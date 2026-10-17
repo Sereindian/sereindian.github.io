@@ -13,7 +13,7 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23062b8a'/%3E%3Ctext x='32' y='46' text-anchor='middle' fill='%23e6dbc7' font-family='Arial,sans-serif' font-weight='700' font-size='44'%3ES%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;500&family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <title>Sereindian · 个人主页</title>
   <style>
     :root {
@@ -23,7 +23,8 @@
       --secondary: #3a5aa8;
       --surface: #ddd0b9;
       --focus: #062b8a;
-      --font: "Chivo", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+      --font: "Public Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+      --font-display: "Libre Bodoni", "Bodoni MT", "Times New Roman", serif;
       --text-small: .875rem;
       --text-body: 1rem;
       --text-lead: clamp(1.125rem, 1rem + .35vw, 1.375rem);
@@ -47,14 +48,14 @@
     .jump-link:hover svg { transform: translateY(3px); }
     .hero { padding-block: 58px 72px; }
     .name-frame { overflow: clip; padding-block: .04em .1em; }
-    h1 { margin: 0; font-size: var(--text-display); font-weight: 900; line-height: 1.02; letter-spacing: -.065em; }
+    h1 { margin: 0; font-family: var(--font-display); font-size: var(--text-display); font-weight: 400; line-height: 1.1; letter-spacing: -.055em; }
     h1 span { display: block; animation: name-arrive .8s var(--ease) both; }
     .introduction { margin: 24px 0 0; font-size: var(--text-lead); line-height: 1.65; animation: arrive .7s .12s var(--ease) both; }
     .introduction strong { font-weight: 700; }
     .content-grid { display: grid; grid-template-columns: 1.12fr 1fr; align-items: start; gap: clamp(56px, 8vw, 136px); padding-bottom: 84px; }
     .personal-quote { margin: 0; animation: arrive .7s .18s var(--ease) both; }
     blockquote { margin: 0; }
-    .german { max-width: 29ch; margin: 0; font-size: var(--text-quote); font-weight: 400; line-height: 1.45; letter-spacing: -.025em; text-wrap: pretty; }
+    .german { max-width: 29ch; margin: 0; font-family: var(--font-display); font-size: var(--text-quote); font-weight: 400; line-height: 1.45; letter-spacing: -.015em; text-wrap: pretty; }
     figcaption { margin-top: 22px; font-size: var(--text-small); line-height: 1.7; }
     figcaption span { display: block; }
     .source { color: var(--secondary); text-decoration: none; }
@@ -64,7 +65,7 @@
     .translation summary::-webkit-details-marker { display: none; }
     .translation summary svg { width: 16px; height: 16px; transition: transform .2s var(--ease); }
     .translation[open] summary svg { transform: rotate(180deg); }
-    .translation p { max-width: 26ch; margin: 4px 0 0; font-size: var(--text-body); line-height: 1.85; }
+    .translation p { margin: 4px 0 0; font-size: var(--text-body); line-height: 1.85; white-space: nowrap; }
     .social-section h2 { margin: 0 0 28px; font-size: var(--text-lead); font-weight: 500; line-height: 1.4; }
     .social-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; row-gap: 32px; padding: 0; margin: 0; list-style: none; }
     .social-item { min-width: 0; animation: arrive .65s calc(.2s + var(--order) * .055s) var(--ease) both; }
@@ -79,7 +80,6 @@
     a.social-entry .social-icon { transition: transform .2s var(--ease); }
     a.social-entry:hover .social-icon { transform: translateY(-2px); }
     a.social-entry:active .social-icon { transform: translateY(0); }
-    .pending .social-copy strong { font-weight: 500; }
     .footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px 32px; padding-block: 24px 32px; color: var(--secondary); font-size: var(--text-small); }
     .footer p { margin: 0; }
     .footer a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
@@ -95,6 +95,10 @@
       .social-icon { width: 22px; }
       .social-icon svg { width: 21px; height: 21px; }
     }
+    @media (max-width: 800px) {
+      .content-grid { grid-template-columns: 1fr; gap: 52px; }
+      .german { max-width: 29ch; }
+    }
     @media (max-width: 640px) {
       :root { --text-display: clamp(2.75rem, 13.4vw, 5.25rem); }
       .shell { width: calc(100% - 40px); }
@@ -107,12 +111,16 @@
       .german { max-width: 27ch; line-height: 1.5; }
       figcaption { margin-top: 18px; }
       .translation { margin-top: 12px; }
+      .translation p { font-size: clamp(.8125rem, 3.6vw, 1rem); }
       .social-section h2 { margin-bottom: 26px; }
       .social-list { column-gap: 24px; row-gap: 28px; }
       .social-entry { grid-template-columns: 24px minmax(0, 1fr); gap: 10px; }
       .social-icon { width: 24px; }
       .social-icon svg { width: 23px; height: 23px; }
       .footer { padding-block: 20px 24px; }
+    }
+    @media (max-width: 360px) {
+      .shell { width: calc(100% - 32px); }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -147,7 +155,7 @@
       </section>
       <section id="social" class="social-section" aria-labelledby="social-heading">
         <h2 id="social-heading">在别处找到我</h2>
-        <!-- 社交账号：真实地址使用 a 链接，未填写的账号使用不可点击的 div。 -->
+        <!-- 有主页地址的账号使用 a 链接；QQ 与 Discord 展示可搜索的账号。 -->
         <ul class="social-list">
           <li class="social-item" style="--order: 0">
             <a class="social-entry" href="https://github.com/Sereindian" target="_blank" rel="noopener noreferrer" aria-label="访问 Sereindian 的 GitHub 主页（新标签页）">
@@ -159,10 +167,10 @@
               <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="4"></rect><path d="m8 2 3 4m5-4-3 4M7.5 11v3m9-3v3m-7 2.5 2.5 1 2.5-1M8 22v-2m8 2v-2"></path></svg></span><span class="social-copy"><strong>哔哩哔哩</strong><small>UID 455994470</small></span>
             </a>
           </li>
-          <li class="social-item pending" style="--order: 2"><div class="social-entry"><span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 9c-1-7 11-7 10 0l1 4c4 6 0 4-1 3 0 5-10 5-10 0-1 1-5 3-1-3l1-4Z"></path><path d="M7 10c3 2 7 2 10 0M6 13c3 2 9 2 12 0M8 20l-2 1m10-1 2 1"></path><path d="M10 7v1m4-1v1m-3 2h2"></path></svg></span><span class="social-copy"><strong>QQ</strong><small>待添加</small></span></div></li>
-          <li class="social-item pending" style="--order: 3"><div class="social-entry"><span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11c-1-4 5-7 7-5 1 1 0 3 0 3 5-2 7-1 6 2 7 3 2 10-7 10-8 0-12-6-6-10Z"></path><ellipse cx="10" cy="15.5" rx="4.5" ry="3"></ellipse><circle cx="9" cy="15" r="1"></circle><path d="M16 3c4 0 6 2 6 6m-6-3c2 0 3 1 3 3"></path></svg></span><span class="social-copy"><strong>微博</strong><small>待添加</small></span></div></li>
-          <li class="social-item pending" style="--order: 4"><div class="social-entry"><span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 3h4l12 18h-4L4 3Zm16 0L4 21"></path></svg></span><span class="social-copy"><strong>X / Twitter</strong><small>待添加</small></span></div></li>
-          <li class="social-item pending" style="--order: 5"><div class="social-entry"><span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg></span><span class="social-copy"><strong>Instagram</strong><small>待添加</small></span></div></li>
+          <li class="social-item" style="--order: 2"><div class="social-entry"><span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 9c-1-7 11-7 10 0l1 4c4 6 0 4-1 3 0 5-10 5-10 0-1 1-5 3-1-3l1-4Z"></path><path d="M7 10c3 2 7 2 10 0M6 13c3 2 9 2 12 0M8 20l-2 1m10-1 2 1"></path><path d="M10 7v1m4-1v1m-3 2h2"></path></svg></span><span class="social-copy"><strong>QQ</strong><small>3167642832</small></span></div></li>
+          <li class="social-item" style="--order: 3"><a class="social-entry" href="https://weibo.com/u/6913789541" target="_blank" rel="noopener noreferrer" aria-label="访问 @Sereindian 的微博主页（新标签页）"><span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11c-1-4 5-7 7-5 1 1 0 3 0 3 5-2 7-1 6 2 7 3 2 10-7 10-8 0-12-6-6-10Z"></path><ellipse cx="10" cy="15.5" rx="4.5" ry="3"></ellipse><circle cx="9" cy="15" r="1"></circle><path d="M16 3c4 0 6 2 6 6m-6-3c2 0 3 1 3 3"></path></svg></span><span class="social-copy"><strong>微博</strong><small>@Sereindian</small></span></a></li>
+          <li class="social-item" style="--order: 4"><a class="social-entry" href="https://x.com/Allchemilla" target="_blank" rel="noopener noreferrer" aria-label="访问 _Allchemilla_ 的 X 主页（新标签页）"><span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 3h4l12 18h-4L4 3Zm16 0L4 21"></path></svg></span><span class="social-copy"><strong>X / Twitter</strong><small>_Allchemilla_</small></span></a></li>
+          <li class="social-item" style="--order: 5"><div class="social-entry"><span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg></span><span class="social-copy"><strong>Discord</strong><small>@sereind1an</small></span></div></li>
         </ul>
       </section>
     </div>
