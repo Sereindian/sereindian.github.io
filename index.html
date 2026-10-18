@@ -66,38 +66,34 @@
     .translation summary svg { width: 16px; height: 16px; transition: transform .2s var(--ease); }
     .translation[open] summary svg { transform: rotate(180deg); }
     .translation p { margin: 4px 0 0; font-size: var(--text-body); line-height: 1.85; white-space: nowrap; }
-    .social-section h2 { margin: 0 0 28px; font-size: var(--text-lead); font-weight: 500; line-height: 1.4; }
-    .social-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; row-gap: 32px; padding: 0; margin: 0; list-style: none; }
-    .social-item { min-width: 0; animation: arrive .65s calc(.2s + var(--order) * .055s) var(--ease) both; }
-    .social-entry { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 12px; min-height: 60px; align-items: start; text-decoration: none; }
-    a.social-entry { cursor: pointer; }
-    .social-icon { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 30px; }
-    .social-icon svg { display: block; width: 24px; height: 24px; }
-    .social-copy { min-width: 0; }
-    .social-copy strong { display: block; font-size: var(--text-lead); font-weight: 700; line-height: 1.4; }
-    .social-copy small { display: block; margin-top: 5px; color: var(--secondary); font-size: var(--text-small); font-weight: 400; line-height: 1.5; overflow-wrap: anywhere; }
-    .social-entry:where(:hover, :focus-visible) strong { text-decoration: underline; text-underline-offset: .2em; }
-    a.social-entry .social-icon { transition: transform .2s var(--ease); }
-    a.social-entry:hover .social-icon { transform: translateY(-2px); }
-    a.social-entry:active .social-icon { transform: translateY(0); }
+    .social-section h2 { margin: 0 0 24px; font-size: var(--text-lead); font-weight: 500; line-height: 1.4; }
+    .social-list { display: grid; grid-template-columns: repeat(6, 64px); gap: 16px; padding: 0; margin: 0; list-style: none; }
+    .social-item { animation: arrive .65s calc(.2s + var(--order) * .055s) var(--ease) both; }
+    .social-entry { display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 50%; color: var(--ink); text-decoration: none; cursor: pointer; transition: transform .2s var(--ease); }
+    .social-entry svg { display: block; width: 30px; height: 30px; fill: currentColor; }
+    .social-entry[data-platform="xiaohongshu"] svg { width: 44px; height: 44px; }
+    .social-entry:where(:hover, :focus-visible) { color: var(--paper); background: var(--ink); transform: translateY(-3px); }
+    .social-entry:focus-visible { outline-offset: 4px; }
+    .social-entry:active { transform: translateY(0) scale(.96); }
     .footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px 32px; padding-block: 24px 32px; color: var(--secondary); font-size: var(--text-small); }
     .footer p { margin: 0; }
     .footer a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
     .footer a:hover { color: var(--ink); text-decoration: underline; }
     @keyframes name-arrive { from { transform: translateY(105%); } to { transform: translateY(0); } }
     @keyframes arrive { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 1100px) {
+      .social-list { grid-template-columns: repeat(3, 64px); }
+    }
     @media (max-width: 900px) {
       .shell { width: calc(100% - 56px); }
       .hero { padding-block: 44px 56px; }
       .content-grid { gap: 48px; grid-template-columns: 1fr 1fr; }
-      .social-list { column-gap: 16px; }
-      .social-entry { grid-template-columns: 22px minmax(0, 1fr); gap: 9px; }
-      .social-icon { width: 22px; }
-      .social-icon svg { width: 21px; height: 21px; }
     }
     @media (max-width: 800px) {
       .content-grid { grid-template-columns: 1fr; gap: 52px; }
       .german { max-width: 29ch; }
+      .social-list { grid-template-columns: repeat(6, 56px); gap: 12px; }
+      .social-entry { width: 56px; height: 56px; }
     }
     @media (max-width: 640px) {
       :root { --text-display: clamp(2.75rem, 13.4vw, 5.25rem); }
@@ -113,11 +109,10 @@
       .translation { margin-top: 12px; }
       .translation p { font-size: clamp(.8125rem, 3.6vw, 1rem); }
       .social-section h2 { margin-bottom: 26px; }
-      .social-list { column-gap: 24px; row-gap: 28px; }
-      .social-entry { grid-template-columns: 24px minmax(0, 1fr); gap: 10px; }
-      .social-icon { width: 24px; }
-      .social-icon svg { width: 23px; height: 23px; }
       .footer { padding-block: 20px 24px; }
+    }
+    @media (max-width: 480px) {
+      .social-list { grid-template-columns: repeat(3, 56px); gap: 16px; }
     }
     @media (max-width: 360px) {
       .shell { width: calc(100% - 32px); }
@@ -155,22 +150,38 @@
       </section>
       <section id="social" class="social-section" aria-labelledby="social-heading">
         <h2 id="social-heading">在别处找到我</h2>
-        <!-- 有主页地址的账号使用 a 链接；QQ 与 Discord 展示可搜索的账号。 -->
+        <!-- 社交入口：修改 href 更新链接，aria-label 为屏幕阅读器保留平台说明。 -->
         <ul class="social-list">
           <li class="social-item" style="--order: 0">
-            <a class="social-entry" href="https://github.com/Sereindian" target="_blank" rel="noopener noreferrer" aria-label="访问 Sereindian 的 GitHub 主页（新标签页）">
-              <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .8a11.4 11.4 0 0 0-3.6 22.2c.6.1.8-.2.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.3.1 2 1.3 2 1.3 1.1 2 2.9 1.4 3.6 1.1.1-.8.4-1.4.8-1.7-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.2-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.3 2.8.2 3.1.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6A11.4 11.4 0 0 0 12 .8Z"></path></svg></span><span class="social-copy"><strong>GitHub</strong><small>@Sereindian</small></span>
+            <a class="social-entry" data-platform="github" href="https://github.com/Sereindian" target="_blank" rel="noopener noreferrer" aria-label="访问我的GitHub主页（新标签页）">
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
             </a>
           </li>
           <li class="social-item" style="--order: 1">
-            <a class="social-entry" href="https://space.bilibili.com/455994470" target="_blank" rel="noopener noreferrer" aria-label="访问我的哔哩哔哩个人空间（新标签页）">
-              <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="4"></rect><path d="m8 2 3 4m5-4-3 4M7.5 11v3m9-3v3m-7 2.5 2.5 1 2.5-1M8 22v-2m8 2v-2"></path></svg></span><span class="social-copy"><strong>哔哩哔哩</strong><small>UID 455994470</small></span>
+            <a class="social-entry" data-platform="bilibili" href="https://space.bilibili.com/455994470" target="_blank" rel="noopener noreferrer" aria-label="访问我的哔哩哔哩主页（新标签页）">
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373Z"/></svg>
             </a>
           </li>
-          <li class="social-item" style="--order: 2"><div class="social-entry"><span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 9c-1-7 11-7 10 0l1 4c4 6 0 4-1 3 0 5-10 5-10 0-1 1-5 3-1-3l1-4Z"></path><path d="M7 10c3 2 7 2 10 0M6 13c3 2 9 2 12 0M8 20l-2 1m10-1 2 1"></path><path d="M10 7v1m4-1v1m-3 2h2"></path></svg></span><span class="social-copy"><strong>QQ</strong><small>3167642832</small></span></div></li>
-          <li class="social-item" style="--order: 3"><a class="social-entry" href="https://weibo.com/u/6913789541" target="_blank" rel="noopener noreferrer" aria-label="访问 @Sereindian 的微博主页（新标签页）"><span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11c-1-4 5-7 7-5 1 1 0 3 0 3 5-2 7-1 6 2 7 3 2 10-7 10-8 0-12-6-6-10Z"></path><ellipse cx="10" cy="15.5" rx="4.5" ry="3"></ellipse><circle cx="9" cy="15" r="1"></circle><path d="M16 3c4 0 6 2 6 6m-6-3c2 0 3 1 3 3"></path></svg></span><span class="social-copy"><strong>微博</strong><small>@Sereindian</small></span></a></li>
-          <li class="social-item" style="--order: 4"><a class="social-entry" href="https://x.com/_Allchemilla_" target="_blank" rel="noopener noreferrer" aria-label="访问 _Allchemilla_ 的 X 主页（新标签页）"><span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 3h4l12 18h-4L4 3Zm16 0L4 21"></path></svg></span><span class="social-copy"><strong>X / Twitter</strong><small>_Allchemilla_</small></span></a></li>
-          <li class="social-item" style="--order: 5"><div class="social-entry"><span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg></span><span class="social-copy"><strong>Discord</strong><small>@sereind1an</small></span></div></li>
+          <li class="social-item" style="--order: 2">
+            <a class="social-entry" data-platform="qq" href="https://qm.qq.com/q/qldpxCY0ww" target="_blank" rel="noopener noreferrer" aria-label="访问我的QQ主页（新标签页）">
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.395 15.035a40 40 0 0 0-.803-2.264l-1.079-2.695c.001-.032.014-.562.014-.836C19.526 4.632 17.351 0 12 0S4.474 4.632 4.474 9.241c0 .274.013.804.014.836l-1.08 2.695a39 39 0 0 0-.802 2.264c-1.021 3.283-.69 4.643-.438 4.673.54.065 2.103-2.472 2.103-2.472 0 1.469.756 3.387 2.394 4.771-.612.188-1.363.479-1.845.835-.434.32-.379.646-.301.778.343.578 5.883.369 7.482.189 1.6.18 7.14.389 7.483-.189.078-.132.132-.458-.301-.778-.483-.356-1.233-.646-1.846-.836 1.637-1.384 2.393-3.302 2.393-4.771 0 0 1.563 2.537 2.103 2.472.251-.03.581-1.39-.438-4.673"/></svg>
+            </a>
+          </li>
+          <li class="social-item" style="--order: 3">
+            <a class="social-entry" data-platform="xiaohongshu" href="https://www.xiaohongshu.com/user/profile/5e2a55eb0000000001002a66" target="_blank" rel="noopener noreferrer" aria-label="访问我的小红书主页（新标签页）">
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.405 9.879c.002.016.01.02.07.019h.725a.797.797 0 0 0 .78-.972.794.794 0 0 0-.884-.618.795.795 0 0 0-.692.794c0 .101-.002.666.001.777zm-11.509 4.808c-.203.001-1.353.004-1.685.003a2.528 2.528 0 0 1-.766-.126.025.025 0 0 0-.03.014L7.7 16.127a.025.025 0 0 0 .01.032c.111.06.336.124.495.124.66.01 1.32.002 1.981 0 .01 0 .02-.006.023-.015l.712-1.545a.025.025 0 0 0-.024-.036zM.477 9.91c-.071 0-.076.002-.076.01a.834.834 0 0 0-.01.08c-.027.397-.038.495-.234 3.06-.012.24-.034.389-.135.607-.026.057-.033.042.003.112.046.092.681 1.523.787 1.74.008.015.011.02.017.02.008 0 .033-.026.047-.044.147-.187.268-.391.371-.606.306-.635.44-1.325.486-1.706.014-.11.021-.22.03-.33l.204-2.616.022-.293c.003-.029 0-.033-.03-.034zm7.203 3.757a1.427 1.427 0 0 1-.135-.607c-.004-.084-.031-.39-.235-3.06a.443.443 0 0 0-.01-.082c-.004-.011-.052-.008-.076-.008h-1.48c-.03.001-.034.005-.03.034l.021.293c.076.982.153 1.964.233 2.946.05.4.186 1.085.487 1.706.103.215.223.419.37.606.015.018.037.051.048.049.02-.003.742-1.642.804-1.765.036-.07.03-.055.003-.112zm3.861-.913h-.872a.126.126 0 0 1-.116-.178l1.178-2.625a.025.025 0 0 0-.023-.035l-1.318-.003a.148.148 0 0 1-.135-.21l.876-1.954a.025.025 0 0 0-.023-.035h-1.56c-.01 0-.02.006-.024.015l-.926 2.068c-.085.169-.314.634-.399.938a.534.534 0 0 0-.02.191.46.46 0 0 0 .23.378.981.981 0 0 0 .46.119h.59c.041 0-.688 1.482-.834 1.972a.53.53 0 0 0-.023.172.465.465 0 0 0 .23.398c.15.092.342.12.475.12l1.66-.001c.01 0 .02-.006.023-.015l.575-1.28a.025.025 0 0 0-.024-.035zm-6.93-4.937H3.1a.032.032 0 0 0-.034.033c0 1.048-.01 2.795-.01 6.829 0 .288-.269.262-.28.262h-.74c-.04.001-.044.004-.04.047.001.037.465 1.064.555 1.263.01.02.03.033.051.033.157.003.767.009.938-.014.153-.02.3-.06.438-.132.3-.156.49-.419.595-.765.052-.172.075-.353.075-.533.002-2.33 0-4.66-.007-6.991a.032.032 0 0 0-.032-.032zm11.784 6.896c0-.014-.01-.021-.024-.022h-1.465c-.048-.001-.049-.002-.05-.049v-4.66c0-.072-.005-.07.07-.07h.863c.08 0 .075.004.075-.074V8.393c0-.082.006-.076-.08-.076h-3.5c-.064 0-.075-.006-.075.073v1.445c0 .083-.006.077.08.077h.854c.075 0 .07-.004.07.07v4.624c0 .095.008.084-.085.084-.37 0-1.11-.002-1.304 0-.048.001-.06.03-.06.03l-.697 1.519s-.014.025-.008.036c.006.01.013.008.058.008 1.748.003 3.495.002 5.243.002.03-.001.034-.006.035-.033v-1.539zm4.177-3.43c0 .013-.007.023-.02.024-.346.006-.692.004-1.037.004-.014-.002-.022-.01-.022-.024-.005-.434-.007-.869-.01-1.303 0-.072-.006-.071.07-.07l.733-.003c.041 0 .081.002.12.015.093.025.16.107.165.204.006.431.002 1.153.001 1.153zm2.67.244a1.953 1.953 0 0 0-.883-.222h-.18c-.04-.001-.04-.003-.042-.04V10.21c0-.132-.007-.263-.025-.394a1.823 1.823 0 0 0-.153-.53 1.533 1.533 0 0 0-.677-.71 2.167 2.167 0 0 0-1-.258c-.153-.003-.567 0-.72 0-.07 0-.068.004-.068-.065V7.76c0-.031-.01-.041-.046-.039H17.93s-.016 0-.023.007c-.006.006-.008.012-.008.023v.546c-.008.036-.057.015-.082.022h-.95c-.022.002-.028.008-.03.032v1.481c0 .09-.004.082.082.082h.913c.082 0 .072.128.072.128V11.19s.003.117-.06.117h-1.482c-.068 0-.06.082-.06.082v1.445s-.01.068.064.068h1.457c.082 0 .076-.006.076.079v3.225c0 .088-.007.081.082.081h1.43c.09 0 .082.007.082-.08v-3.27c0-.029.006-.035.033-.035l2.323-.003c.098 0 .191.02.28.061a.46.46 0 0 1 .274.407c.008.395.003.79.003 1.185 0 .259-.107.367-.33.367h-1.218c-.023.002-.029.008-.028.033.184.437.374.871.57 1.303a.045.045 0 0 0 .04.026c.17.005.34.002.51.003.15-.002.517.004.666-.01a2.03 2.03 0 0 0 .408-.075c.59-.18.975-.698.976-1.313v-1.981c0-.128-.01-.254-.034-.38 0 .078-.029-.641-.724-.998z"/></svg>
+            </a>
+          </li>
+          <li class="social-item" style="--order: 4">
+            <a class="social-entry" data-platform="x" href="https://x.com/_Allchemilla_" target="_blank" rel="noopener noreferrer" aria-label="访问我的X主页（新标签页）">
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg>
+            </a>
+          </li>
+          <li class="social-item" style="--order: 5">
+            <a class="social-entry" data-platform="discord" href="https://discord.com/users/1051161558690050048" target="_blank" rel="noopener noreferrer" aria-label="访问我的Discord主页（新标签页）">
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+            </a>
+          </li>
         </ul>
       </section>
     </div>
