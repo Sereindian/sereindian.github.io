@@ -111,15 +111,15 @@
       .social-section h2 { margin-bottom: 26px; }
       .footer { padding-block: 20px 24px; }
     }
-    @media (max-width: 480px) {
+    @media (max-width: 640px) {
       .social-list {
-        width: min(100%, 176px);
-        grid-template-columns: repeat(3, 56px);
-        column-gap: 4px;
-        row-gap: 12px;
-        justify-items: center;
+        width: 100%;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px 16px;
       }
-      .social-entry { width: 56px; height: 56px; }
+      .social-item { display: grid; place-items: center; min-width: 0; }
+      .social-entry { width: 64px; height: 64px; background: var(--surface); }
+      .social-entry:where(:hover, :focus-visible) { background: var(--ink); }
     }
     @media (max-width: 360px) {
       .shell { width: calc(100% - 32px); }
