@@ -69,7 +69,7 @@
     .social-section h2 { margin: 0 0 24px; font-size: var(--text-lead); font-weight: 500; line-height: 1.4; }
     .social-list { display: grid; grid-template-columns: repeat(6, 64px); gap: 16px; padding: 0; margin: 0; list-style: none; }
     .social-item { animation: arrive .65s calc(.2s + var(--order) * .055s) var(--ease) both; }
-    .social-entry { display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 50%; color: var(--ink); text-decoration: none; cursor: pointer; transition: transform .2s var(--ease); }
+    .social-entry { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; color: var(--ink); text-decoration: none; cursor: pointer; line-height: 0; transition: transform .2s var(--ease); }
     .social-entry svg { display: block; width: 30px; height: 30px; fill: currentColor; }
     .social-entry[data-platform="xiaohongshu"] svg { width: 44px; height: 44px; }
     .social-entry:where(:hover, :focus-visible) { color: var(--paper); background: var(--ink); transform: translateY(-3px); }
@@ -112,7 +112,14 @@
       .footer { padding-block: 20px 24px; }
     }
     @media (max-width: 480px) {
-      .social-list { grid-template-columns: repeat(3, 56px); gap: 16px; }
+      .social-list {
+        width: min(100%, 176px);
+        grid-template-columns: repeat(3, 56px);
+        column-gap: 4px;
+        row-gap: 12px;
+        justify-items: center;
+      }
+      .social-entry { width: 56px; height: 56px; }
     }
     @media (max-width: 360px) {
       .shell { width: calc(100% - 32px); }
