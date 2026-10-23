@@ -1,198 +1,1908 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="你好，我是 Sereindian，也可以叫我 Leon。我的个人介绍、喜欢的一句话，以及社交主页。">
-  <meta name="theme-color" content="#e6dbc7">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Sereindian · 个人主页">
-  <meta property="og:description" content="每一个不曾起舞的日子，都是对生活的辜负。">
-  <meta property="og:url" content="https://sereindian.github.io/">
-  <link rel="canonical" href="https://sereindian.github.io/">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23062b8a'/%3E%3Ctext x='32' y='46' text-anchor='middle' fill='%23e6dbc7' font-family='Arial,sans-serif' font-weight='700' font-size='44'%3ES%3C/text%3E%3C/svg%3E">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Producer Profile | 制作人扩列名片</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Google Fonts: Noto Sans SC & Noto Serif JP for Rinze/Momoka quotes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;500&family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <title>Sereindian · 个人主页</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Japanese card introductions: Shippori Mincho Medium, subset to the supplied text. -->
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500&amp;display=swap&amp;text=%E3%80%81%E3%80%82%E3%81%82%E3%81%84%E3%81%86%E3%81%88%E3%81%8B%E3%81%8C%E3%81%8D%E3%81%8E%E3%81%8F%E3%81%90%E3%81%91%E3%81%93%E3%81%94%E3%81%95%E3%81%97%E3%81%98%E3%81%99%E3%81%9B%E3%81%9D%E3%81%9F%E3%81%A0%E3%81%A1%E3%81%A3%E3%81%A4%E3%81%A5%E3%81%A6%E3%81%A7%E3%81%A8%E3%81%AA%E3%81%AB%E3%81%AE%E3%81%AF%E3%81%B2%E3%81%B3%E3%81%B6%E3%81%B8%E3%81%BB%E3%81%BE%E3%81%BF%E3%82%81%E3%82%82%E3%82%83%E3%82%89%E3%82%8A%E3%82%8B%E3%82%8C%E3%82%8D%E3%82%8F%E3%82%92%E3%82%93%E3%82%B8%E3%82%B9%E3%83%86%E3%83%BC%E4%B8%80%E4%B8%8A%E4%B8%8B%E4%B8%96%E4%B8%AD%E4%BB%8A%E4%BC%9D%E4%BC%B8%E5%85%88%E5%85%89%E5%87%9D%E5%89%8D%E5%8B%87%E5%90%91%E5%92%B2%E5%9B%9B%E5%A3%B0%E5%A4%89%E5%A4%9C%E5%A4%A2%E5%A4%A7%E5%A5%A5%E5%A5%B3%E5%A5%BD%E5%AD%A3%E5%AD%A4%E5%B0%8F%E5%B1%8A%E5%B7%A1%E5%BA%A6%E5%BC%B7%E5%BD%93%E5%BE%85%E5%BF%83%E6%83%B3%E6%86%A7%E6%8A%B1%E6%8D%A8%E6%97%A5%E6%98%8E%E6%99%AF%E6%9C%AC%E6%AD%8C%E6%AD%A9%E6%B0%97%E6%B7%91%E6%BA%B6%E7%8B%AC%E7%95%8C%E7%9B%AE%E7%9C%9F%E7%9E%AC%E7%9F%A5%E7%A9%BA%E7%AB%8B%E7%AC%91%E7%B5%82%E7%B6%9A%E7%B7%92%E7%BF%BC%E8%83%8C%E8%84%B1%E8%89%B2%E8%8A%B1%E8%91%89%E8%96%87%E8%96%94%E8%A1%8C%E8%A8%80%E8%BB%A2%E8%BC%AA%E8%BE%BC%E8%BF%B7%E8%BF%BD%E9%81%B8%E9%96%93%E9%9D%92%E9%A0%90%E9%A1%94%E9%A2%A8%E9%A3%9B" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Noto Sans SC"', 'system-ui', '-apple-system', 'sans-serif'],
+            serif: ['"Noto Serif JP"', '"Noto Sans SC"', 'serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            rinze: {
+              light: '#EBF5FB',
+              soft: '#B5D9F2',
+              DEFAULT: '#7DB9DE',
+              deep: '#3A6E94',
+              dark: '#1E3D54'
+            },
+            momoka: {
+              light: '#FDF0F5',
+              soft: '#FADCE6',
+              DEFAULT: '#F29CB7',
+              deep: '#D96B90',
+              dark: '#5C283B'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
   <style>
     :root {
-      color-scheme: light;
-      --paper: #e6dbc7;
-      --ink: #062b8a;
-      --secondary: #3a5aa8;
-      --surface: #ddd0b9;
-      --focus: #062b8a;
-      --font: "Public Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
-      --font-display: "Libre Bodoni", "Bodoni MT", "Times New Roman", serif;
-      --text-small: .875rem;
-      --text-body: 1rem;
-      --text-lead: clamp(1.125rem, 1rem + .35vw, 1.375rem);
-      --text-quote: clamp(1.375rem, 1rem + 1.25vw, 2.125rem);
-      --text-display: clamp(3.25rem, 13.6vw, 13rem);
-      --ease: cubic-bezier(.2,.7,.2,1);
+      --accent-primary: #7DB9DE;
+      --accent-secondary: #F29CB7;
+      --accent-deep: #3A6E94;
+      --accent-glow: rgba(125, 185, 222, 0.35);
+      --card-border: rgba(125, 185, 222, 0.35);
+      --bg-gradient-from: rgba(125, 185, 222, 0.16);
+      --bg-gradient-to: rgba(242, 156, 183, 0.16);
     }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
-    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font); font-size: var(--text-body); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-    a { color: inherit; text-decoration-thickness: .07em; text-underline-offset: .2em; touch-action: manipulation; }
-    a:focus-visible, summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 6px; }
-    ::selection { color: var(--paper); background: var(--ink); }
-    .shell { width: min(1280px, calc(100% - 96px)); margin-inline: auto; }
-    .skip-link { position: fixed; inset: -100px auto auto 20px; z-index: 10; padding: 12px 20px; background: var(--ink); color: var(--paper); }
-    .skip-link:focus { top: 16px; }
-    .header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 24px; }
-    .wordmark { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; text-decoration: none; }
-    .jump-link { display: inline-flex; align-items: center; min-height: 44px; gap: 12px; text-decoration: none; }
-    .jump-link svg { width: 18px; height: 18px; transition: transform .2s var(--ease); }
-    .jump-link:hover svg { transform: translateY(3px); }
-    .hero { padding-block: 58px 72px; }
-    .name-frame { overflow: clip; padding-block: .04em .1em; }
-    h1 { margin: 0; font-family: var(--font-display); font-size: var(--text-display); font-weight: 400; line-height: 1.1; letter-spacing: -.055em; }
-    h1 span { display: block; animation: name-arrive .8s var(--ease) both; }
-    .introduction { margin: 24px 0 0; font-size: var(--text-lead); line-height: 1.65; animation: arrive .7s .12s var(--ease) both; }
-    .introduction strong { font-weight: 700; }
-    .content-grid { display: grid; grid-template-columns: 1.12fr 1fr; align-items: start; gap: clamp(56px, 8vw, 136px); padding-bottom: 84px; }
-    .personal-quote { margin: 0; animation: arrive .7s .18s var(--ease) both; }
-    blockquote { margin: 0; }
-    .german { max-width: 29ch; margin: 0; font-family: var(--font-display); font-size: var(--text-quote); font-weight: 400; line-height: 1.45; letter-spacing: -.015em; text-wrap: pretty; }
-    figcaption { margin-top: 22px; font-size: var(--text-small); line-height: 1.7; }
-    figcaption span { display: block; }
-    .source { color: var(--secondary); text-decoration: none; }
-    .source:hover { color: var(--ink); text-decoration: underline; }
-    .translation { margin-top: 22px; }
-    .translation summary { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; cursor: pointer; list-style: none; font-size: var(--text-small); }
-    .translation summary::-webkit-details-marker { display: none; }
-    .translation summary svg { width: 16px; height: 16px; transition: transform .2s var(--ease); }
-    .translation[open] summary svg { transform: rotate(180deg); }
-    .translation p { margin: 4px 0 0; font-size: var(--text-body); line-height: 1.85; white-space: nowrap; }
-    .social-section h2 { margin: 0 0 24px; font-size: var(--text-lead); font-weight: 500; line-height: 1.4; }
-    .social-list { display: grid; grid-template-columns: repeat(6, 64px); gap: 16px; padding: 0; margin: 0; list-style: none; }
-    .social-item { animation: arrive .65s calc(.2s + var(--order) * .055s) var(--ease) both; }
-    .social-entry { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; color: var(--ink); text-decoration: none; cursor: pointer; line-height: 0; transition: transform .2s var(--ease); }
-    .social-entry svg { display: block; width: 30px; height: 30px; fill: currentColor; }
-    .social-entry[data-platform="xiaohongshu"] svg { width: 44px; height: 44px; }
-    .social-entry:where(:hover, :focus-visible) { color: var(--paper); background: var(--ink); transform: translateY(-3px); }
-    .social-entry:focus-visible { outline-offset: 4px; }
-    .social-entry:active { transform: translateY(0) scale(.96); }
-    .footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px 32px; padding-block: 24px 32px; color: var(--secondary); font-size: var(--text-small); }
-    .footer p { margin: 0; }
-    .footer a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
-    .footer a:hover { color: var(--ink); text-decoration: underline; }
-    @keyframes name-arrive { from { transform: translateY(105%); } to { transform: translateY(0); } }
-    @keyframes arrive { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-    @media (max-width: 1100px) {
-      .social-list { grid-template-columns: repeat(3, 64px); }
+
+    [data-theme-accent="rinze"] {
+      --accent-primary: #7DB9DE;
+      --accent-secondary: #5B9BD5;
+      --accent-deep: #2B5B84;
+      --accent-glow: rgba(125, 185, 222, 0.4);
+      --card-border: rgba(125, 185, 222, 0.45);
+      --bg-gradient-from: rgba(125, 185, 222, 0.22);
+      --bg-gradient-to: rgba(91, 155, 213, 0.08);
     }
-    @media (max-width: 900px) {
-      .shell { width: calc(100% - 56px); }
-      .hero { padding-block: 44px 56px; }
-      .content-grid { gap: 48px; grid-template-columns: 1fr 1fr; }
+
+    [data-theme-accent="momoka"] {
+      --accent-primary: #F29CB7;
+      --accent-secondary: #E87A9F;
+      --accent-deep: #C44D76;
+      --accent-glow: rgba(242, 156, 183, 0.4);
+      --card-border: rgba(242, 156, 183, 0.45);
+      --bg-gradient-from: rgba(242, 156, 183, 0.22);
+      --bg-gradient-to: rgba(232, 122, 159, 0.08);
     }
-    @media (max-width: 800px) {
-      .content-grid { grid-template-columns: 1fr; gap: 52px; }
-      .german { max-width: 29ch; }
-      .social-list { grid-template-columns: repeat(6, 56px); gap: 12px; }
-      .social-entry { width: 56px; height: 56px; }
+
+    [data-theme-accent="dual"] {
+      --accent-primary: #7DB9DE;
+      --accent-secondary: #F29CB7;
+      --accent-deep: #4A6984;
+      --accent-glow: rgba(183, 170, 202, 0.4);
+      --card-border: rgba(160, 175, 210, 0.4);
+      --bg-gradient-from: rgba(125, 185, 222, 0.18);
+      --bg-gradient-to: rgba(242, 156, 183, 0.18);
     }
-    @media (max-width: 640px) {
-      :root { --text-display: clamp(2.75rem, 13.4vw, 5.25rem); }
-      .shell { width: calc(100% - 40px); }
-      .header { padding-block: 16px; gap: 16px; }
-      .wordmark, .jump-link { font-size: var(--text-small); }
-      .jump-link { gap: 8px; }
-      .hero { padding-block: 36px 52px; }
-      .introduction { margin-top: 22px; }
-      .content-grid { grid-template-columns: 1fr; gap: 52px; padding-bottom: 40px; }
-      .german { max-width: 27ch; line-height: 1.5; }
-      figcaption { margin-top: 18px; }
-      .translation { margin-top: 12px; }
-      .translation p { font-size: clamp(.8125rem, 3.6vw, 1rem); }
-      .social-section h2 { margin-bottom: 26px; }
-      .footer { padding-block: 20px 24px; }
+
+    body {
+      font-family: 'Noto Sans SC', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+      overflow-x: hidden;
     }
-    @media (max-width: 640px) {
-      .social-list {
-        width: 100%;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 20px 16px;
-      }
-      .social-item { display: grid; place-items: center; min-width: 0; }
-      .social-entry { width: 64px; height: 64px; background: var(--surface); }
-      .social-entry:where(:hover, :focus-visible) { background: var(--ink); }
+
+    /* Subtle Japanese Seigaiha / Geometric Pattern Overlay */
+    .wagasa-bg {
+      background-image:
+        radial-gradient(circle at 15% 15%, var(--bg-gradient-from) 0%, transparent 45%),
+        radial-gradient(circle at 85% 80%, var(--bg-gradient-to) 0%, transparent 50%),
+        radial-gradient(rgba(125, 185, 222, 0.12) 1px, transparent 1px),
+        radial-gradient(rgba(242, 156, 183, 0.12) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 24px 24px, 24px 24px;
+      background-position: 0 0, 0 0, 0 0, 12px 12px;
     }
+
+    /* Glassmorphism Cards */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      box-shadow: 0 8px 30px -6px rgba(28, 45, 66, 0.07);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .dark .glass-card {
+      background: rgba(22, 29, 41, 0.82);
+      border: 1px solid rgba(148, 163, 184, 0.16);
+      box-shadow: 0 8px 30px -6px rgba(0, 0, 0, 0.35);
+    }
+
+    .glass-card:hover {
+      border-color: var(--accent-primary);
+    }
+
+    /* Custom Dual Gradient Borders & Text */
+    .dual-gradient-bg {
+      background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+    }
+
+    .dual-gradient-text {
+      background: linear-gradient(135deg, #3A6E94 0%, #D96B90 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .dark .dual-gradient-text {
+      background: linear-gradient(135deg, #8CC8EC 0%, #F7B2C9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Avatar Ring Rotation */
+    @keyframes spin-slow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .avatar-ring {
+      background: conic-gradient(from 0deg, #7DB9DE, #F29CB7, #7DB9DE, #F29CB7, #7DB9DE);
+      animation: spin-slow 12s linear infinite;
+    }
+
+    /* Floating Petals Canvas */
+    #petalCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(125, 185, 222, 0.4);
+      border-radius: 9999px;
+    }
+
+    [hidden] { display: none !important; }
+
+    /* ==============================================================
+     * REDESIGNED SECTION 3: FRANCHISE TABS & IDOL SHOWCASE CARDS
+     * ============================================================== */
+    .franchise-tabs {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 6px;
+      padding: 5px;
+      border-radius: 18px;
+      background: rgba(241, 245, 249, 0.85);
+      border: 1px solid rgba(203, 213, 225, 0.65);
+    }
+
+    .dark .franchise-tabs {
+      background: rgba(15, 23, 42, 0.75);
+      border-color: rgba(51, 65, 85, 0.7);
+    }
+
+    .franchise-tab-btn {
+      position: relative;
+      min-width: 0;
+      min-height: 54px;
+      padding: 8px 3px;
+      border-radius: 9999px;
+      border: 1px solid transparent;
+      background: transparent;
+      color: #64748b;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+
+    .dark .franchise-tab-btn {
+      color: #94a3b8;
+    }
+
+    .franchise-tab-btn:hover {
+      color: #1e293b;
+      background: rgba(255, 255, 255, 0.55);
+    }
+
+    .dark .franchise-tab-btn:hover {
+      color: #f1f5f9;
+      background: rgba(30, 41, 59, 0.55);
+    }
+
+    .franchise-tab-btn[aria-selected="true"] {
+      background: #ffffff;
+      color: #0f172a;
+      border-color: var(--tab-accent, #7DB9DE);
+      box-shadow: 0 4px 14px -3px var(--tab-glow, rgba(125, 185, 222, 0.38));
+      transform: translateY(-1px);
+    }
+
+    .dark .franchise-tab-btn[aria-selected="true"] {
+      background: rgba(30, 41, 59, 0.95);
+      color: #ffffff;
+      border-color: var(--tab-accent, #7DB9DE);
+      box-shadow: 0 4px 16px -3px rgba(0, 0, 0, 0.5);
+    }
+
+    .franchise-tab-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 9999px;
+      background-color: var(--tab-accent, #7DB9DE);
+      opacity: 0.55;
+      transition: all 0.25s ease;
+    }
+
+    .franchise-tab-btn[aria-selected="true"] .franchise-tab-dot {
+      width: 14px;
+      opacity: 1;
+    }
+
+
+    .franchise-tab-label {
+      display: block;
+      font-family: Arial, "Noto Sans SC", sans-serif;
+      font-size: clamp(9px, 2.45vw, 11px);
+      font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: -.015em;
+      white-space: nowrap;
+    }
+    .franchise-tab-symbol { display: block; width: 26px; height: 18px; object-fit: contain; flex-shrink: 0; }
+    .franchise-badge-img { display: inline-block; width: 14px; height: 14px; object-fit: contain; vertical-align: -.125em; }
+    .franchise-header-img { display: block; width: 20px; height: 20px; object-fit: contain; }
+    .franchise-banner-img { display: block; width: 28px; height: 28px; object-fit: contain; }
+    .franchise-office-symbol { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; flex-shrink: 0; border-radius: 12px; background: rgba(255,255,255,.65); font-size: 20px; opacity: .7; }
+    .dark .franchise-office-symbol { background: rgba(15,23,42,.45); }
+    .million-idol-heading { min-width: 0; }
+    .million-idol-color { align-self: flex-start; }
     @media (max-width: 360px) {
-      .shell { width: calc(100% - 32px); }
+      .franchise-tabs { margin-inline: -12px; gap: 4px; padding: 3px; }
+      .franchise-tab-btn { padding-inline: 1px; }
+      .million-idol-title { flex-direction: column; gap: 6px; }
+    }
+
+    /* Supplied Japanese introductions: upright Mincho, with each sentence on its own line. */
+    .idol-introduction {
+      font-family: "Shippori Mincho", "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+      font-size: 12px;
+      font-weight: 500;
+      font-style: normal;
+      font-synthesis: none;
+      line-height: 1.95;
+      letter-spacing: .025em;
+      line-break: strict;
+      word-break: normal;
+      overflow-wrap: anywhere;
+    }
+    .idol-introduction > span { display: block; }
+    @media (min-width: 640px) { .idol-introduction { font-size: 13px; } }
+
+    /* Idol Showcase Bespoke Card */
+    .idol-showcase-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      padding: 16px;
+      background: linear-gradient(135deg, var(--idol-tint-light, rgba(235, 245, 251, 0.85)) 0%, rgba(255, 255, 255, 0.96) 55%, var(--idol-tint-light, rgba(235, 245, 251, 0.55)) 100%);
+      border: 1px solid var(--idol-border, rgba(125, 185, 222, 0.45));
+      box-shadow: 0 6px 20px -6px rgba(15, 23, 42, 0.06);
+      transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .dark .idol-showcase-card {
+      background: linear-gradient(135deg, var(--idol-tint-dark, rgba(23, 42, 58, 0.82)) 0%, rgba(15, 23, 42, 0.92) 60%, var(--idol-tint-dark, rgba(23, 42, 58, 0.6)) 100%);
+      border-color: var(--idol-border-dark, rgba(125, 185, 222, 0.32));
+      box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.4);
+    }
+
+    .idol-showcase-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px -8px var(--idol-glow, rgba(125, 185, 222, 0.35));
+    }
+
+    .idol-top-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3.5px;
+      background: linear-gradient(90deg, var(--idol-color, #7DB9DE), var(--idol-color-secondary, #3A6E94));
+    }
+
+    @keyframes panelFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(5px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .franchise-panel {
+      animation: panelFadeIn 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    button:focus-visible, a:focus-visible, [role="tabpanel"]:focus-visible {
+      outline: 2px solid var(--accent-deep);
+      outline-offset: 2px;
+    }
+    .dark button:focus-visible, .dark a:focus-visible, .dark [role="tabpanel"]:focus-visible {
+      outline-color: #a9d6f2;
     }
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { animation: none !important; transition: none !important; }
+      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+      #petalCanvas { display: none; }
     }
   </style>
 </head>
-<body>
-  <a class="skip-link" href="#main">跳到主要内容</a>
-  <header class="header shell">
-    <a class="wordmark" href="./" aria-label="Sereindian 首页">Sereindian</a>
-    <a class="jump-link" href="#social">在别处找到我<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a>
-  </header>
-  <main id="main" class="shell">
-    <section class="hero" aria-labelledby="name">
-      <div class="name-frame"><h1 id="name"><span>Sereindian</span></h1></div>
-      <!-- 在这里修改昵称和自我介绍。 -->
-      <p class="introduction">你好，我是 <strong>Leon</strong>。<br>很高兴在这里与你相遇。</p>
+
+<body data-theme-accent="dual" class="wagasa-bg min-h-screen text-slate-800 dark:text-slate-100 bg-slate-50 dark:bg-slate-950 transition-colors duration-300 relative selection:bg-rinze selection:text-white">
+
+  <!-- Ambient Floating Sakura & Maple Petals Canvas -->
+  <canvas id="petalCanvas"></canvas>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-2 pointer-events-none w-11/12 max-w-sm"></div>
+
+  <!-- Main Mobile-First Container -->
+  <div class="relative z-10 max-w-[480px] mx-auto min-h-screen pb-14 px-3.5 pt-3 sm:py-6 flex flex-col gap-3.5">
+
+    <!-- 0. Top Controls Bar (Theme Switcher + Dark Mode) -->
+    <header class="glass-card rounded-2xl px-3.5 py-2.5 flex items-center justify-between gap-2">
+      <!-- Accent Theme Selector -->
+      <div class="flex items-center gap-1.5 bg-slate-100/80 dark:bg-slate-800/80 p-1 rounded-xl border border-slate-200/60 dark:border-slate-700/60">
+        <button onclick="setAccentTheme('dual')" id="btnThemeDual" class="px-2.5 py-1 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 bg-white dark:bg-slate-700 shadow-sm text-slate-800 dark:text-white" title="水色与玫瑰混色">
+          <span class="w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-[#7DB9DE] to-[#F29CB7]"></span>
+          <span>混色</span>
+        </button>
+        <button onclick="setAccentTheme('rinze')" id="btnThemeRinze" class="px-2.5 py-1 rounded-lg text-xs font-medium transition-all flex items-center gap-1 text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-white" title="凛世水色">
+          <span class="w-2 h-2 rounded-full bg-[#7DB9DE]"></span>
+          <span>水色</span>
+        </button>
+        <button onclick="setAccentTheme('momoka')" id="btnThemeMomoka" class="px-2.5 py-1 rounded-lg text-xs font-medium transition-all flex items-center gap-1 text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-white" title="桃华玫瑰粉">
+          <span class="w-2 h-2 rounded-full bg-[#F29CB7]"></span>
+          <span>玫瑰</span>
+        </button>
+      </div>
+
+      <!-- Right Action Controls -->
+      <div class="flex items-center gap-1.5">
+        <!-- Dark Mode Button -->
+        <button onclick="toggleDarkMode()" class="w-8 h-8 rounded-xl flex items-center justify-center bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-amber-300 border border-slate-200/70 dark:border-slate-700 hover:scale-105 transition-transform" aria-label="切换深浅色模式">
+          <i id="darkModeIcon" class="fa-solid fa-moon text-xs"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- 2. Hero Producer Identity Card -->
+    <section class="glass-card rounded-3xl p-5 relative overflow-hidden">
+      <!-- Subtle Decorative Corner SVG (Japanese Wagasa / Rose Motif) -->
+      <svg class="absolute -right-8 -top-8 w-36 h-36 opacity-10 dark:opacity-15 pointer-events-none text-[#7DB9DE]" viewBox="0 0 100 100" fill="currentColor">
+        <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
+        <path d="M50 5 L50 95 M5 50 L95 50 M18 18 L82 82 M18 82 L82 18" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="50" cy="50" r="18" fill="none" stroke="#F29CB7" stroke-width="2"/>
+      </svg>
+
+      <!-- Top Row: Avatar & Producer Name + Action Buttons -->
+      <div class="flex items-start justify-between gap-3 relative z-10">
+        <div class="flex items-center gap-3.5">
+          <!-- Avatar with Dual-Color Ring -->
+          <div class="relative w-20 h-20 shrink-0 group cursor-pointer" onclick="openQrModal()" title="点击展示名片二维码">
+            <div class="avatar-ring absolute -inset-1 rounded-full opacity-85 group-hover:opacity-100 transition-opacity"></div>
+            <div class="relative w-full h-full rounded-full bg-white dark:bg-slate-900 p-0.5 overflow-hidden flex items-center justify-center">
+              <!-- Stylized SVG Avatar with Rinze Water Blue & Momoka Rose Elements -->
+              <svg id="defaultAvatarSvg" viewBox="0 0 120 120" class="w-full h-full rounded-full hidden">
+                <defs>
+                  <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#EBF5FB" />
+                    <stop offset="50%" stop-color="#DCEEFB" />
+                    <stop offset="100%" stop-color="#FCE8EF" />
+                  </linearGradient>
+                  <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#5B9BD5" />
+                    <stop offset="100%" stop-color="#E87A9F" />
+                  </linearGradient>
+                </defs>
+                <rect width="120" height="120" fill="url(#avatarGrad)" />
+                <!-- Stylized Producer Monogram 'P' & Origami/Sakura -->
+                <circle cx="60" cy="60" r="48" fill="none" stroke="url(#accentGrad)" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6" />
+                <!-- Producer Suit Silhouette / Emblem -->
+                <path d="M44 34 H66 C76 34 82 40 82 49 C82 58 76 64 66 64 H54 V86 H44 V34 Z M54 43 V55 H65 C70 55 72 52.5 72 49 C72 45.5 70 43 65 43 H54 Z" fill="url(#accentGrad)" />
+                <!-- Small Rose & Maple Accent -->
+                <circle cx="82" cy="80" r="6" fill="#F29CB7" opacity="0.85" />
+                <circle cx="36" cy="36" r="4" fill="#7DB9DE" opacity="0.85" />
+              </svg>
+              <img id="customAvatarImg" src="my-avatar.jpg" width="832" height="832" alt="SereindianP 的头像" class="w-full h-full object-cover rounded-full" decoding="async" fetchpriority="high" onerror="this.classList.add('hidden'); document.getElementById('defaultAvatarSvg').classList.remove('hidden');" />
+            </div>
+            <!-- Mini Badge Icon -->
+            <span class="absolute -bottom-0.5 -right-0.5 w-6 h-6 rounded-full dual-gradient-bg text-white text-[11px] flex items-center justify-center shadow-md border-2 border-white dark:border-slate-900">
+              <i class="fa-solid fa-id-badge"></i>
+            </span>
+          </div>
+
+          <!-- Producer Name & Title -->
+          <div>
+            <div class="flex items-center gap-2 flex-wrap">
+              <h1 id="profileName" class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
+                SereindianP
+              </h1>
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded-md bg-rinze/15 dark:bg-rinze/25 text-rinze-deep dark:text-rinze-soft font-semibold border border-rinze/30">
+                CN / P名
+              </span>
+            </div>
+            <p id="profileSubtitle" class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+              杜野凛世担当
+            </p>
+            <!-- Quick Action Buttons -->
+            <div class="flex items-center gap-2 mt-2.5">
+              <button onclick="openQrModal()" class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition-colors flex items-center gap-1 border border-slate-200/80 dark:border-slate-700">
+                <i class="fa-solid fa-qrcode text-[11px] text-[#D96B90] dark:text-[#F29CB7]"></i>
+                <span>QQ 加好友码</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Office Affiliation Badges -->
+      <div class="mt-4 pt-3.5 border-t border-slate-200/60 dark:border-slate-800/80 flex flex-wrap items-center gap-1.5">
+        <span class="px-2.5 py-1 rounded-full text-xs font-semibold border bg-rose-500/10 text-rose-700 dark:bg-rose-500/20 dark:text-rose-300 border-rose-400/30"><img src="icon/IM@S_AMCG_Angel.svg" class="franchise-badge-img mr-1" width="14" height="14" alt="" aria-hidden="true" decoding="async">765PRO ALLSTARS</span>
+        <span class="px-2.5 py-1 rounded-full text-xs font-semibold border bg-[#F29CB7]/15 text-[#B5466C] dark:bg-[#F29CB7]/20 dark:text-[#F7B2C9] border-[#F29CB7]/35"><img src="icon/IM@S_CG_Pegasus_Mark.svg" class="franchise-badge-img mr-1" width="14" height="14" alt="" aria-hidden="true" decoding="async">Cinderella Girls</span>
+        <span class="px-2.5 py-1 rounded-full text-xs font-semibold border bg-yellow-500/10 text-yellow-800 dark:bg-yellow-500/15 dark:text-yellow-200 border-yellow-400/40"><img src="icon/IM@S_ML_Papillon_Mark.svg" class="franchise-badge-img mr-1" width="14" height="14" alt="" aria-hidden="true" decoding="async">Million Live!</span>
+        <span class="px-2.5 py-1 rounded-full text-xs font-semibold border bg-teal-500/10 text-teal-700 dark:bg-teal-400/15 dark:text-teal-300 border-teal-400/30"><img src="icon/IM@S_SideM_M-Mark.svg" class="franchise-badge-img mr-1" width="14" height="14" alt="" aria-hidden="true" decoding="async">SideM</span>
+        <span class="px-2.5 py-1 rounded-full text-xs font-semibold border bg-[#7DB9DE]/15 text-[#2B5B84] dark:bg-[#7DB9DE]/20 dark:text-[#9FD0F0] border-[#7DB9DE]/35"><img src="icon/IM@S_SC_Swan_Mark.svg" class="franchise-badge-img mr-1" width="14" height="14" alt="" aria-hidden="true" decoding="async">Shiny Colors</span>
+        <span class="px-2.5 py-1 rounded-full text-xs font-semibold border bg-amber-500/10 text-amber-700 dark:bg-amber-400/15 dark:text-amber-300 border-amber-400/30"><img src="icon/IM@S_Gakuen_Hummingbird_Mark.svg" class="franchise-badge-img mr-1" width="14" height="14" alt="" aria-hidden="true" decoding="async">Gakuen</span>
+      </div>
+
+      <!-- Iconic Tagline Quote Box (Click to play subtle Rinze chime) -->
+      <div onclick="playChime('rinze')" class="mt-3.5 p-3 rounded-2xl bg-gradient-to-r from-[#EBF5FB]/90 via-white/80 to-[#FDF0F5]/90 dark:from-slate-900/90 dark:via-slate-800/70 dark:to-slate-900/90 border border-slate-200/70 dark:border-slate-700/70 cursor-pointer group relative overflow-hidden">
+        <div class="flex items-center justify-between gap-2">
+          <p id="profileQuote" class="font-serif text-xs sm:text-[13px] italic text-slate-700 dark:text-slate-200 leading-relaxed">
+            「プロデューサーさま……凛世は、いつでも、お傍に……」
+          </p>
+          <span class="w-6 h-6 rounded-full bg-rinze/15 dark:bg-rinze/25 text-rinze-deep dark:text-rinze flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform" title="点击触发八音盒和弦">
+            <i class="fa-solid fa-volume-low text-xs"></i>
+          </span>
+        </div>
+      </div>
+
+      <!-- Status / Disposition Tags -->
+      <div id="profileTagsContainer" class="mt-3.5 flex flex-wrap gap-1.5">
+        <span class="px-2.5 py-1 rounded-lg text-[11px] font-medium bg-slate-100 dark:bg-slate-800/90 text-slate-600 dark:text-slate-300">#同担大欢迎</span>
+        <span class="px-2.5 py-1 rounded-lg text-[11px] font-medium bg-slate-100 dark:bg-slate-800/90 text-slate-600 dark:text-slate-300">#主看剧情与考据</span>
+        <span class="px-2.5 py-1 rounded-lg text-[11px] font-medium bg-slate-100 dark:bg-slate-800/90 text-slate-600 dark:text-slate-300">#杂食听歌党</span>
+        <span class="px-2.5 py-1 rounded-lg text-[11px] font-medium bg-slate-100 dark:bg-slate-800/90 text-slate-600 dark:text-slate-300">#现地/LV参战</span>
+      </div>
     </section>
-    <div class="content-grid">
-      <section aria-label="我的个人介绍与座右铭">
-        <figure class="personal-quote">
-          <blockquote cite="https://austria-forum.org/web-books/zarathustra00de1885isds/000214">
-            <p class="german" lang="de">„Und verloren sei uns der Tag, wo nicht Ein Mal getanzt wurde!“</p>
-          </blockquote>
-          <figcaption><span>Friedrich Nietzsche</span><a class="source" href="https://austria-forum.org/web-books/zarathustra00de1885isds/000214" target="_blank" rel="noopener noreferrer">《查拉图斯特拉如是说》· 论旧榜和新榜 §23</a></figcaption>
-        </figure>
-        <details class="translation">
-          <summary>中文释义<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
-          <p>每一个不曾起舞的日子，都是对生活的辜负。</p>
-        </details>
-      </section>
-      <section id="social" class="social-section" aria-labelledby="social-heading">
-        <h2 id="social-heading">在别处找到我</h2>
-        <!-- 社交入口：修改 href 更新链接，aria-label 为屏幕阅读器保留平台说明。 -->
-        <ul class="social-list">
-          <li class="social-item" style="--order: 0">
-            <a class="social-entry" data-platform="github" href="https://github.com/Sereindian" target="_blank" rel="noopener noreferrer" aria-label="访问我的GitHub主页（新标签页）">
-              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-            </a>
-          </li>
-          <li class="social-item" style="--order: 1">
-            <a class="social-entry" data-platform="bilibili" href="https://space.bilibili.com/455994470" target="_blank" rel="noopener noreferrer" aria-label="访问我的哔哩哔哩主页（新标签页）">
-              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373Z"/></svg>
-            </a>
-          </li>
-          <li class="social-item" style="--order: 2">
-            <a class="social-entry" data-platform="qq" href="https://qm.qq.com/q/qldpxCY0ww" target="_blank" rel="noopener noreferrer" aria-label="访问我的QQ主页（新标签页）">
-              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.395 15.035a40 40 0 0 0-.803-2.264l-1.079-2.695c.001-.032.014-.562.014-.836C19.526 4.632 17.351 0 12 0S4.474 4.632 4.474 9.241c0 .274.013.804.014.836l-1.08 2.695a39 39 0 0 0-.802 2.264c-1.021 3.283-.69 4.643-.438 4.673.54.065 2.103-2.472 2.103-2.472 0 1.469.756 3.387 2.394 4.771-.612.188-1.363.479-1.845.835-.434.32-.379.646-.301.778.343.578 5.883.369 7.482.189 1.6.18 7.14.389 7.483-.189.078-.132.132-.458-.301-.778-.483-.356-1.233-.646-1.846-.836 1.637-1.384 2.393-3.302 2.393-4.771 0 0 1.563 2.537 2.103 2.472.251-.03.581-1.39-.438-4.673"/></svg>
-            </a>
-          </li>
-          <li class="social-item" style="--order: 3">
-            <a class="social-entry" data-platform="xiaohongshu" href="https://www.xiaohongshu.com/user/profile/5e2a55eb0000000001002a66" target="_blank" rel="noopener noreferrer" aria-label="访问我的小红书主页（新标签页）">
-              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.405 9.879c.002.016.01.02.07.019h.725a.797.797 0 0 0 .78-.972.794.794 0 0 0-.884-.618.795.795 0 0 0-.692.794c0 .101-.002.666.001.777zm-11.509 4.808c-.203.001-1.353.004-1.685.003a2.528 2.528 0 0 1-.766-.126.025.025 0 0 0-.03.014L7.7 16.127a.025.025 0 0 0 .01.032c.111.06.336.124.495.124.66.01 1.32.002 1.981 0 .01 0 .02-.006.023-.015l.712-1.545a.025.025 0 0 0-.024-.036zM.477 9.91c-.071 0-.076.002-.076.01a.834.834 0 0 0-.01.08c-.027.397-.038.495-.234 3.06-.012.24-.034.389-.135.607-.026.057-.033.042.003.112.046.092.681 1.523.787 1.74.008.015.011.02.017.02.008 0 .033-.026.047-.044.147-.187.268-.391.371-.606.306-.635.44-1.325.486-1.706.014-.11.021-.22.03-.33l.204-2.616.022-.293c.003-.029 0-.033-.03-.034zm7.203 3.757a1.427 1.427 0 0 1-.135-.607c-.004-.084-.031-.39-.235-3.06a.443.443 0 0 0-.01-.082c-.004-.011-.052-.008-.076-.008h-1.48c-.03.001-.034.005-.03.034l.021.293c.076.982.153 1.964.233 2.946.05.4.186 1.085.487 1.706.103.215.223.419.37.606.015.018.037.051.048.049.02-.003.742-1.642.804-1.765.036-.07.03-.055.003-.112zm3.861-.913h-.872a.126.126 0 0 1-.116-.178l1.178-2.625a.025.025 0 0 0-.023-.035l-1.318-.003a.148.148 0 0 1-.135-.21l.876-1.954a.025.025 0 0 0-.023-.035h-1.56c-.01 0-.02.006-.024.015l-.926 2.068c-.085.169-.314.634-.399.938a.534.534 0 0 0-.02.191.46.46 0 0 0 .23.378.981.981 0 0 0 .46.119h.59c.041 0-.688 1.482-.834 1.972a.53.53 0 0 0-.023.172.465.465 0 0 0 .23.398c.15.092.342.12.475.12l1.66-.001c.01 0 .02-.006.023-.015l.575-1.28a.025.025 0 0 0-.024-.035zm-6.93-4.937H3.1a.032.032 0 0 0-.034.033c0 1.048-.01 2.795-.01 6.829 0 .288-.269.262-.28.262h-.74c-.04.001-.044.004-.04.047.001.037.465 1.064.555 1.263.01.02.03.033.051.033.157.003.767.009.938-.014.153-.02.3-.06.438-.132.3-.156.49-.419.595-.765.052-.172.075-.353.075-.533.002-2.33 0-4.66-.007-6.991a.032.032 0 0 0-.032-.032zm11.784 6.896c0-.014-.01-.021-.024-.022h-1.465c-.048-.001-.049-.002-.05-.049v-4.66c0-.072-.005-.07.07-.07h.863c.08 0 .075.004.075-.074V8.393c0-.082.006-.076-.08-.076h-3.5c-.064 0-.075-.006-.075.073v1.445c0 .083-.006.077.08.077h.854c.075 0 .07-.004.07.07v4.624c0 .095.008.084-.085.084-.37 0-1.11-.002-1.304 0-.048.001-.06.03-.06.03l-.697 1.519s-.014.025-.008.036c.006.01.013.008.058.008 1.748.003 3.495.002 5.243.002.03-.001.034-.006.035-.033v-1.539zm4.177-3.43c0 .013-.007.023-.02.024-.346.006-.692.004-1.037.004-.014-.002-.022-.01-.022-.024-.005-.434-.007-.869-.01-1.303 0-.072-.006-.071.07-.07l.733-.003c.041 0 .081.002.12.015.093.025.16.107.165.204.006.431.002 1.153.001 1.153zm2.67.244a1.953 1.953 0 0 0-.883-.222h-.18c-.04-.001-.04-.003-.042-.04V10.21c0-.132-.007-.263-.025-.394a1.823 1.823 0 0 0-.153-.53 1.533 1.533 0 0 0-.677-.71 2.167 2.167 0 0 0-1-.258c-.153-.003-.567 0-.72 0-.07 0-.068.004-.068-.065V7.76c0-.031-.01-.041-.046-.039H17.93s-.016 0-.023.007c-.006.006-.008.012-.008.023v.546c-.008.036-.057.015-.082.022h-.95c-.022.002-.028.008-.03.032v1.481c0 .09-.004.082.082.082h.913c.082 0 .072.128.072.128V11.19s.003.117-.06.117h-1.482c-.068 0-.06.082-.06.082v1.445s-.01.068.064.068h1.457c.082 0 .076-.006.076.079v3.225c0 .088-.007.081.082.081h1.43c.09 0 .082.007.082-.08v-3.27c0-.029.006-.035.033-.035l2.323-.003c.098 0 .191.02.28.061a.46.46 0 0 1 .274.407c.008.395.003.79.003 1.185 0 .259-.107.367-.33.367h-1.218c-.023.002-.029.008-.028.033.184.437.374.871.57 1.303a.045.045 0 0 0 .04.026c.17.005.34.002.51.003.15-.002.517.004.666-.01a2.03 2.03 0 0 0 .408-.075c.59-.18.975-.698.976-1.313v-1.981c0-.128-.01-.254-.034-.38 0 .078-.029-.641-.724-.998z"/></svg>
-            </a>
-          </li>
-          <li class="social-item" style="--order: 4">
-            <a class="social-entry" data-platform="x" href="https://x.com/_Allchemilla_" target="_blank" rel="noopener noreferrer" aria-label="访问我的X主页（新标签页）">
-              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg>
-            </a>
-          </li>
-          <li class="social-item" style="--order: 5">
-            <a class="social-entry" data-platform="discord" href="https://discord.com/users/1051161558690050048" target="_blank" rel="noopener noreferrer" aria-label="访问我的Discord主页（新标签页）">
-              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
-            </a>
-          </li>
-        </ul>
-      </section>
+
+    <!-- ==============================================================
+         3. 担当偶像 · 按企划浏览 (HIGH-AESTHETIC REDESIGN)
+         ============================================================== -->
+    <section id="tantouShowcase" class="glass-card rounded-3xl p-4 sm:p-5">
+      <!-- Section Title Header -->
+      <div class="flex items-center justify-between mb-1.5">
+        <div class="flex items-center gap-2">
+          <span class="w-1.5 h-5 rounded-full dual-gradient-bg"></span>
+          <h2 class="text-base font-bold tracking-tight text-slate-900 dark:text-white">担当偶像 · 按企划浏览</h2>
+        </div>
+        <span class="text-[11px] text-slate-400 dark:text-slate-500 font-mono">TANTOU ARCHIVE</span>
+      </div>
+      <p class="text-xs text-slate-500 dark:text-slate-400 mb-3.5">
+        不同企划，各有偏爱。点击切换事务所查看我的担当与印象色档案。
+      </p>
+
+      <!-- Segmented Glassmorphic Franchise Tab Bar -->
+      <div id="franchiseTabs" role="tablist" aria-label="选择偶像大师企划" class="franchise-tabs">
+        <button id="tab-765" type="button" role="tab" aria-controls="panel-765" aria-selected="false" tabindex="-1" data-franchise="765" class="franchise-tab-btn" style="--tab-accent: #E22B30; --tab-glow: rgba(226,43,48,.28);">
+          <img src="icon/IM@S_AMCG_Angel.svg" class="franchise-tab-symbol" width="26" height="18" alt="" aria-hidden="true" decoding="async">
+          <span class="franchise-tab-label">765PRO ALLSTARS</span>
+        </button>
+        <button id="tab-cg" type="button" role="tab" aria-controls="panel-cg" aria-selected="false" tabindex="-1" data-franchise="cg" class="franchise-tab-btn" style="--tab-accent: #EF93B6; --tab-glow: rgba(239,147,182,.35);">
+          <img src="icon/IM@S_CG_Pegasus_Mark.svg" class="franchise-tab-symbol" width="26" height="18" alt="" aria-hidden="true" decoding="async">
+          <span class="franchise-tab-label">Cinderella Girls</span>
+        </button>
+        <button id="tab-million" type="button" role="tab" aria-controls="panel-million" aria-selected="false" tabindex="-1" data-franchise="million" class="franchise-tab-btn" style="--tab-accent: #F5B32F; --tab-glow: rgba(245,179,47,.32);">
+          <img src="icon/IM@S_ML_Papillon_Mark.svg" class="franchise-tab-symbol" width="26" height="18" alt="" aria-hidden="true" decoding="async">
+          <span class="franchise-tab-label">Million Live!</span>
+        </button>
+        <button id="tab-sidem" type="button" role="tab" aria-controls="panel-sidem" aria-selected="false" tabindex="-1" data-franchise="sidem" class="franchise-tab-btn" style="--tab-accent: #14B8A6; --tab-glow: rgba(20,184,166,.28);">
+          <img src="icon/IM@S_SideM_M-Mark.svg" class="franchise-tab-symbol" width="26" height="18" alt="" aria-hidden="true" decoding="async">
+          <span class="franchise-tab-label">SideM</span>
+        </button>
+        <button id="tab-283" type="button" role="tab" aria-controls="panel-283" aria-selected="true" tabindex="0" data-franchise="283" class="franchise-tab-btn" style="--tab-accent: #7DB9DE; --tab-glow: rgba(125,185,222,.4);">
+          <img src="icon/IM@S_SC_Swan_Mark.svg" class="franchise-tab-symbol" width="26" height="18" alt="" aria-hidden="true" decoding="async">
+          <span class="franchise-tab-label">Shiny Colors</span>
+        </button>
+        <button id="tab-gakuen" type="button" role="tab" aria-controls="panel-gakuen" aria-selected="false" tabindex="-1" data-franchise="gakuen" class="franchise-tab-btn" style="--tab-accent: #F59E0B; --tab-glow: rgba(245,158,11,.3);">
+          <img src="icon/IM@S_Gakuen_Hummingbird_Mark.svg" class="franchise-tab-symbol" width="26" height="18" alt="" aria-hidden="true" decoding="async">
+          <span class="franchise-tab-label">Gakuen</span>
+        </button>
+      </div>
+
+      <!-- ==========================================================
+           PANEL 1: 765 PRODUCTION (ALLSTARS)
+           ========================================================== -->
+      <div id="panel-765" class="franchise-panel" role="tabpanel" aria-labelledby="tab-765" tabindex="0" hidden>
+        <!-- Franchise Office Header Banner -->
+        <div class="mt-4 mb-3 px-3.5 py-2.5 rounded-2xl bg-gradient-to-r from-rose-500/10 via-slate-100/60 to-blue-500/10 dark:from-rose-500/15 dark:via-slate-800/60 dark:to-blue-500/15 border border-rose-400/25 flex items-center justify-between gap-2">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-xl bg-rose-500/15 text-rose-600 dark:text-rose-300 flex items-center justify-center border border-rose-400/30">
+              <img src="icon/IM@S_AMCG_Angel.svg" class="franchise-header-img" width="20" height="20" alt="" aria-hidden="true" decoding="async">
+            </div>
+            <div>
+              <h3 class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">765PRO ALLSTARS</h3>
+              <p class="text-[10px] font-mono text-slate-500 dark:text-slate-400">765PRO ALLSTARS · 本家王道起点</p>
+            </div>
+          </div>
+          <span class="franchise-office-symbol" style="color: #E22B30;" aria-hidden="true"><img src="icon/IM@S_AMCG_Angel.svg" class="franchise-banner-img" width="28" height="28" alt="" aria-hidden="true" decoding="async"></span>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <!-- Haruka Amami (#E22B30) -->
+          <article class="idol-showcase-card" style="--idol-color: #E22B30; --idol-color-secondary: #F87171; --idol-tint-light: rgba(254, 226, 226, 0.65); --idol-tint-dark: rgba(69, 10, 10, 0.55); --idol-border: rgba(226, 43, 48, 0.35); --idol-border-dark: rgba(248, 113, 113, 0.3); --idol-glow: rgba(226, 43, 48, 0.25);">
+            <div class="idol-top-bar"></div>
+            <div class="absolute -right-2 -bottom-3 text-[#E22B30]/10 dark:text-[#E22B30]/10 pointer-events-none select-none">
+              <i class="fa-solid fa-ribbon text-6xl"></i>
+            </div>
+
+            <div class="flex items-start justify-between gap-2 relative z-10">
+              <div>
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-[#E22B30] text-white shadow-sm">
+                    765 担当
+                  </span>
+                  <span class="text-[11px] font-medium text-rose-700 dark:text-rose-300">
+                    765PRO ALLSTARS
+                  </span>
+                </div>
+                <h4 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mt-1 flex items-baseline gap-2 flex-wrap">
+                  <span>天海 春香</span>
+                  <span class="text-xs font-serif font-normal text-slate-500 dark:text-slate-400" lang="ja">Haruka Amami</span>
+                </h4>
+              </div>
+              <span class="inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/90 dark:bg-slate-800 text-rose-700 dark:text-rose-300 border border-rose-300/50 shrink-0">
+                <span class="w-2 h-2 rounded-full bg-[#E22B30]"></span>
+                #E22B30
+              </span>
+            </div>
+
+            <p class="idol-introduction mt-2.5 text-slate-700 dark:text-slate-200 relative z-10" lang="ja">
+              <span>転んだって、笑って立ち上がろう。</span>
+              <span>夢の真ん中へ、みんなと一緒に。</span>
+            </p>
+
+            <div class="mt-3 pt-2.5 border-t border-rose-200/50 dark:border-slate-700/60 flex items-center justify-between gap-2 text-xs relative z-10">
+              <span class="text-slate-600 dark:text-slate-300 font-medium">
+                <i class="fa-solid fa-microphone-lines text-[10px] text-[#E22B30] mr-1"></i>CV：<span lang="ja">中村繪里子</span>
+              </span>
+              <a href="https://adm-millionlive-anime.idolmaster-official.jp/character/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-white/90 hover:bg-rose-50 dark:bg-slate-800 dark:hover:bg-slate-700 text-rose-700 dark:text-rose-300 border border-rose-300/50 dark:border-slate-600 text-[11px] font-semibold inline-flex items-center gap-1 transition-all" aria-label="天海春香的官方资料">
+                <span>官方资料</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Chihaya Kisaragi (#2743D2) -->
+          <article class="idol-showcase-card" style="--idol-color: #2743D2; --idol-color-secondary: #60A5FA; --idol-tint-light: rgba(219, 234, 254, 0.7); --idol-tint-dark: rgba(23, 37, 84, 0.6); --idol-border: rgba(39, 67, 210, 0.35); --idol-border-dark: rgba(96, 165, 250, 0.3); --idol-glow: rgba(39, 67, 210, 0.25);">
+            <div class="idol-top-bar"></div>
+            <div class="absolute -right-2 -bottom-3 text-[#2743D2]/10 dark:text-[#60A5FA]/10 pointer-events-none select-none">
+              <i class="fa-solid fa-feather text-6xl"></i>
+            </div>
+
+            <div class="flex items-start justify-between gap-2 relative z-10">
+              <div>
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-[#2743D2] text-white shadow-sm">
+                    765 担当
+                  </span>
+                  <span class="text-[11px] font-medium text-blue-700 dark:text-blue-300">
+                    765PRO ALLSTARS
+                  </span>
+                </div>
+                <h4 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mt-1 flex items-baseline gap-2 flex-wrap">
+                  <span>如月 千早</span>
+                  <span class="text-xs font-serif font-normal text-slate-500 dark:text-slate-400" lang="ja">Chihaya Kisaragi</span>
+                </h4>
+              </div>
+              <span class="inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/90 dark:bg-slate-800 text-blue-700 dark:text-blue-300 border border-blue-300/50 shrink-0">
+                <span class="w-2 h-2 rounded-full bg-[#2743D2]"></span>
+                #2743D2
+              </span>
+            </div>
+
+            <p class="idol-introduction mt-2.5 text-slate-700 dark:text-slate-200 relative z-10" lang="ja">
+              <span>孤独さえ、歌声に変えて。</span>
+              <span>青い空へ、わたしの翼で飛ぶ。</span>
+            </p>
+
+            <div class="mt-3 pt-2.5 border-t border-blue-200/50 dark:border-slate-700/60 flex items-center justify-between gap-2 text-xs relative z-10">
+              <span class="text-slate-600 dark:text-slate-300 font-medium">
+                <i class="fa-solid fa-microphone-lines text-[10px] text-[#2743D2] dark:text-blue-400 mr-1"></i>CV：<span lang="ja">今井麻美</span>
+              </span>
+              <a href="https://adm-millionlive-anime.idolmaster-official.jp/character/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-white/90 hover:bg-blue-50 dark:bg-slate-800 dark:hover:bg-slate-700 text-blue-700 dark:text-blue-300 border border-blue-300/50 dark:border-slate-600 text-[11px] font-semibold inline-flex items-center gap-1 transition-all" aria-label="如月千早的官方资料">
+                <span>官方资料</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Yukiho Hagiwara (#D3DDE9) -->
+          <article class="idol-showcase-card" style="--idol-color: #8FA6BF; --idol-color-secondary: #CBD5E1; --idol-tint-light: rgba(241, 245, 249, 0.9); --idol-tint-dark: rgba(30, 41, 59, 0.75); --idol-border: rgba(143, 166, 191, 0.45); --idol-border-dark: rgba(148, 163, 184, 0.35); --idol-glow: rgba(143, 166, 191, 0.28);">
+            <div class="idol-top-bar"></div>
+            <div class="absolute -right-2 -bottom-3 text-slate-400/15 dark:text-slate-400/10 pointer-events-none select-none">
+              <i class="fa-solid fa-snowflake text-6xl"></i>
+            </div>
+
+            <div class="flex items-start justify-between gap-2 relative z-10">
+              <div>
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-[#64748B] text-white shadow-sm">
+                    765 担当
+                  </span>
+                  <span class="text-[11px] font-medium text-slate-600 dark:text-slate-300">
+                    765PRO ALLSTARS
+                  </span>
+                </div>
+                <h4 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mt-1 flex items-baseline gap-2 flex-wrap">
+                  <span>萩原 雪步</span>
+                  <span class="text-xs font-serif font-normal text-slate-500 dark:text-slate-400" lang="ja">Yukiho Hagiwara</span>
+                </h4>
+              </div>
+              <span class="inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/90 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-300/60 shrink-0">
+                <span class="w-2 h-2 rounded-full bg-[#D3DDE9] border border-slate-400"></span>
+                #D3DDE9
+              </span>
+            </div>
+
+            <p class="idol-introduction mt-2.5 text-slate-700 dark:text-slate-200 relative z-10" lang="ja">
+              <span>小さな勇気を、今日の一歩に。</span>
+              <span>明日のわたしは、きっともっと強い。</span>
+            </p>
+
+            <div class="mt-3 pt-2.5 border-t border-slate-200/70 dark:border-slate-700/60 flex items-center justify-between gap-2 text-xs relative z-10">
+              <span class="text-slate-600 dark:text-slate-300 font-medium">
+                <i class="fa-solid fa-microphone-lines text-[10px] text-slate-500 mr-1"></i>CV：<span lang="ja">浅倉杏美</span>
+              </span>
+              <a href="https://adm-millionlive-anime.idolmaster-official.jp/character/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-white/90 hover:bg-slate-100 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-300/60 dark:border-slate-600 text-[11px] font-semibold inline-flex items-center gap-1 transition-all" aria-label="萩原雪步的官方资料">
+                <span>官方资料</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ==========================================================
+           PANEL 2: CINDERELLA GIRLS (346 PRO / U149)
+           ========================================================== -->
+      <div id="panel-cg" class="franchise-panel" role="tabpanel" aria-labelledby="tab-cg" tabindex="0" hidden>
+        <!-- Franchise Office Header Banner -->
+        <div class="mt-4 mb-3 px-3.5 py-2.5 rounded-2xl bg-gradient-to-r from-[#F29CB7]/20 via-slate-100/60 to-sky-500/10 dark:from-[#F29CB7]/20 dark:via-slate-800/60 dark:to-sky-500/15 border border-[#F29CB7]/40 flex items-center justify-between gap-2">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-xl bg-[#F29CB7]/20 text-[#B5466C] dark:text-[#F7B2C9] flex items-center justify-center border border-[#F29CB7]/40">
+              <img src="icon/IM@S_CG_Pegasus_Mark.svg" class="franchise-header-img" width="20" height="20" alt="" aria-hidden="true" decoding="async">
+            </div>
+            <div>
+              <h3 class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Cinderella Girls</h3>
+              <p class="text-[10px] font-mono text-slate-500 dark:text-slate-400">CINDERELLA GIRLS / U149</p>
+            </div>
+          </div>
+          <span class="franchise-office-symbol" style="color: #EF93B6;" aria-hidden="true"><img src="icon/IM@S_CG_Pegasus_Mark.svg" class="franchise-banner-img" width="28" height="28" alt="" aria-hidden="true" decoding="async"></span>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <!-- Rin Shibuya (#1C90CD) -->
+          <article class="idol-showcase-card" style="--idol-color: #1C90CD; --idol-color-secondary: #38BDF8; --idol-tint-light: rgba(224, 242, 254, 0.7); --idol-tint-dark: rgba(12, 74, 110, 0.55); --idol-border: rgba(28, 144, 205, 0.38); --idol-border-dark: rgba(56, 189, 248, 0.3); --idol-glow: rgba(28, 144, 205, 0.25);">
+            <div class="idol-top-bar"></div>
+            <div class="absolute -right-2 -bottom-3 text-[#1C90CD]/10 dark:text-[#38BDF8]/10 pointer-events-none select-none">
+              <i class="fa-solid fa-star-of-life text-6xl"></i>
+            </div>
+
+            <div class="flex items-start justify-between gap-2 relative z-10">
+              <div>
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-[#1C90CD] text-white shadow-sm">
+                    346 担当
+                  </span>
+                  <span class="text-[11px] font-medium text-sky-700 dark:text-sky-300">
+                    Cool
+                  </span>
+                </div>
+                <h4 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mt-1 flex items-baseline gap-2 flex-wrap">
+                  <span>涩谷 凛</span>
+                  <span class="text-xs font-serif font-normal text-slate-500 dark:text-slate-400" lang="ja">渋谷 凛 · Rin Shibuya</span>
+                </h4>
+              </div>
+              <span class="inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/90 dark:bg-slate-800 text-sky-700 dark:text-sky-300 border border-sky-300/50 shrink-0">
+                <span class="w-2 h-2 rounded-full bg-[#1C90CD]"></span>
+                #1C90CD
+              </span>
+            </div>
+
+            <p class="idol-introduction mt-2.5 text-slate-700 dark:text-slate-200 relative z-10" lang="ja">
+              <span>まだ届かない光を、追いかけて。</span>
+              <span>迷いながらでも、まっすぐ前へ。</span>
+            </p>
+
+            <div class="mt-3 pt-2.5 border-t border-sky-200/50 dark:border-slate-700/60 flex items-center justify-between gap-2 text-xs relative z-10">
+              <span class="text-slate-600 dark:text-slate-300 font-medium">
+                <i class="fa-solid fa-microphone-lines text-[10px] text-[#1C90CD] mr-1"></i>CV：<span lang="ja">福原綾香</span>
+              </span>
+              <a href="https://imas-cinderella.com/character/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-white/90 hover:bg-sky-50 dark:bg-slate-800 dark:hover:bg-slate-700 text-sky-700 dark:text-sky-300 border border-sky-300/50 dark:border-slate-600 text-[11px] font-semibold inline-flex items-center gap-1 transition-all" aria-label="涩谷凛的官方资料">
+                <span>官方资料</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Momoka Sakurai (#EF93B6) -->
+          <article class="idol-showcase-card" style="--idol-color: #F29CB7; --idol-color-secondary: #D96B90; --idol-tint-light: rgba(253, 240, 245, 0.85); --idol-tint-dark: rgba(54, 25, 37, 0.72); --idol-border: rgba(242, 156, 183, 0.5); --idol-border-dark: rgba(242, 156, 183, 0.35); --idol-glow: rgba(242, 156, 183, 0.32);">
+            <div class="idol-top-bar"></div>
+            <div class="absolute -right-2 -bottom-3 text-[#F29CB7]/15 dark:text-[#F29CB7]/10 pointer-events-none select-none">
+              <i class="fa-solid fa-mug-hot text-6xl"></i>
+            </div>
+
+            <div class="flex items-start justify-between gap-2 relative z-10">
+              <div>
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-[#F29CB7] text-white shadow-sm">
+                    346 担当 · U149
+                  </span>
+                  <span class="text-[11px] font-medium text-[#B5466C] dark:text-[#F7B2C9]">
+                    Cute
+                  </span>
+                </div>
+                <h4 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mt-1 flex items-baseline gap-2 flex-wrap">
+                  <span>樱井 桃华</span>
+                  <span class="text-xs font-serif font-normal text-slate-500 dark:text-slate-400" lang="ja">櫻井 桃華 · Momoka Sakurai</span>
+                </h4>
+              </div>
+              <span class="inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/90 dark:bg-slate-800 text-[#B5466C] dark:text-[#F7B2C9] border border-[#F29CB7]/50 shrink-0">
+                <span class="w-2 h-2 rounded-full bg-[#F29CB7]"></span>
+                #EF93B6
+              </span>
+            </div>
+
+            <div class="mt-2.5 flex flex-wrap gap-1.5 relative z-10">
+              <span class="px-2 py-0.5 rounded-md text-[10px] font-medium bg-white/90 dark:bg-slate-800/90 text-[#B5466C] dark:text-[#F7B2C9] border border-[#F29CB7]/35">🌹 【ローズフルール】</span>
+              <span class="px-2 py-0.5 rounded-md text-[10px] font-medium bg-white/90 dark:bg-slate-800/90 text-[#B5466C] dark:text-[#F7B2C9] border border-[#F29CB7]/35">☕ ラヴィアンローズ</span>
+            </div>
+
+            <p class="idol-introduction mt-2.5 text-slate-700 dark:text-slate-200 relative z-10" lang="ja">
+              <span>一輪の薔薇に、想いを込めて。</span>
+              <span>小さな背伸びも、淑女への一歩。</span>
+            </p>
+
+            <div class="mt-3 pt-2.5 border-t border-[#F29CB7]/30 dark:border-slate-700/60 flex items-center justify-between gap-2 text-xs relative z-10">
+              <span class="text-slate-600 dark:text-slate-300 font-medium">
+                <i class="fa-solid fa-microphone-lines text-[10px] text-[#D96B90] mr-1"></i>CV：<span lang="ja">照井春佳</span>
+              </span>
+              <a href="https://www.tv-tokyo.co.jp/anime/idolmaster-cinderella-u149/staff/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-white/90 hover:bg-pink-50 dark:bg-slate-800 dark:hover:bg-slate-700 text-[#B5466C] dark:text-[#F7B2C9] border border-[#F29CB7]/50 dark:border-slate-600 text-[11px] font-semibold inline-flex items-center gap-1 transition-all" aria-label="樱井桃华的官方资料">
+                <span>官方资料</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Arisu Tachibana (#5881C1) -->
+          <article class="idol-showcase-card" style="--idol-color: #5881C1; --idol-color-secondary: #818CF8; --idol-tint-light: rgba(224, 231, 255, 0.65); --idol-tint-dark: rgba(30, 27, 75, 0.55); --idol-border: rgba(88, 129, 193, 0.4); --idol-border-dark: rgba(129, 140, 248, 0.3); --idol-glow: rgba(88, 129, 193, 0.25);">
+            <div class="idol-top-bar"></div>
+            <div class="absolute -right-2 -bottom-3 text-[#5881C1]/12 dark:text-[#818CF8]/10 pointer-events-none select-none">
+              <i class="fa-solid fa-book-bookmark text-6xl"></i>
+            </div>
+
+            <div class="flex items-start justify-between gap-2 relative z-10">
+              <div>
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-[#5881C1] text-white shadow-sm">
+                    346 担当 · U149
+                  </span>
+                  <span class="text-[11px] font-medium text-indigo-700 dark:text-indigo-300">
+                    Cool
+                  </span>
+                </div>
+                <h4 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mt-1 flex items-baseline gap-2 flex-wrap">
+                  <span>橘 爱丽丝</span>
+                  <span class="text-xs font-serif font-normal text-slate-500 dark:text-slate-400" lang="ja">橘 ありす · Arisu Tachibana</span>
+                </h4>
+              </div>
+              <span class="inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/90 dark:bg-slate-800 text-indigo-700 dark:text-indigo-300 border border-indigo-300/50 shrink-0">
+                <span class="w-2 h-2 rounded-full bg-[#5881C1]"></span>
+                #5881C1
+              </span>
+            </div>
+
+            <p class="idol-introduction mt-2.5 text-slate-700 dark:text-slate-200 relative z-10" lang="ja">
+              <span>強がりの奥で、伝えたいことがある。</span>
+              <span>本当のわたしに、気づいてほしい。</span>
+            </p>
+
+            <div class="mt-3 pt-2.5 border-t border-indigo-200/50 dark:border-slate-700/60 flex items-center justify-between gap-2 text-xs relative z-10">
+              <span class="text-slate-600 dark:text-slate-300 font-medium">
+                <i class="fa-solid fa-microphone-lines text-[10px] text-[#5881C1] mr-1"></i>CV：<span lang="ja">佐藤亜美菜</span>
+              </span>
+              <a href="https://www.tv-tokyo.co.jp/anime/idolmaster-cinderella-u149/staff/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-white/90 hover:bg-indigo-50 dark:bg-slate-800 dark:hover:bg-slate-700 text-indigo-700 dark:text-indigo-300 border border-indigo-300/50 dark:border-slate-600 text-[11px] font-semibold inline-flex items-center gap-1 transition-all" aria-label="橘爱丽丝的官方资料">
+                <span>官方资料</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Million Live! / 765 Production Theater -->
+      <div id="panel-million" class="franchise-panel" role="tabpanel" aria-labelledby="tab-million" tabindex="0" hidden>
+        <div class="mt-4 mb-3 px-3.5 py-2.5 rounded-2xl bg-gradient-to-r from-yellow-400/20 via-slate-100/60 to-orange-300/15 dark:from-yellow-500/20 dark:via-slate-800/60 dark:to-orange-400/15 border border-yellow-400/40 flex items-center justify-between gap-2">
+          <div class="flex items-center gap-2.5 min-w-0">
+            <div class="w-8 h-8 rounded-xl bg-yellow-400/20 text-yellow-700 dark:text-yellow-200 flex items-center justify-center border border-yellow-400/40 shrink-0"><img src="icon/IM@S_ML_Papillon_Mark.svg" class="franchise-header-img" width="20" height="20" alt="" aria-hidden="true" decoding="async"></div>
+            <div><h3 class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Million Live!</h3><p class="text-[10px] font-mono text-slate-500 dark:text-slate-400">765 Production · MILLIONSTARS</p></div>
+          </div>
+          <span class="franchise-office-symbol text-yellow-600 dark:text-yellow-200" aria-hidden="true"><img src="icon/IM@S_ML_Papillon_Mark.svg" class="franchise-banner-img" width="28" height="28" alt="" aria-hidden="true" decoding="async"></span>
+        </div>
+        <div class="flex flex-col gap-3">
+          <!-- Konomi Baba (#F1BECB). CV name follows the requested original credit; current official name: 髙橋ミナミ. -->
+          <article id="idol-konomi" class="idol-showcase-card" style="--idol-color: #F1BECB; --idol-color-secondary: #CB7D96; --idol-tint-light: rgba(241,190,203,.22); --idol-tint-dark: rgba(72,38,52,.7); --idol-border: rgba(241,190,203,.65); --idol-border-dark: rgba(241,190,203,.4); --idol-glow: rgba(241,190,203,.35);">
+            <div class="idol-top-bar"></div>
+            <div class="absolute -right-2 -bottom-3 pointer-events-none select-none" style="color: #F1BECB; opacity: .16;" aria-hidden="true"><i class="fa-solid fa-wine-glass text-6xl"></i></div>
+            <div class="million-idol-title flex items-start justify-between gap-2 relative z-10">
+              <div class="million-idol-heading">
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="px-2 py-0.5 rounded-md text-[10px] font-bold text-slate-800 shadow-sm" style="background-color: #F1BECB;">Million Live! 担当</span>
+                  <span class="text-[11px] font-semibold text-rose-700 dark:text-rose-200">4Luxury</span>
+                </div>
+                <h4 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mt-1">马场木实</h4>
+                <p class="text-xs font-serif text-slate-500 dark:text-slate-400 mt-0.5"><span lang="ja">馬場 このみ</span> · Konomi Baba</p>
+              </div>
+              <span class="million-idol-color inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/90 dark:bg-slate-800 text-rose-800 dark:text-rose-200 border border-rose-300/50 shrink-0"><span class="w-2 h-2 rounded-full" style="background: #F1BECB;"></span>#F1BECB</span>
+            </div>
+            <p class="idol-introduction mt-2.5 text-slate-700 dark:text-slate-200 relative z-10" lang="ja">
+              <span>夜に溶けた言葉を、もう一度。</span>
+              <span>あなたの笑顔を、まだ待っている。</span>
+            </p>
+            <div class="mt-3 pt-2.5 border-t border-rose-200/50 dark:border-slate-700/60 flex items-center justify-between gap-2 text-xs relative z-10">
+              <span class="text-slate-600 dark:text-slate-300 font-medium"><i class="fa-solid fa-microphone-lines text-[10px] mr-1 text-rose-600 dark:text-rose-300" aria-hidden="true"></i>CV：<span lang="ja">高橋未奈美</span></span>
+              <a href="https://millionlive-theaterdays.idolmaster-official.jp/idol/konomi/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-white/90 hover:bg-rose-50 dark:bg-slate-800 dark:hover:bg-slate-700 text-rose-700 dark:text-rose-200 border border-rose-300/50 dark:border-slate-600 text-[11px] font-semibold inline-flex items-center gap-1 transition-all" aria-label="马场木实的官方资料"><span>官方资料</span><i class="fa-solid fa-arrow-up-right-from-square text-[9px]" aria-hidden="true"></i></a>
+            </div>
+          </article>
+          <!-- Kana Yabuki (#F5AD3B). Quote excerpt from the official idol directory: https://idollist.idolmaster-official.jp/detail/30037 -->
+          <article id="idol-kana" class="idol-showcase-card" style="--idol-color: #F5AD3B; --idol-color-secondary: #D88117; --idol-tint-light: rgba(245,173,59,.22); --idol-tint-dark: rgba(73,44,18,.7); --idol-border: rgba(245,173,59,.65); --idol-border-dark: rgba(245,173,59,.4); --idol-glow: rgba(245,173,59,.35);">
+            <div class="idol-top-bar"></div>
+            <div class="absolute -right-2 -bottom-3 pointer-events-none select-none" style="color: #F5AD3B; opacity: .16;" aria-hidden="true"><i class="fa-solid fa-music text-6xl"></i></div>
+            <div class="million-idol-title flex items-start justify-between gap-2 relative z-10">
+              <div class="million-idol-heading">
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="px-2 py-0.5 rounded-md text-[10px] font-bold text-slate-800 shadow-sm" style="background-color: #F5AD3B;">Million Live! 担当</span>
+                  <span class="text-[11px] font-semibold text-amber-700 dark:text-amber-200">MILLIONSTARS</span>
+                </div>
+                <h4 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mt-1">矢吹可奈</h4>
+                <p class="text-xs font-serif text-slate-500 dark:text-slate-400 mt-0.5"><span lang="ja">矢吹 可奈</span> · Kana Yabuki</p>
+              </div>
+              <span class="million-idol-color inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/90 dark:bg-slate-800 text-amber-800 dark:text-amber-200 border border-amber-300/50 shrink-0"><span class="w-2 h-2 rounded-full" style="background: #F5AD3B;"></span>#F5AD3B</span>
+            </div>
+            <p class="idol-introduction mt-2.5 text-slate-700 dark:text-slate-200 relative z-10" lang="ja">
+              <span>うまく歌えなくても、大好きだから。</span>
+              <span>わたしだけの声で、明日へ届ける。</span>
+            </p>
+            <div class="mt-3 pt-2.5 border-t border-amber-200/50 dark:border-slate-700/60 flex items-center justify-between gap-2 text-xs relative z-10">
+              <span class="text-slate-600 dark:text-slate-300 font-medium"><i class="fa-solid fa-microphone-lines text-[10px] mr-1 text-amber-600 dark:text-amber-300" aria-hidden="true"></i>CV：<span lang="ja">木戸衣吹</span></span>
+              <a href="https://millionlive-theaterdays.idolmaster-official.jp/idol/kana/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-white/90 hover:bg-amber-50 dark:bg-slate-800 dark:hover:bg-slate-700 text-amber-700 dark:text-amber-200 border border-amber-300/50 dark:border-slate-600 text-[11px] font-semibold inline-flex items-center gap-1 transition-all" aria-label="矢吹可奈的官方资料"><span>官方资料</span><i class="fa-solid fa-arrow-up-right-from-square text-[9px]" aria-hidden="true"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div id="panel-sidem" class="franchise-panel" role="tabpanel" aria-labelledby="tab-sidem" tabindex="0" hidden>
+        <div class="mt-4 mb-3 px-3.5 py-2.5 rounded-2xl bg-gradient-to-r from-teal-500/15 via-slate-100/60 to-emerald-500/10 dark:from-teal-500/20 dark:via-slate-800/60 dark:to-emerald-500/15 border border-teal-400/30 flex items-center justify-between gap-2">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-xl bg-teal-500/15 text-teal-600 dark:text-teal-300 flex items-center justify-center border border-teal-400/30">
+              <img src="icon/IM@S_SideM_M-Mark.svg" class="franchise-header-img" width="20" height="20" alt="" aria-hidden="true" decoding="async">
+            </div>
+            <div>
+              <h3 class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">SideM</h3>
+              <p class="text-[10px] font-mono text-slate-500 dark:text-slate-400">理由あって、アイドル！</p>
+            </div>
+          </div>
+          <span class="franchise-office-symbol" style="color: #14B8A6;" aria-hidden="true"><img src="icon/IM@S_SideM_M-Mark.svg" class="franchise-banner-img" width="28" height="28" alt="" aria-hidden="true" decoding="async"></span>
+        </div>
+
+        <div class="rounded-2xl border border-dashed border-teal-400/40 dark:border-teal-500/30 bg-gradient-to-b from-teal-50/40 to-white/60 dark:from-slate-800/50 dark:to-slate-900/50 px-5 py-8 text-center relative overflow-hidden">
+          <div class="w-11 h-11 rounded-2xl bg-teal-500/10 dark:bg-teal-500/20 text-teal-600 dark:text-teal-300 flex items-center justify-center mx-auto mb-2.5 border border-teal-400/30">
+            <i class="fa-solid fa-compact-disc text-lg"></i>
+          </div>
+          <p class="text-sm font-bold text-slate-800 dark:text-slate-100">暂无固定担当</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 max-w-xs mx-auto leading-relaxed">
+            日常涉猎 315 Production 团体曲目与综合 Live 舞台，随时欢迎 SideM 制作人同好安利交流！
+          </p>
+        </div>
+      </div>
+
+      <!-- ==========================================================
+           PANEL 4: 283 PRODUCTION (SHINY COLORS - DEFAULT SELECTED)
+           ========================================================== -->
+      <div id="panel-283" class="franchise-panel" role="tabpanel" aria-labelledby="tab-283" tabindex="0">
+        <!-- Franchise Office Header Banner -->
+        <div class="mt-4 mb-3 px-3.5 py-2.5 rounded-2xl bg-gradient-to-r from-[#7DB9DE]/20 via-slate-100/60 to-cyan-500/15 dark:from-[#7DB9DE]/25 dark:via-slate-800/60 dark:to-cyan-500/15 border border-[#7DB9DE]/45 flex items-center justify-between gap-2">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-xl bg-[#7DB9DE]/20 text-[#2B5B84] dark:text-[#9FD0F0] flex items-center justify-center border border-[#7DB9DE]/40">
+              <img src="icon/IM@S_SC_Swan_Mark.svg" class="franchise-header-img" width="20" height="20" alt="" aria-hidden="true" decoding="async">
+            </div>
+            <div>
+              <h3 class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Shiny Colors</h3>
+              <p class="text-[10px] font-mono text-slate-500 dark:text-slate-400">THE IDOLM@STER SHINY COLORS</p>
+            </div>
+          </div>
+          <span class="franchise-office-symbol" style="color: #7DB9DE;" aria-hidden="true"><img src="icon/IM@S_SC_Swan_Mark.svg" class="franchise-banner-img" width="28" height="28" alt="" aria-hidden="true" decoding="async"></span>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <!-- Morino Rinze (#89C3EB) - Main Tantou Centerpiece -->
+          <article class="idol-showcase-card" style="--idol-color: #7DB9DE; --idol-color-secondary: #3A6E94; --idol-tint-light: rgba(235, 245, 251, 0.9); --idol-tint-dark: rgba(23, 42, 58, 0.85); --idol-border: rgba(125, 185, 222, 0.55); --idol-border-dark: rgba(125, 185, 222, 0.4); --idol-glow: rgba(125, 185, 222, 0.35);">
+            <div class="idol-top-bar"></div>
+            <div class="absolute -right-2 -bottom-3 text-[#7DB9DE]/15 dark:text-[#7DB9DE]/10 pointer-events-none select-none">
+              <i class="fa-solid fa-umbrella text-6xl"></i>
+            </div>
+
+            <div class="flex items-start justify-between gap-2 relative z-10">
+              <div>
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-[#7DB9DE] text-white shadow-sm">
+                    283 担当
+                  </span>
+                  <span class="text-[11px] font-semibold text-[#3A6E94] dark:text-[#84C0EA]">
+                    放课后 Climax Girls
+                  </span>
+                </div>
+                <h4 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mt-1 flex items-baseline gap-2 flex-wrap">
+                  <span>杜野 凛世</span>
+                  <span class="text-xs font-serif font-normal text-slate-500 dark:text-slate-400" lang="ja">杜野 凛世 · Rinze Morino</span>
+                </h4>
+              </div>
+              <span class="inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/90 dark:bg-slate-800 text-[#2B5B84] dark:text-[#9FD0F0] border border-[#7DB9DE]/50 shrink-0">
+                <span class="w-2 h-2 rounded-full bg-[#89C3EB]"></span>
+                #89C3EB
+              </span>
+            </div>
+
+            <div class="mt-2.5 flex flex-wrap gap-1.5 relative z-10">
+              <span class="px-2 py-0.5 rounded-md text-[10px] font-medium bg-white/90 dark:bg-slate-800/90 text-[#2B5B84] dark:text-[#9FD0F0] border border-[#7DB9DE]/35">🎐 【水色感情】</span>
+              <span class="px-2 py-0.5 rounded-md text-[10px] font-medium bg-white/90 dark:bg-slate-800/90 text-[#2B5B84] dark:text-[#9FD0F0] border border-[#7DB9DE]/35">🍁 【ロー・ポジション】</span>
+              <span class="px-2 py-0.5 rounded-md text-[10px] font-medium bg-white/90 dark:bg-slate-800/90 text-[#2B5B84] dark:text-[#9FD0F0] border border-[#7DB9DE]/35">✨ ゆめのごとし</span>
+            </div>
+
+            <p class="idol-introduction mt-2.5 text-slate-700 dark:text-slate-200 relative z-10" lang="ja">
+              <span>四季が巡っても、心に咲く花はひとつ。</span>
+              <span>言えない想いを、そっと風に預けて。</span>
+            </p>
+
+            <div class="mt-3 pt-2.5 border-t border-[#7DB9DE]/30 dark:border-slate-700/60 flex items-center justify-between gap-2 text-xs relative z-10">
+              <span class="text-slate-600 dark:text-slate-300 font-medium">
+                <i class="fa-solid fa-microphone-lines text-[10px] text-[#3A6E94] dark:text-[#7DB9DE] mr-1"></i>CV：<span lang="ja">丸岡和佳奈</span>
+              </span>
+              <a href="https://shinycolors.idolmaster-official.jp/idol/hokagoclimaxgirls/rinze/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-white/90 hover:bg-[#EBF5FB] dark:bg-slate-800 dark:hover:bg-slate-700 text-[#2B5B84] dark:text-[#9FD0F0] border border-[#7DB9DE]/50 dark:border-slate-600 text-[11px] font-semibold inline-flex items-center gap-1 transition-all" aria-label="杜野凛世的官方资料">
+                <span>官方资料</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Hinana Ichikawa (#FDD35C) -->
+          <article class="idol-showcase-card" style="--idol-color: #F59E0B; --idol-color-secondary: #FBBF24; --idol-tint-light: rgba(254, 249, 195, 0.65); --idol-tint-dark: rgba(66, 32, 6, 0.5); --idol-border: rgba(245, 158, 11, 0.4); --idol-border-dark: rgba(251, 191, 36, 0.3); --idol-glow: rgba(245, 158, 11, 0.25);">
+            <div class="idol-top-bar"></div>
+            <div class="absolute -right-2 -bottom-3 text-amber-400/15 dark:text-amber-400/10 pointer-events-none select-none">
+              <i class="fa-solid fa-sun text-6xl"></i>
+            </div>
+
+            <div class="flex items-start justify-between gap-2 relative z-10">
+              <div>
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-amber-500 text-white shadow-sm">
+                    283 担当
+                  </span>
+                  <span class="text-[11px] font-semibold text-amber-700 dark:text-amber-300">
+                    noctchill / ノクチル
+                  </span>
+                </div>
+                <h4 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mt-1 flex items-baseline gap-2 flex-wrap">
+                  <span>市川 雏菜</span>
+                  <span class="text-xs font-serif font-normal text-slate-500 dark:text-slate-400" lang="ja">市川 雛菜 · Hinana Ichikawa</span>
+                </h4>
+              </div>
+              <span class="inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/90 dark:bg-slate-800 text-amber-700 dark:text-amber-300 border border-amber-300/60 shrink-0">
+                <span class="w-2 h-2 rounded-full bg-[#FDD35C]"></span>
+                #FDD35C
+              </span>
+            </div>
+
+            <p class="idol-introduction mt-2.5 text-slate-700 dark:text-slate-200 relative z-10" lang="ja">
+              <span>青空の下で、今日もわたしらしく。</span>
+              <span>しあわせは、好きな瞬間を選ぶこと。</span>
+            </p>
+
+            <div class="mt-3 pt-2.5 border-t border-amber-200/60 dark:border-slate-700/60 flex items-center justify-between gap-2 text-xs relative z-10">
+              <span class="text-slate-600 dark:text-slate-300 font-medium">
+                <i class="fa-solid fa-microphone-lines text-[10px] text-amber-500 mr-1"></i>CV：<span lang="ja">岡咲美保</span>
+              </span>
+              <a href="https://shinycolors.idolmaster-official.jp/idol/noctchill/hinana/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-white/90 hover:bg-amber-50 dark:bg-slate-800 dark:hover:bg-slate-700 text-amber-700 dark:text-amber-300 border border-amber-300/60 dark:border-slate-600 text-[11px] font-semibold inline-flex items-center gap-1 transition-all" aria-label="市川雏菜的官方资料">
+                <span>官方资料</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Toru Asakura (#50D0D0) -->
+          <article class="idol-showcase-card" style="--idol-color: #14B8A6; --idol-color-secondary: #50D0D0; --idol-tint-light: rgba(204, 251, 241, 0.65); --idol-tint-dark: rgba(19, 78, 74, 0.55); --idol-border: rgba(80, 208, 208, 0.45); --idol-border-dark: rgba(80, 208, 208, 0.32); --idol-glow: rgba(80, 208, 208, 0.28);">
+            <div class="idol-top-bar"></div>
+            <div class="absolute -right-2 -bottom-3 text-[#50D0D0]/15 dark:text-[#50D0D0]/10 pointer-events-none select-none">
+              <i class="fa-solid fa-water text-6xl"></i>
+            </div>
+
+            <div class="flex items-start justify-between gap-2 relative z-10">
+              <div>
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-[#14B8A6] text-white shadow-sm">
+                    283 担当
+                  </span>
+                  <span class="text-[11px] font-semibold text-teal-700 dark:text-teal-300">
+                    noctchill / ノクチル
+                  </span>
+                </div>
+                <h4 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mt-1 flex items-baseline gap-2 flex-wrap">
+                  <span>浅仓 透</span>
+                  <span class="text-xs font-serif font-normal text-slate-500 dark:text-slate-400" lang="ja">浅倉 透 · Toru Asakura</span>
+                </h4>
+              </div>
+              <span class="inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/90 dark:bg-slate-800 text-teal-700 dark:text-teal-300 border border-teal-300/60 shrink-0">
+                <span class="w-2 h-2 rounded-full bg-[#50D0D0]"></span>
+                #50D0D0
+              </span>
+            </div>
+
+            <p class="idol-introduction mt-2.5 text-slate-700 dark:text-slate-200 relative z-10" lang="ja">
+              <span>行き先は、まだ知らなくていい。</span>
+              <span>風の向こうに、わたしだけの景色がある。</span>
+            </p>
+
+            <div class="mt-3 pt-2.5 border-t border-teal-200/60 dark:border-slate-700/60 flex items-center justify-between gap-2 text-xs relative z-10">
+              <span class="text-slate-600 dark:text-slate-300 font-medium">
+                <i class="fa-solid fa-microphone-lines text-[10px] text-teal-500 mr-1"></i>CV：<span lang="ja">和久井優</span>
+              </span>
+              <a href="https://shinycolors.idolmaster-official.jp/idol/noctchill/toru/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-white/90 hover:bg-teal-50 dark:bg-slate-800 dark:hover:bg-slate-700 text-teal-700 dark:text-teal-300 border border-teal-300/60 dark:border-slate-600 text-[11px] font-semibold inline-flex items-center gap-1 transition-all" aria-label="浅仓透的官方资料">
+                <span>官方资料</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ==========================================================
+           PANEL 5: GAKUEN IDOLM@STER (初星学园)
+           ========================================================== -->
+      <div id="panel-gakuen" class="franchise-panel" role="tabpanel" aria-labelledby="tab-gakuen" tabindex="0" hidden>
+        <!-- Franchise Office Header Banner -->
+        <div class="mt-4 mb-3 px-3.5 py-2.5 rounded-2xl bg-gradient-to-r from-amber-500/15 via-slate-100/60 to-sky-500/15 dark:from-amber-500/20 dark:via-slate-800/60 dark:to-sky-500/15 border border-amber-400/35 flex items-center justify-between gap-2">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-xl bg-amber-500/15 text-amber-700 dark:text-amber-300 flex items-center justify-center border border-amber-400/30">
+              <img src="icon/IM@S_Gakuen_Hummingbird_Mark.svg" class="franchise-header-img" width="20" height="20" alt="" aria-hidden="true" decoding="async">
+            </div>
+            <div>
+              <h3 class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Gakuen</h3>
+              <p class="text-[10px] font-mono text-slate-500 dark:text-slate-400">GAKUEN IDOLM@STER · 偶像科培育</p>
+            </div>
+          </div>
+          <span class="franchise-office-symbol" style="color: #F59E0B;" aria-hidden="true"><img src="icon/IM@S_Gakuen_Hummingbird_Mark.svg" class="franchise-banner-img" width="28" height="28" alt="" aria-hidden="true" decoding="async"></span>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <!-- Temari Tsukimura (#49B4E6) -->
+          <article class="idol-showcase-card" style="--idol-color: #49B4E6; --idol-color-secondary: #0284C7; --idol-tint-light: rgba(224, 242, 254, 0.72); --idol-tint-dark: rgba(12, 74, 110, 0.55); --idol-border: rgba(73, 180, 230, 0.42); --idol-border-dark: rgba(73, 180, 230, 0.32); --idol-glow: rgba(73, 180, 230, 0.28);">
+            <div class="idol-top-bar"></div>
+            <div class="absolute -right-2 -bottom-3 text-[#49B4E6]/15 dark:text-[#49B4E6]/10 pointer-events-none select-none">
+              <i class="fa-solid fa-music text-6xl"></i>
+            </div>
+
+            <div class="flex items-start justify-between gap-2 relative z-10">
+              <div>
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-[#0284C7] text-white shadow-sm">
+                    学园担当
+                  </span>
+                  <span class="text-[11px] font-semibold text-sky-700 dark:text-sky-300">
+                    初星学园
+                  </span>
+                </div>
+                <h4 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mt-1 flex items-baseline gap-2 flex-wrap">
+                  <span>月村 手毬</span>
+                  <span class="text-xs font-serif font-normal text-slate-500 dark:text-slate-400" lang="ja">月村 手毬 · Temari Tsukimura</span>
+                </h4>
+              </div>
+              <span class="inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/90 dark:bg-slate-800 text-sky-700 dark:text-sky-300 border border-sky-300/50 shrink-0">
+                <span class="w-2 h-2 rounded-full bg-[#49B4E6]"></span>
+                #49B4E6
+              </span>
+            </div>
+
+            <p class="idol-introduction mt-2.5 text-slate-700 dark:text-slate-200 relative z-10" lang="ja">
+              <span>うまく言えない心を、歌にして。</span>
+              <span>迷いごと抱きしめて、ステージへ。</span>
+            </p>
+
+            <div class="mt-3 pt-2.5 border-t border-sky-200/50 dark:border-slate-700/60 flex items-center justify-between gap-2 text-xs relative z-10">
+              <span class="text-slate-600 dark:text-slate-300 font-medium">
+                <i class="fa-solid fa-microphone-lines text-[10px] text-[#0284C7] mr-1"></i>CV：<span lang="ja">小鹿なお</span>
+              </span>
+              <a href="https://gakuen.idolmaster-official.jp/idol/temari/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-white/90 hover:bg-sky-50 dark:bg-slate-800 dark:hover:bg-slate-700 text-sky-700 dark:text-sky-300 border border-sky-300/50 dark:border-slate-600 text-[11px] font-semibold inline-flex items-center gap-1 transition-all" aria-label="月村手毬的官方资料">
+                <span>官方资料</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Sumika Shiun (#86E344) -->
+          <article class="idol-showcase-card" style="--idol-color: #65A30D; --idol-color-secondary: #86E344; --idol-tint-light: rgba(236, 252, 203, 0.68); --idol-tint-dark: rgba(26, 46, 5, 0.55); --idol-border: rgba(134, 227, 68, 0.45); --idol-border-dark: rgba(134, 227, 68, 0.3); --idol-glow: rgba(134, 227, 68, 0.25);">
+            <div class="idol-top-bar"></div>
+            <div class="absolute -right-2 -bottom-3 text-lime-500/15 dark:text-lime-400/10 pointer-events-none select-none">
+              <i class="fa-solid fa-seedling text-6xl"></i>
+            </div>
+
+            <div class="flex items-start justify-between gap-2 relative z-10">
+              <div>
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-lime-600 text-white shadow-sm">
+                    学园担当
+                  </span>
+                  <span class="text-[11px] font-semibold text-lime-700 dark:text-lime-300">
+                    初星学园
+                  </span>
+                </div>
+                <h4 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mt-1 flex items-baseline gap-2 flex-wrap">
+                  <span>紫云 清夏</span>
+                  <span class="text-xs font-serif font-normal text-slate-500 dark:text-slate-400" lang="ja">紫雲 清夏 · Sumika Shiun</span>
+                </h4>
+              </div>
+              <span class="inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/90 dark:bg-slate-800 text-lime-700 dark:text-lime-300 border border-lime-300/60 shrink-0">
+                <span class="w-2 h-2 rounded-full bg-[#86E344]"></span>
+                #86E344
+              </span>
+            </div>
+
+            <p class="idol-introduction mt-2.5 text-slate-700 dark:text-slate-200 relative z-10" lang="ja">
+              <span>ためらいを脱ぎ捨て、もう一歩。</span>
+              <span>憧れじゃ終わらせない、わたしの夢。</span>
+            </p>
+
+            <div class="mt-3 pt-2.5 border-t border-lime-200/60 dark:border-slate-700/60 flex items-center justify-between gap-2 text-xs relative z-10">
+              <span class="text-slate-600 dark:text-slate-300 font-medium">
+                <i class="fa-solid fa-microphone-lines text-[10px] text-lime-600 mr-1"></i>CV：<span lang="ja">湊みや</span>
+              </span>
+              <a href="https://gakuen.idolmaster-official.jp/idol/sumika/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-white/90 hover:bg-lime-50 dark:bg-slate-800 dark:hover:bg-slate-700 text-lime-700 dark:text-lime-300 border border-lime-300/60 dark:border-slate-600 text-[11px] font-semibold inline-flex items-center gap-1 transition-all" aria-label="紫云清夏的官方资料">
+                <span>官方资料</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Hiro Shinosawa (#44C8D6) -->
+          <article class="idol-showcase-card" style="--idol-color: #0891B2; --idol-color-secondary: #44C8D6; --idol-tint-light: rgba(207, 250, 254, 0.68); --idol-tint-dark: rgba(22, 78, 99, 0.55); --idol-border: rgba(68, 200, 214, 0.45); --idol-border-dark: rgba(68, 200, 214, 0.32); --idol-glow: rgba(68, 200, 214, 0.25);">
+            <div class="idol-top-bar"></div>
+            <div class="absolute -right-2 -bottom-3 text-cyan-500/15 dark:text-cyan-400/10 pointer-events-none select-none">
+              <i class="fa-solid fa-wand-magic-sparkles text-6xl"></i>
+            </div>
+
+            <div class="flex items-start justify-between gap-2 relative z-10">
+              <div>
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-cyan-600 text-white shadow-sm">
+                    学园担当
+                  </span>
+                  <span class="text-[11px] font-semibold text-cyan-700 dark:text-cyan-300">
+                    初星学园
+                  </span>
+                </div>
+                <h4 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mt-1 flex items-baseline gap-2 flex-wrap">
+                  <span>筱泽 广</span>
+                  <span class="text-xs font-serif font-normal text-slate-500 dark:text-slate-400" lang="ja">篠澤 広 · Hiro Shinosawa</span>
+                </h4>
+              </div>
+              <span class="inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/90 dark:bg-slate-800 text-cyan-700 dark:text-cyan-300 border border-cyan-300/60 shrink-0">
+                <span class="w-2 h-2 rounded-full bg-[#44C8D6]"></span>
+                #44C8D6
+              </span>
+            </div>
+
+            <p class="idol-introduction mt-2.5 text-slate-700 dark:text-slate-200 relative z-10" lang="ja">
+              <span>まぶしすぎる世界に、目を凝らす。</span>
+              <span>選んだ景色は、まだここから続く。</span>
+            </p>
+
+            <div class="mt-3 pt-2.5 border-t border-cyan-200/60 dark:border-slate-700/60 flex items-center justify-between gap-2 text-xs relative z-10">
+              <span class="text-slate-600 dark:text-slate-300 font-medium">
+                <i class="fa-solid fa-microphone-lines text-[10px] text-cyan-600 mr-1"></i>CV：<span lang="ja">川村玲奈</span>
+              </span>
+              <a href="https://gakuen.idolmaster-official.jp/idol/hiro/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-white/90 hover:bg-cyan-50 dark:bg-slate-800 dark:hover:bg-slate-700 text-cyan-700 dark:text-cyan-300 border border-cyan-300/60 dark:border-slate-600 text-[11px] font-semibold inline-flex items-center gap-1 transition-all" aria-label="筱泽广的官方资料">
+                <span>官方资料</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <noscript><style>.franchise-panel[hidden] { display: block !important; } #franchiseTabs { display: none; }</style></noscript>
+    </section>
+
+    <!-- 4. 企划涉猎与游戏 ID (Franchise Progress & One-Click Copy IDs) -->
+    <section class="glass-card rounded-3xl p-4 sm:p-5">
+      <div class="flex items-center justify-between mb-3.5">
+        <div class="flex items-center gap-2">
+          <span class="w-1.5 h-5 rounded-full dual-gradient-bg"></span>
+          <h2 class="text-base font-bold tracking-tight text-slate-900 dark:text-white">企划进度与好友码</h2>
+          <span class="text-[11px] text-slate-400 dark:text-slate-500 font-mono">GAME UIDs</span>
+        </div>
+        <span class="text-[11px] text-slate-500 dark:text-slate-400">点击右侧按钮复制</span>
+      </div>
+
+      <div class="flex flex-col gap-2.5">
+        <!-- Branch 1: Shiny Colors -->
+        <div class="p-3 rounded-2xl bg-slate-50/90 dark:bg-slate-800/60 border border-slate-200/70 dark:border-slate-700/60 flex items-center justify-between gap-2">
+          <div class="min-w-0">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[#7DB9DE]"></span>
+              <h3 class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-100 truncate">
+                闪耀色彩 (SC enza)
+              </h3>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">
+              杜野凛世 / 市川雏菜 / 浅仓透
+            </p>
+            <div class="mt-1 flex items-center gap-1.5">
+              <span class="text-[11px] font-mono text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-900 px-2 py-0.5 rounded border border-slate-200 dark:border-slate-700">
+                enza ID: <strong id="scGameId">NtdrKxpims</strong>
+              </span>
+            </div>
+          </div>
+          <button onclick="copyGameId('scGameId', '闪耀色彩好友 ID')" class="shrink-0 px-3 py-2 rounded-xl text-xs font-semibold bg-[#7DB9DE]/15 hover:bg-[#7DB9DE]/25 text-[#2B5B84] dark:text-[#9FD0F0] border border-[#7DB9DE]/30 transition-all flex items-center gap-1.5 active:scale-95">
+            <i class="fa-regular fa-copy"></i>
+            <span>复制</span>
+          </button>
+        </div>
+
+        <!-- Branch 2: Gakuen IM@S -->
+        <div class="p-3 rounded-2xl bg-slate-50/90 dark:bg-slate-800/60 border border-slate-200/70 dark:border-slate-700/60 flex items-center justify-between gap-2">
+          <div class="min-w-0">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+              <h3 class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-100 truncate">
+                学园偶像大师 (Gakuen IM@S)
+              </h3>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">
+              日常培育与竞技场 · 欢迎互借支援卡与记忆
+            </p>
+            <div class="mt-1 flex items-center gap-1.5">
+              <span class="text-[11px] font-mono text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-900 px-2 py-0.5 rounded border border-slate-200 dark:border-slate-700">
+                P-ID: <strong id="gakuenGameId">U34GTMZS</strong>
+              </span>
+            </div>
+          </div>
+          <button onclick="copyGameId('gakuenGameId', '学园偶大 P-ID')" class="shrink-0 px-3 py-2 rounded-xl text-xs font-semibold bg-amber-500/15 hover:bg-amber-500/25 text-amber-700 dark:text-amber-300 border border-amber-400/30 transition-all flex items-center gap-1.5 active:scale-95">
+            <i class="fa-regular fa-copy"></i>
+            <span>复制</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. 常听曲目与歌单 (Music & Apple Music Bar) -->
+    <section class="glass-card rounded-3xl p-4 sm:p-5">
+      <div class="flex items-center justify-between mb-3.5">
+        <div class="flex items-center gap-2">
+          <span class="w-1.5 h-5 rounded-full dual-gradient-bg"></span>
+          <h2 class="text-base font-bold tracking-tight text-slate-900 dark:text-white">常听曲目与印象歌单</h2>
+          <span class="text-[11px] text-slate-400 dark:text-slate-500 font-mono">FAVORITE TRACKS</span>
+        </div>
+        <!-- Decorative music bars -->
+        <div aria-hidden="true" class="flex items-end gap-0.5 h-4 px-1.5">
+          <span class="bar-1 w-1 h-1.5 bg-[#7DB9DE] rounded-full transition-all"></span>
+          <span class="bar-2 w-1 h-3 bg-[#F29CB7] rounded-full transition-all"></span>
+          <span class="bar-3 w-1 h-2 bg-[#7DB9DE] rounded-full transition-all"></span>
+          <span class="bar-4 w-1 h-3.5 bg-[#F29CB7] rounded-full transition-all"></span>
+        </div>
+      </div>
+
+      <!-- Apple Music song links -->
+      <div class="flex flex-col gap-2">
+        <a id="trackRow0" href="https://music.apple.com/jp/song/%E3%83%A1%E3%83%AA%E3%83%BC/1659371791" target="_blank" rel="noopener noreferrer" aria-label="在 Apple Music 打开メリー（新窗口）" class="group p-2.5 rounded-2xl bg-slate-50/90 hover:bg-[#EBF5FB]/60 dark:bg-slate-800/60 dark:hover:bg-slate-800 border border-slate-200/70 dark:border-slate-700/60 flex items-center justify-between gap-3 transition-all">
+          <div class="flex items-center gap-3 min-w-0 flex-1">
+            <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[#7DB9DE] to-[#3A6E94] text-white flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform"><i class="fa-brands fa-apple text-lg" aria-hidden="true"></i></div>
+            <div class="min-w-0 flex-1">
+              <h4 class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-100 break-words leading-relaxed" lang="ja">メリー</h4>
+              <p class="mt-0.5 text-[11px] text-slate-500 dark:text-slate-400 break-words leading-relaxed">THE IDOLM@STER 765PRO ALLSTARS+ GRE@TEST BEST! -LOVE&amp;PEACE!-</p>
+            </div>
+          </div>
+          <span class="inline-flex items-center gap-1 text-[10px] px-2 py-1 rounded-md bg-rinze/15 text-rinze-deep dark:text-rinze-soft shrink-0">跳转<i class="fa-solid fa-arrow-up-right-from-square text-[9px]" aria-hidden="true"></i></span>
+        </a>
+        <a id="trackRow1" href="https://music.apple.com/jp/song/%E8%87%AA%E5%B7%B1%E8%82%AF%E5%AE%9A%E6%84%9F%E7%88%86%E4%B8%8A%E3%81%92-%E3%81%97%E3%82%85%E3%81%8D%E3%81%97%E3%82%85%E3%81%8D%E3%82%BD%E3%83%B3%E3%82%B0/1828134663" target="_blank" rel="noopener noreferrer" aria-label="在 Apple Music 打开自己肯定感爆上げ↑↑しゅきしゅきソング（新窗口）" class="group p-2.5 rounded-2xl bg-slate-50/90 hover:bg-amber-50/60 dark:bg-slate-800/60 dark:hover:bg-slate-800 border border-slate-200/70 dark:border-slate-700/60 flex items-center justify-between gap-3 transition-all">
+          <div class="flex items-center gap-3 min-w-0 flex-1">
+            <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-orange-400 to-amber-500 text-white flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform"><i class="fa-brands fa-apple text-lg" aria-hidden="true"></i></div>
+            <div class="min-w-0 flex-1">
+              <h4 class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-100 break-words leading-relaxed" lang="ja">自己肯定感爆上げ↑↑しゅきしゅきソング</h4>
+              <p class="mt-0.5 text-[11px] text-slate-500 dark:text-slate-400 break-words leading-relaxed">初星学園 &amp; 藤田ことね</p>
+            </div>
+          </div>
+          <span class="inline-flex items-center gap-1 text-[10px] px-2 py-1 rounded-md bg-amber-500/15 text-amber-700 dark:text-amber-300 shrink-0">跳转<i class="fa-solid fa-arrow-up-right-from-square text-[9px]" aria-hidden="true"></i></span>
+        </a>
+        <a id="trackRow2" href="https://music.apple.com/jp/song/tokyo%E8%87%AA%E7%94%B1%E7%B3%BB-%E3%82%AC%E3%83%BC%E3%83%AB/6775439372" target="_blank" rel="noopener noreferrer" aria-label="在 Apple Music 打开Tokyo自由系*ガール（新窗口）" class="group p-2.5 rounded-2xl bg-slate-50/90 hover:bg-[#FDF0F5]/70 dark:bg-slate-800/60 dark:hover:bg-slate-800 border border-slate-200/70 dark:border-slate-700/60 flex items-center justify-between gap-3 transition-all">
+          <div class="flex items-center gap-3 min-w-0 flex-1">
+            <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[#F29CB7] to-[#D96B90] text-white flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform"><i class="fa-brands fa-apple text-lg" aria-hidden="true"></i></div>
+            <div class="min-w-0 flex-1">
+              <h4 class="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-100 break-words leading-relaxed" lang="ja">Tokyo自由系*ガール</h4>
+              <p class="mt-0.5 text-[11px] text-slate-500 dark:text-slate-400 break-words leading-relaxed">No 1 feel alone</p>
+            </div>
+          </div>
+          <span class="inline-flex items-center gap-1 text-[10px] px-2 py-1 rounded-md bg-momoka/20 text-momoka-deep dark:text-momoka-soft shrink-0">跳转<i class="fa-solid fa-arrow-up-right-from-square text-[9px]" aria-hidden="true"></i></span>
+        </a>
+      </div>
+
+      <!-- Apple Music Album Button -->
+      <a id="appleMusicLink" href="https://music.apple.com/jp/album/the-idolm-ster-765pro-allstars-gre-test-best-love-peace/1659371784" target="_blank" rel="noopener noreferrer" class="mt-3 w-full py-2.5 px-4 rounded-2xl bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-semibold text-xs flex items-center justify-center gap-2 shadow-sm transition-all active:scale-[0.99]">
+        <i class="fa-brands fa-apple text-sm"></i>
+        <span>打开 Apple Music 专辑 · LOVE&PEACE!</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-80"></i>
+      </a>
+    </section>
+
+    <!-- 6. 多元成分雷达 (ACGN & Geek Radar) -->
+    <section class="glass-card rounded-3xl p-4 sm:p-5">
+      <div class="flex items-center justify-between mb-3.5">
+        <div class="flex items-center gap-2">
+          <span class="w-1.5 h-5 rounded-full dual-gradient-bg"></span>
+          <h2 class="text-base font-bold tracking-tight text-slate-900 dark:text-white">多元成分与共同话题雷达</h2>
+          <span class="text-[11px] text-slate-400 dark:text-slate-500 font-mono">ACGN & GEEK</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+        <!-- Category 1: Galgame / Visual Novel -->
+        <div class="p-3.5 rounded-2xl bg-slate-50/90 dark:bg-slate-800/60 border border-slate-200/70 dark:border-slate-700/60">
+          <div class="flex items-center gap-2 text-xs font-bold text-[#3A6E94] dark:text-[#84C0EA]">
+            <i class="fa-solid fa-book-open-reader"></i>
+            <span>视觉小说 / Galgame</span>
+          </div>
+          <p class="mt-1.5 text-xs font-medium text-slate-800 dark:text-slate-100">
+            F社 / 调色板社 / Key社
+          </p>
+          <p class="mt-1 text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
+            玩的比较多的是 F社、调色板社、Key社等作品，欢迎聊不同社团的剧本、角色与音乐。
+          </p>
+        </div>
+
+        <!-- Category 2: PC & Competitive Games -->
+        <div class="p-3.5 rounded-2xl bg-slate-50/90 dark:bg-slate-800/60 border border-slate-200/70 dark:border-slate-700/60">
+          <div class="flex items-center gap-2 text-xs font-bold text-[#D96B90] dark:text-[#F29CB7]">
+            <i class="fa-solid fa-crosshairs"></i>
+            <span>常玩游戏 / 联机开黑</span>
+          </div>
+          <p class="mt-1.5 text-xs font-medium text-slate-800 dark:text-slate-100">
+            FPS · RPG · RTS · 独立游戏
+          </p>
+          <p class="mt-1 text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
+            FPS 常玩战地、PUBG、彩虹六号等，也玩 RPG、RTS 和独立游戏，欢迎交流或一起联机。
+          </p>
+        </div>
+
+        <!-- Category 3: Audio & IEM Gear -->
+        <div class="p-3.5 rounded-2xl bg-slate-50/90 dark:bg-slate-800/60 border border-slate-200/70 dark:border-slate-700/60">
+          <div class="flex items-center gap-2 text-xs font-bold text-indigo-600 dark:text-indigo-400">
+            <i class="fa-solid fa-headphones-simple"></i>
+            <span>音频外设与听音偏好</span>
+          </div>
+          <div class="mt-1.5 flex flex-wrap gap-1">
+            <span class="px-2 py-0.5 rounded bg-white dark:bg-slate-900 text-[11px] font-mono text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">DUNU Titan S2</span>
+            <span class="px-2 py-0.5 rounded bg-white dark:bg-slate-900 text-[11px] font-mono text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">DUNU DTC 480</span>
+          </div>
+          <p class="mt-1.5 text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
+            折腾 IEM 耳塞目标曲线与人声频段微调，主听偶像大师企划、Vocaloid 与 J-Pop。
+          </p>
+        </div>
+
+        <!-- Category 4: Tech, Self-Hosted & Robotics -->
+        <div class="p-3.5 rounded-2xl bg-slate-50/90 dark:bg-slate-800/60 border border-slate-200/70 dark:border-slate-700/60">
+          <div class="flex items-center gap-2 text-xs font-bold text-emerald-600 dark:text-emerald-400">
+            <i class="fa-solid fa-terminal"></i>
+            <span>技术折腾与自建服务</span>
+          </div>
+          <div class="mt-1.5 flex flex-wrap gap-1">
+            <span class="px-2 py-0.5 rounded bg-white dark:bg-slate-900 text-[11px] font-mono text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Linux / Docker</span>
+            <span class="px-2 py-0.5 rounded bg-white dark:bg-slate-900 text-[11px] font-mono text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Koishi / NapCatQQ</span>
+          </div>
+          <p class="mt-1.5 text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
+            群聊 Bot 插件搭建与容器化部署、Vibe Coding折腾各种东西
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. 一键扩列与社交矩阵 (Quick Connect) -->
+    <section class="glass-card rounded-3xl p-4 sm:p-5">
+      <div class="flex items-center justify-between mb-3.5">
+        <div class="flex items-center gap-2">
+          <span class="w-1.5 h-5 rounded-full dual-gradient-bg"></span>
+          <h2 class="text-base font-bold tracking-tight text-slate-900 dark:text-white">一键扩列与社交矩阵</h2>
+          <span class="text-[11px] text-slate-400 dark:text-slate-500 font-mono">QUICK CONNECT</span>
+        </div>
+      </div>
+
+      <!-- Primary QQ Connect Box -->
+      <div class="p-4 rounded-2xl bg-gradient-to-r from-[#7DB9DE]/15 via-[#7DB9DE]/10 to-[#F29CB7]/15 dark:from-[#7DB9DE]/20 dark:to-[#F29CB7]/20 border border-[#7DB9DE]/40">
+        <div class="flex items-center justify-between gap-2">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-2xl dual-gradient-bg text-white flex items-center justify-center text-xl shadow-md shrink-0">
+              <i class="fa-brands fa-qq"></i>
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <span class="text-xs font-bold text-slate-800 dark:text-white">主力扩列 QQ</span>
+                <span class="text-[10px] px-1.5 py-0.2 rounded bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 font-medium">备注：P名片扩列</span>
+              </div>
+              <p id="profileQqNumber" class="text-base font-mono font-bold text-[#2B5B84] dark:text-[#9FD0F0] tracking-wide mt-0.5">
+                3167642832
+              </p>
+            </div>
+          </div>
+
+          <button onclick="openQrModal()" class="w-10 h-10 rounded-xl bg-white/90 dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:scale-105 transition-transform shrink-0" title="展示二维码">
+            <i class="fa-solid fa-qrcode text-base"></i>
+          </button>
+        </div>
+
+        <!-- Action Buttons: Copy QQ & Launch QQ App -->
+        <div class="grid grid-cols-2 gap-2.5 mt-3.5">
+          <button onclick="copyQqNumber()" class="py-2.5 px-3 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-800 dark:text-white font-semibold text-xs border border-slate-200/80 dark:border-slate-700 flex items-center justify-center gap-1.5 shadow-sm transition-all active:scale-95">
+            <i class="fa-regular fa-copy text-[#3A6E94] dark:text-[#7DB9DE]"></i>
+            <span>复制 QQ 号</span>
+          </button>
+          <a id="qqWakeLink" href="https://qm.qq.com/q/qldpxCY0ww" target="_blank" rel="noopener noreferrer" class="py-2.5 px-3 rounded-xl dual-gradient-bg text-white font-semibold text-xs flex items-center justify-center gap-1.5 shadow-md hover:opacity-95 transition-all active:scale-95">
+            <i class="fa-solid fa-bolt"></i>
+            <span>QQ 加好友</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Social Matrix Grid -->
+      <div class="grid grid-cols-3 sm:grid-cols-5 gap-2 mt-3">
+        <a href="https://space.bilibili.com/455994470" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-2xl bg-slate-50/90 hover:bg-sky-50 dark:bg-slate-800/60 dark:hover:bg-slate-800 border border-slate-200/70 dark:border-slate-700/60 flex flex-col items-center justify-center gap-1 transition-all group">
+          <i class="fa-brands fa-bilibili text-lg text-[#00AEEC] group-hover:scale-110 transition-transform"></i>
+          <span class="text-[11px] font-medium text-slate-600 dark:text-slate-300">Bilibili</span>
+        </a>
+        <a href="https://steamcommunity.com/profiles/76561199043348118/" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-2xl bg-slate-50/90 hover:bg-slate-100 dark:bg-slate-800/60 dark:hover:bg-slate-800 border border-slate-200/70 dark:border-slate-700/60 flex flex-col items-center justify-center gap-1 transition-all group">
+          <i class="fa-brands fa-steam text-lg text-slate-700 dark:text-slate-200 group-hover:scale-110 transition-transform"></i>
+          <span class="text-[11px] font-medium text-slate-600 dark:text-slate-300">Steam</span>
+        </a>
+        <a href="https://github.com/Sereindian" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-2xl bg-slate-50/90 hover:bg-slate-100 dark:bg-slate-800/60 dark:hover:bg-slate-800 border border-slate-200/70 dark:border-slate-700/60 flex flex-col items-center justify-center gap-1 transition-all group">
+          <i class="fa-brands fa-github text-lg text-slate-800 dark:text-white group-hover:scale-110 transition-transform"></i>
+          <span class="text-[11px] font-medium text-slate-600 dark:text-slate-300">GitHub</span>
+        </a>
+        <a href="https://discord.com/users/1051161558690050048" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-2xl bg-slate-50/90 hover:bg-indigo-50 dark:bg-slate-800/60 dark:hover:bg-slate-800 border border-slate-200/70 dark:border-slate-700/60 flex flex-col items-center justify-center gap-1 transition-all group">
+          <i class="fa-brands fa-discord text-lg text-[#5865F2] group-hover:scale-110 transition-transform"></i>
+          <span class="text-[11px] font-medium text-slate-600 dark:text-slate-300">Discord</span>
+        </a>
+        <a href="https://bgm.tv/user/882140" target="_blank" rel="noopener noreferrer" class="col-span-2 sm:col-span-1 p-2.5 rounded-2xl bg-slate-50/90 hover:bg-pink-50 dark:bg-slate-800/60 dark:hover:bg-slate-800 border border-slate-200/70 dark:border-slate-700/60 flex flex-col items-center justify-center gap-1 transition-all group">
+          <i class="fa-solid fa-tv text-base text-[#F09199] group-hover:scale-110 transition-transform"></i>
+          <span class="text-[11px] font-medium text-slate-600 dark:text-slate-300">Bangumi</span>
+        </a>
+      </div>
+
+      <!-- Save vCard -->
+      <div class="mt-3.5 pt-3.5 border-t border-slate-200/60 dark:border-slate-800 flex items-center justify-between gap-2">
+        <button onclick="downloadVCard()" class="flex-1 py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-slate-200/80 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-medium flex items-center justify-center gap-1.5 transition-all">
+          <i class="fa-solid fa-address-card text-[#3A6E94] dark:text-[#7DB9DE]"></i>
+          <span>保存电子名片 (.vcf)</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-2 text-[11px] text-slate-400 dark:text-slate-500 flex flex-col items-center gap-1">
+      <p class="font-serif">「プロデューサーさん、これからもプロデュース、よろしくお願いしますね♪」</p>
+      <p class="font-mono text-[10px]">PRODUCER DIGITAL MEISHI · THE IDOLM@STER</p>
+    </footer>
+  </div>
+
+  <!-- MODAL 1: QR Code & Live Share Modal -->
+  <div id="qrModal" role="dialog" aria-modal="true" aria-labelledby="qrModalName" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+    <div class="glass-card rounded-3xl max-w-xs w-full p-5 relative animate-fadeIn border border-[#7DB9DE]/50">
+      <button onclick="closeQrModal()" aria-label="关闭加好友二维码" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-800 dark:hover:text-white flex items-center justify-center">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="text-center">
+        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold dual-gradient-bg text-white">
+          PRODUCER QR CARD
+        </span>
+        <h3 id="qrModalName" class="text-lg font-bold text-slate-900 dark:text-white mt-1.5">SereindianP</h3>
+        <p class="text-xs text-slate-500 dark:text-slate-400">杜野凛世担当 · 多企划同好</p>
+      </div>
+
+      <!-- Static, scannable QQ contact QR code -->
+      <div class="my-4 p-3 rounded-2xl bg-white border-2 border-[#7DB9DE]/40 shadow-inner flex flex-col items-center">
+        <svg id="qqContactQr" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 37" width="200" height="200" class="w-44 h-44" role="img" aria-label="QQ 3167642832 加好友二维码" shape-rendering="crispEdges"><rect width="37" height="37" fill="white"/><path d="M4,4h1v1h-1z M5,4h1v1h-1z M6,4h1v1h-1z M7,4h1v1h-1z M8,4h1v1h-1z M9,4h1v1h-1z M10,4h1v1h-1z M13,4h1v1h-1z M14,4h1v1h-1z M15,4h1v1h-1z M17,4h1v1h-1z M18,4h1v1h-1z M19,4h1v1h-1z M22,4h1v1h-1z M23,4h1v1h-1z M24,4h1v1h-1z M26,4h1v1h-1z M27,4h1v1h-1z M28,4h1v1h-1z M29,4h1v1h-1z M30,4h1v1h-1z M31,4h1v1h-1z M32,4h1v1h-1z M4,5h1v1h-1z M10,5h1v1h-1z M13,5h1v1h-1z M15,5h1v1h-1z M17,5h1v1h-1z M18,5h1v1h-1z M19,5h1v1h-1z M20,5h1v1h-1z M26,5h1v1h-1z M32,5h1v1h-1z M4,6h1v1h-1z M6,6h1v1h-1z M7,6h1v1h-1z M8,6h1v1h-1z M10,6h1v1h-1z M12,6h1v1h-1z M14,6h1v1h-1z M15,6h1v1h-1z M16,6h1v1h-1z M17,6h1v1h-1z M19,6h1v1h-1z M22,6h1v1h-1z M24,6h1v1h-1z M26,6h1v1h-1z M28,6h1v1h-1z M29,6h1v1h-1z M30,6h1v1h-1z M32,6h1v1h-1z M4,7h1v1h-1z M6,7h1v1h-1z M7,7h1v1h-1z M8,7h1v1h-1z M10,7h1v1h-1z M12,7h1v1h-1z M16,7h1v1h-1z M18,7h1v1h-1z M19,7h1v1h-1z M21,7h1v1h-1z M23,7h1v1h-1z M26,7h1v1h-1z M28,7h1v1h-1z M29,7h1v1h-1z M30,7h1v1h-1z M32,7h1v1h-1z M4,8h1v1h-1z M6,8h1v1h-1z M7,8h1v1h-1z M8,8h1v1h-1z M10,8h1v1h-1z M12,8h1v1h-1z M13,8h1v1h-1z M14,8h1v1h-1z M15,8h1v1h-1z M16,8h1v1h-1z M19,8h1v1h-1z M20,8h1v1h-1z M23,8h1v1h-1z M24,8h1v1h-1z M26,8h1v1h-1z M28,8h1v1h-1z M29,8h1v1h-1z M30,8h1v1h-1z M32,8h1v1h-1z M4,9h1v1h-1z M10,9h1v1h-1z M12,9h1v1h-1z M13,9h1v1h-1z M15,9h1v1h-1z M22,9h1v1h-1z M24,9h1v1h-1z M26,9h1v1h-1z M32,9h1v1h-1z M4,10h1v1h-1z M5,10h1v1h-1z M6,10h1v1h-1z M7,10h1v1h-1z M8,10h1v1h-1z M9,10h1v1h-1z M10,10h1v1h-1z M12,10h1v1h-1z M14,10h1v1h-1z M16,10h1v1h-1z M18,10h1v1h-1z M20,10h1v1h-1z M22,10h1v1h-1z M24,10h1v1h-1z M26,10h1v1h-1z M27,10h1v1h-1z M28,10h1v1h-1z M29,10h1v1h-1z M30,10h1v1h-1z M31,10h1v1h-1z M32,10h1v1h-1z M12,11h1v1h-1z M15,11h1v1h-1z M16,11h1v1h-1z M18,11h1v1h-1z M20,11h1v1h-1z M22,11h1v1h-1z M4,12h1v1h-1z M6,12h1v1h-1z M7,12h1v1h-1z M8,12h1v1h-1z M9,12h1v1h-1z M10,12h1v1h-1z M15,12h1v1h-1z M16,12h1v1h-1z M20,12h1v1h-1z M21,12h1v1h-1z M24,12h1v1h-1z M26,12h1v1h-1z M27,12h1v1h-1z M28,12h1v1h-1z M29,12h1v1h-1z M30,12h1v1h-1z M4,13h1v1h-1z M6,13h1v1h-1z M8,13h1v1h-1z M12,13h1v1h-1z M13,13h1v1h-1z M14,13h1v1h-1z M16,13h1v1h-1z M17,13h1v1h-1z M18,13h1v1h-1z M19,13h1v1h-1z M21,13h1v1h-1z M23,13h1v1h-1z M24,13h1v1h-1z M26,13h1v1h-1z M27,13h1v1h-1z M28,13h1v1h-1z M32,13h1v1h-1z M5,14h1v1h-1z M6,14h1v1h-1z M7,14h1v1h-1z M8,14h1v1h-1z M9,14h1v1h-1z M10,14h1v1h-1z M11,14h1v1h-1z M13,14h1v1h-1z M14,14h1v1h-1z M16,14h1v1h-1z M17,14h1v1h-1z M18,14h1v1h-1z M19,14h1v1h-1z M20,14h1v1h-1z M22,14h1v1h-1z M24,14h1v1h-1z M25,14h1v1h-1z M27,14h1v1h-1z M28,14h1v1h-1z M5,15h1v1h-1z M6,15h1v1h-1z M8,15h1v1h-1z M12,15h1v1h-1z M13,15h1v1h-1z M15,15h1v1h-1z M16,15h1v1h-1z M17,15h1v1h-1z M19,15h1v1h-1z M22,15h1v1h-1z M23,15h1v1h-1z M24,15h1v1h-1z M28,15h1v1h-1z M29,15h1v1h-1z M31,15h1v1h-1z M4,16h1v1h-1z M5,16h1v1h-1z M7,16h1v1h-1z M8,16h1v1h-1z M10,16h1v1h-1z M13,16h1v1h-1z M15,16h1v1h-1z M16,16h1v1h-1z M18,16h1v1h-1z M19,16h1v1h-1z M23,16h1v1h-1z M25,16h1v1h-1z M27,16h1v1h-1z M29,16h1v1h-1z M30,16h1v1h-1z M5,17h1v1h-1z M7,17h1v1h-1z M8,17h1v1h-1z M12,17h1v1h-1z M13,17h1v1h-1z M16,17h1v1h-1z M19,17h1v1h-1z M20,17h1v1h-1z M22,17h1v1h-1z M23,17h1v1h-1z M25,17h1v1h-1z M26,17h1v1h-1z M27,17h1v1h-1z M28,17h1v1h-1z M32,17h1v1h-1z M4,18h1v1h-1z M5,18h1v1h-1z M6,18h1v1h-1z M8,18h1v1h-1z M9,18h1v1h-1z M10,18h1v1h-1z M12,18h1v1h-1z M13,18h1v1h-1z M14,18h1v1h-1z M16,18h1v1h-1z M21,18h1v1h-1z M22,18h1v1h-1z M24,18h1v1h-1z M26,18h1v1h-1z M29,18h1v1h-1z M30,18h1v1h-1z M4,19h1v1h-1z M5,19h1v1h-1z M6,19h1v1h-1z M7,19h1v1h-1z M11,19h1v1h-1z M12,19h1v1h-1z M14,19h1v1h-1z M15,19h1v1h-1z M16,19h1v1h-1z M18,19h1v1h-1z M20,19h1v1h-1z M25,19h1v1h-1z M26,19h1v1h-1z M27,19h1v1h-1z M31,19h1v1h-1z M4,20h1v1h-1z M7,20h1v1h-1z M9,20h1v1h-1z M10,20h1v1h-1z M14,20h1v1h-1z M15,20h1v1h-1z M16,20h1v1h-1z M20,20h1v1h-1z M24,20h1v1h-1z M29,20h1v1h-1z M30,20h1v1h-1z M4,21h1v1h-1z M5,21h1v1h-1z M6,21h1v1h-1z M8,21h1v1h-1z M9,21h1v1h-1z M11,21h1v1h-1z M12,21h1v1h-1z M15,21h1v1h-1z M17,21h1v1h-1z M18,21h1v1h-1z M19,21h1v1h-1z M21,21h1v1h-1z M23,21h1v1h-1z M24,21h1v1h-1z M25,21h1v1h-1z M26,21h1v1h-1z M28,21h1v1h-1z M30,21h1v1h-1z M32,21h1v1h-1z M4,22h1v1h-1z M6,22h1v1h-1z M9,22h1v1h-1z M10,22h1v1h-1z M12,22h1v1h-1z M13,22h1v1h-1z M15,22h1v1h-1z M17,22h1v1h-1z M18,22h1v1h-1z M19,22h1v1h-1z M20,22h1v1h-1z M22,22h1v1h-1z M24,22h1v1h-1z M25,22h1v1h-1z M27,22h1v1h-1z M28,22h1v1h-1z M30,22h1v1h-1z M4,23h1v1h-1z M7,23h1v1h-1z M12,23h1v1h-1z M15,23h1v1h-1z M17,23h1v1h-1z M19,23h1v1h-1z M23,23h1v1h-1z M24,23h1v1h-1z M26,23h1v1h-1z M27,23h1v1h-1z M31,23h1v1h-1z M4,24h1v1h-1z M6,24h1v1h-1z M9,24h1v1h-1z M10,24h1v1h-1z M13,24h1v1h-1z M14,24h1v1h-1z M18,24h1v1h-1z M19,24h1v1h-1z M21,24h1v1h-1z M22,24h1v1h-1z M23,24h1v1h-1z M24,24h1v1h-1z M25,24h1v1h-1z M26,24h1v1h-1z M27,24h1v1h-1z M28,24h1v1h-1z M30,24h1v1h-1z M31,24h1v1h-1z M32,24h1v1h-1z M12,25h1v1h-1z M13,25h1v1h-1z M14,25h1v1h-1z M15,25h1v1h-1z M16,25h1v1h-1z M19,25h1v1h-1z M20,25h1v1h-1z M24,25h1v1h-1z M28,25h1v1h-1z M29,25h1v1h-1z M30,25h1v1h-1z M31,25h1v1h-1z M32,25h1v1h-1z M4,26h1v1h-1z M5,26h1v1h-1z M6,26h1v1h-1z M7,26h1v1h-1z M8,26h1v1h-1z M9,26h1v1h-1z M10,26h1v1h-1z M15,26h1v1h-1z M16,26h1v1h-1z M22,26h1v1h-1z M23,26h1v1h-1z M24,26h1v1h-1z M26,26h1v1h-1z M28,26h1v1h-1z M29,26h1v1h-1z M30,26h1v1h-1z M4,27h1v1h-1z M10,27h1v1h-1z M12,27h1v1h-1z M13,27h1v1h-1z M15,27h1v1h-1z M18,27h1v1h-1z M20,27h1v1h-1z M22,27h1v1h-1z M24,27h1v1h-1z M28,27h1v1h-1z M31,27h1v1h-1z M32,27h1v1h-1z M4,28h1v1h-1z M6,28h1v1h-1z M7,28h1v1h-1z M8,28h1v1h-1z M10,28h1v1h-1z M12,28h1v1h-1z M13,28h1v1h-1z M15,28h1v1h-1z M21,28h1v1h-1z M24,28h1v1h-1z M25,28h1v1h-1z M26,28h1v1h-1z M27,28h1v1h-1z M28,28h1v1h-1z M30,28h1v1h-1z M32,28h1v1h-1z M4,29h1v1h-1z M6,29h1v1h-1z M7,29h1v1h-1z M8,29h1v1h-1z M10,29h1v1h-1z M12,29h1v1h-1z M14,29h1v1h-1z M15,29h1v1h-1z M16,29h1v1h-1z M18,29h1v1h-1z M19,29h1v1h-1z M23,29h1v1h-1z M29,29h1v1h-1z M30,29h1v1h-1z M4,30h1v1h-1z M6,30h1v1h-1z M7,30h1v1h-1z M8,30h1v1h-1z M10,30h1v1h-1z M12,30h1v1h-1z M13,30h1v1h-1z M14,30h1v1h-1z M15,30h1v1h-1z M16,30h1v1h-1z M17,30h1v1h-1z M19,30h1v1h-1z M20,30h1v1h-1z M21,30h1v1h-1z M23,30h1v1h-1z M24,30h1v1h-1z M25,30h1v1h-1z M26,30h1v1h-1z M27,30h1v1h-1z M28,30h1v1h-1z M29,30h1v1h-1z M30,30h1v1h-1z M31,30h1v1h-1z M4,31h1v1h-1z M10,31h1v1h-1z M13,31h1v1h-1z M17,31h1v1h-1z M18,31h1v1h-1z M20,31h1v1h-1z M24,31h1v1h-1z M26,31h1v1h-1z M27,31h1v1h-1z M28,31h1v1h-1z M29,31h1v1h-1z M31,31h1v1h-1z M4,32h1v1h-1z M5,32h1v1h-1z M6,32h1v1h-1z M7,32h1v1h-1z M8,32h1v1h-1z M9,32h1v1h-1z M10,32h1v1h-1z M12,32h1v1h-1z M13,32h1v1h-1z M14,32h1v1h-1z M16,32h1v1h-1z M18,32h1v1h-1z M19,32h1v1h-1z M20,32h1v1h-1z M21,32h1v1h-1z M23,32h1v1h-1z M26,32h1v1h-1z M28,32h1v1h-1z M29,32h1v1h-1z M30,32h1v1h-1z" fill="#182B40"/></svg>
+        <p id="qrModalQq" class="mt-2 text-xs font-mono font-bold text-slate-700">QQ: 3167642832</p>
+      </div>
+
+      <p class="text-[11px] text-center text-slate-500 dark:text-slate-400 mb-3">
+        扫码添加 QQ 好友，或复制下方完整扩列介绍
+      </p>
+
+      <button onclick="copyFullMeishiSummary()" class="w-full py-2.5 rounded-xl dual-gradient-bg text-white font-semibold text-xs shadow-md hover:opacity-95 transition-all flex items-center justify-center gap-1.5">
+        <i class="fa-solid fa-share-nodes"></i>
+        <span>一键复制完整扩列自我介绍文本</span>
+      </button>
     </div>
-  </main>
-  <footer class="footer shell"><p>© 2026 Sereindian</p><a href="https://github.com/Sereindian/sereindian.github.io" target="_blank" rel="noopener noreferrer">查看网页源码</a></footer>
+  </div>
+
+  <!-- Application Logic -->
+  <script>
+    /**************************************************************
+     * 1. STATIC PROFILE & APPEARANCE PREFERENCES
+     **************************************************************/
+    const STORAGE_KEY = 'imas_producer_appearance_v2';
+    const defaultProfile = {
+      name: 'SereindianP',
+      subtitle: '杜野凛世担当',
+      qq: '3167642832',
+      qqLink: 'https://qm.qq.com/q/qldpxCY0ww',
+      avatarUrl: 'my-avatar.jpg',
+      scId: 'NtdrKxpims',
+      gakuenId: 'U34GTMZS',
+      quote: '「プロデューサーさま……凛世は、いつでも、お傍に……」',
+      accentTheme: 'dual',
+      darkMode: false
+    };
+
+    let currentProfile = { ...defaultProfile };
+
+    function loadProfile() {
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+          const preferences = JSON.parse(saved);
+          if (['dual', 'rinze', 'momoka'].includes(preferences.accentTheme)) {
+            currentProfile.accentTheme = preferences.accentTheme;
+          }
+          currentProfile.darkMode = preferences.darkMode === true;
+        }
+      } catch (e) {
+        console.warn('LocalStorage read failed, using defaults.', e);
+      }
+      applyProfileToDOM();
+      setAccentTheme(currentProfile.accentTheme || 'dual', false);
+      if (currentProfile.darkMode) {
+        document.documentElement.classList.add('dark');
+        updateDarkModeIcon(true);
+      }
+    }
+
+    function saveToStorage() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({ accentTheme: currentProfile.accentTheme, darkMode: currentProfile.darkMode }));
+      } catch (e) {
+        console.warn('LocalStorage save failed.', e);
+      }
+    }
+
+    function applyProfileToDOM() {
+      document.getElementById('profileName').textContent = currentProfile.name;
+      document.getElementById('qrModalName').textContent = currentProfile.name;
+      document.getElementById('profileSubtitle').textContent = currentProfile.subtitle;
+      document.getElementById('profileQqNumber').textContent = currentProfile.qq;
+      document.getElementById('qrModalQq').textContent = 'QQ: ' + currentProfile.qq;
+      document.getElementById('scGameId').textContent = currentProfile.scId;
+      document.getElementById('gakuenGameId').textContent = currentProfile.gakuenId;
+      document.getElementById('profileQuote').textContent = currentProfile.quote;
+
+      // Update QQ contact link
+      const wakeLink = document.getElementById('qqWakeLink');
+      wakeLink.href = currentProfile.qqLink;
+
+      // Avatar handling
+      const customImg = document.getElementById('customAvatarImg');
+      const defaultSvg = document.getElementById('defaultAvatarSvg');
+      if (currentProfile.avatarUrl && currentProfile.avatarUrl.trim() !== '') {
+        customImg.src = currentProfile.avatarUrl.trim();
+        customImg.classList.remove('hidden');
+        defaultSvg.classList.add('hidden');
+      } else {
+        customImg.classList.add('hidden');
+        defaultSvg.classList.remove('hidden');
+      }
+    }
+
+    /**************************************************************
+     * 2. THEME SWITCHER & DARK MODE
+     **************************************************************/
+    function setAccentTheme(theme, persist = true) {
+      document.body.setAttribute('data-theme-accent', theme);
+      currentProfile.accentTheme = theme;
+      if (persist) saveToStorage();
+
+      const buttons = {
+        dual: document.getElementById('btnThemeDual'),
+        rinze: document.getElementById('btnThemeRinze'),
+        momoka: document.getElementById('btnThemeMomoka')
+      };
+
+      Object.keys(buttons).forEach(key => {
+        const btn = buttons[key];
+        if (key === theme) {
+          btn.className = 'px-2.5 py-1 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 bg-white dark:bg-slate-700 shadow-sm text-slate-800 dark:text-white';
+        } else {
+          btn.className = 'px-2.5 py-1 rounded-lg text-xs font-medium transition-all flex items-center gap-1 text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-white';
+        }
+      });
+    }
+
+    function toggleDarkMode() {
+      const isDark = document.documentElement.classList.toggle('dark');
+      currentProfile.darkMode = isDark;
+      updateDarkModeIcon(isDark);
+      saveToStorage();
+    }
+
+    function updateDarkModeIcon(isDark) {
+      const icon = document.getElementById('darkModeIcon');
+      icon.className = isDark ? 'fa-solid fa-sun text-xs' : 'fa-solid fa-moon text-xs';
+    }
+
+    /**************************************************************
+     * 3. TANTOU SHOWCASE FILTER
+     **************************************************************/
+    function selectFranchise(target, moveFocus = false) {
+      const tabs = Array.from(document.querySelectorAll('[data-franchise]'));
+      if (!tabs.some(tab => tab.dataset.franchise === target)) return;
+      tabs.forEach(tab => {
+        const selected = tab.dataset.franchise === target;
+        tab.setAttribute('aria-selected', String(selected));
+        tab.tabIndex = selected ? 0 : -1;
+        document.getElementById(tab.getAttribute('aria-controls')).hidden = !selected;
+        if (selected && moveFocus) tab.focus();
+      });
+    }
+
+    function initFranchiseTabs() {
+      const tabs = Array.from(document.querySelectorAll('[data-franchise]'));
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => selectFranchise(tab.dataset.franchise));
+        tab.addEventListener('keydown', event => {
+          let next;
+          if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+          else if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+          else if (event.key === 'ArrowDown' || event.key === 'ArrowUp') next = (index + 3) % tabs.length;
+          else if (event.key === 'Home') next = 0;
+          else if (event.key === 'End') next = tabs.length - 1;
+          else return;
+          event.preventDefault();
+          selectFranchise(tabs[next].dataset.franchise, true);
+        });
+      });
+    }
+
+    /**************************************************************
+     * 4. CLIPBOARD COPY & CUSTOM TOAST NOTIFICATION
+     **************************************************************/
+    function copyTextToClipboard(text) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand('copy');
+      } catch (err) {
+        console.error('Copy command failed', err);
+      }
+      document.body.removeChild(textarea);
+    }
+
+    function showToast(message) {
+      const container = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+      toast.className = 'px-4 py-2.5 rounded-2xl bg-slate-900/90 dark:bg-white/95 text-white dark:text-slate-900 text-xs font-semibold shadow-lg flex items-center gap-2 border border-[#7DB9DE]/40 transition-all duration-300 transform translate-y-0 opacity-100';
+      toast.innerHTML = `<i class="fa-solid fa-circle-check text-[#7DB9DE] dark:text-[#3A6E94]"></i><span>${message}</span>`;
+      container.appendChild(toast);
+
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(-8px)';
+        setTimeout(() => toast.remove(), 300);
+      }, 2400);
+    }
+
+    function copyGameId(elementId, label) {
+      const text = document.getElementById(elementId).textContent.trim();
+      copyTextToClipboard(text);
+      playChime('rinze');
+      showToast(`${label} (${text}) 已复制到剪贴板`);
+    }
+
+    function copyQqNumber() {
+      copyTextToClipboard(currentProfile.qq);
+      playChime('momoka');
+      showToast(`QQ号 ${currentProfile.qq} 已复制，快去添加好友吧！`);
+    }
+
+    function copyTextWithToast(text, msg) {
+      copyTextToClipboard(text);
+      showToast(msg);
+    }
+
+    function copyFullMeishiSummary() {
+      const summary = `【制作人扩列名片】\nP名：${currentProfile.name}\n${currentProfile.subtitle}\n765PRO ALLSTARS：天海春香、如月千早、萩原雪步\nCinderella Girls：涩谷凛、樱井桃华、橘爱丽丝\nMillion Live!：马场木实、矢吹可奈\nSideM：暂无担当\nShiny Colors：杜野凛世、市川雏菜、浅仓透\nGakuen：月村手毬、紫云清夏、筱泽广\n扩列QQ：${currentProfile.qq}\n加好友：${currentProfile.qqLink}\n欢迎同担与综合 ACGN 同好扩列交流！`;
+      copyTextToClipboard(summary);
+      showToast('完整名片自我介绍已复制！可直接粘贴至群聊');
+    }
+
+    /**************************************************************
+     * 5. WEB AUDIO INTERACTION CHIME
+     **************************************************************/
+    let audioCtx = null;
+
+    function getAudioContext() {
+      if (!audioCtx) {
+        const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+        audioCtx = new AudioContextClass();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      return audioCtx;
+    }
+
+    function playChime(type) {
+      try {
+        const ctx = getAudioContext();
+        const notes = type === 'rinze' ? [523.25, 659.25, 783.99, 987.77] : [587.33, 739.99, 880.00, 1174.66];
+        notes.forEach((freq, idx) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, ctx.currentTime + idx * 0.08);
+          gain.gain.setValueAtTime(0.08, ctx.currentTime + idx * 0.08);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + idx * 0.08 + 0.55);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(ctx.currentTime + idx * 0.08);
+          osc.stop(ctx.currentTime + idx * 0.08 + 0.6);
+        });
+      } catch (e) {
+        // Ignore audio errors if blocked by browser
+      }
+    }
+
+    /**************************************************************
+     * 6. QQ CONTACT QR MODAL
+     **************************************************************/
+    function openQrModal() {
+      const modal = document.getElementById('qrModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeQrModal() {
+      const modal = document.getElementById('qrModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    /**************************************************************
+     * 7. DOWNLOAD VCARD (.vcf) FOR MOBILE CONTACTS
+     **************************************************************/
+    function downloadVCard() {
+      const vcardContent = [
+        'BEGIN:VCARD',
+        'VERSION:3.0',
+        `FN:${currentProfile.name} (偶大制作人)`,
+        `ORG:THE IDOLM@STER`,
+        `TITLE:${currentProfile.subtitle}`,
+        `NOTE:扩列QQ: ${currentProfile.qq} | 闪耀色彩ID: ${currentProfile.scId} | 学园偶大ID: ${currentProfile.gakuenId}`,
+        `URL:${window.location.href}`,
+        'END:VCARD'
+      ].join('\r\n');
+
+      const blob = new Blob([vcardContent], { type: 'text/vcard;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${currentProfile.name}_ProducerCard.vcf`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast('已生成电子通讯录名片 (.vcf)');
+    }
+
+    /**************************************************************
+     * 8. AMBIENT FLOATING PETALS (SAKURA & RINZE WATER DROPLETS)
+     **************************************************************/
+    function initPetalCanvas() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const canvas = document.getElementById('petalCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let width = canvas.width = window.innerWidth;
+      let height = canvas.height = window.innerHeight;
+
+      window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      });
+
+      const particles = Array.from({ length: 18 }, () => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        r: Math.random() * 4 + 2.5,
+        speedY: Math.random() * 0.45 + 0.2,
+        speedX: (Math.random() - 0.5) * 0.35,
+        angle: Math.random() * Math.PI * 2,
+        spin: (Math.random() - 0.5) * 0.015,
+        color: Math.random() > 0.5 ? 'rgba(125, 185, 222, 0.28)' : 'rgba(242, 156, 183, 0.28)'
+      }));
+
+      function render() {
+        ctx.clearRect(0, 0, width, height);
+        particles.forEach(p => {
+          p.y += p.speedY;
+          p.x += p.speedX + Math.sin(p.angle) * 0.2;
+          p.angle += p.spin;
+
+          if (p.y > height + 10) {
+            p.y = -10;
+            p.x = Math.random() * width;
+          }
+
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.angle);
+          ctx.fillStyle = p.color;
+          ctx.beginPath();
+          ctx.ellipse(0, 0, p.r * 1.4, p.r * 0.8, 0, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
+        });
+        requestAnimationFrame(render);
+      }
+      render();
+    }
+
+    // Initialize on Window Load
+    window.onload = function () {
+      loadProfile();
+      initFranchiseTabs();
+      initPetalCanvas();
+    };
+  </script>
 </body>
 </html>
