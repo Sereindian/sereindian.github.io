@@ -529,22 +529,8 @@
   #siteLayout { max-width: 960px; padding-inline: 24px; }
 }
 
-/* Desktop-only glass contrast and compact social icons. */
+/* Compact social icons on desktop; use the original shared color themes. */
 @media (min-width: 1024px) and (orientation: landscape) {
-  html:not(.dark) body.wagasa-bg {
-    background-color: #F1F5F9;
-    background-image:
-      radial-gradient(ellipse at 100% 0%, rgba(125,185,222,.25) 0%, transparent 56%),
-      radial-gradient(ellipse at 0% 100%, rgba(242,156,183,.25) 0%, transparent 56%),
-      radial-gradient(rgba(125,185,222,.07) 1px, transparent 1px),
-      radial-gradient(rgba(242,156,183,.07) 1px, transparent 1px);
-    background-attachment: fixed;
-  }
-  html:not(.dark) #siteLayout .glass-card {
-    background-color: rgba(255,255,255,.88);
-    border-color: rgba(255,255,255,.9);
-    box-shadow: 0 14px 40px -20px rgba(45,70,98,.22);
-  }
   #connectSection .desktop-social-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
   #connectSection .desktop-social-grid > a { padding: 0; aspect-ratio: 1; border-radius: 12px; }
   #connectSection .desktop-social-grid > a > span { display: none; }
