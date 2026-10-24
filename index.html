@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-CN" class="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Producer Profile | 制作人扩列名片</title>
   <link rel="icon" type="image/svg+xml" sizes="any" href="favicon-round.svg">
   <!-- Resolve the color mode before external resources load to avoid a light flash. -->
@@ -71,16 +71,16 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <!-- Fonts via loli.net mirror; async stylesheets keep initial rendering unblocked. -->
   <link rel="preconnect" href="https://fonts.loli.net">
-  <link rel="preconnect" href="https://gstatic.loli.net" crossorigin>
+  <link rel="preconnect" href="https://gstatic.loli.net" crossorigin="">
   <link href="https://fonts.loli.net/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.loli.net/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
 
   <!-- Japanese card introductions: Shippori Mincho Medium, subset to the supplied text. -->
-  <link href="https://fonts.loli.net/css2?family=Shippori+Mincho:wght@500&amp;display=swap&amp;text=%E3%80%81%E3%80%82%E3%81%82%E3%81%84%E3%81%86%E3%81%88%E3%81%8B%E3%81%8C%E3%81%8D%E3%81%8E%E3%81%8F%E3%81%90%E3%81%91%E3%81%93%E3%81%94%E3%81%95%E3%81%97%E3%81%98%E3%81%99%E3%81%9B%E3%81%9D%E3%81%9F%E3%81%A0%E3%81%A1%E3%81%A3%E3%81%A4%E3%81%A5%E3%81%A6%E3%81%A7%E3%81%A8%E3%81%AA%E3%81%AB%E3%81%AE%E3%81%AF%E3%81%B2%E3%81%B3%E3%81%B6%E3%81%B8%E3%81%BB%E3%81%BE%E3%81%BF%E3%82%81%E3%82%82%E3%82%83%E3%82%89%E3%82%8A%E3%82%8B%E3%82%8C%E3%82%8D%E3%82%8F%E3%82%92%E3%82%93%E3%82%B8%E3%82%B9%E3%83%86%E3%83%BC%E4%B8%80%E4%B8%8A%E4%B8%8B%E4%B8%96%E4%B8%AD%E4%BB%8A%E4%BC%9D%E4%BC%B8%E5%85%88%E5%85%89%E5%87%9D%E5%89%8D%E5%8B%87%E5%90%91%E5%92%B2%E5%9B%9B%E5%A3%B0%E5%A4%89%E5%A4%9C%E5%A4%A2%E5%A4%A7%E5%A5%A5%E5%A5%B3%E5%A5%BD%E5%AD%A3%E5%AD%A4%E5%B0%8F%E5%B1%8A%E5%B7%A1%E5%BA%A6%E5%BC%B7%E5%BD%93%E5%BE%85%E5%BF%83%E6%83%B3%E6%86%A7%E6%8A%B1%E6%8D%A8%E6%97%A5%E6%98%8E%E6%99%AF%E6%9C%AC%E6%AD%8C%E6%AD%A9%E6%B0%97%E6%B7%91%E6%BA%B6%E7%8B%AC%E7%95%8C%E7%9B%AE%E7%9C%9F%E7%9E%AC%E7%9F%A5%E7%A9%BA%E7%AB%8B%E7%AC%91%E7%B5%82%E7%B6%9A%E7%B7%92%E7%BF%BC%E8%83%8C%E8%84%B1%E8%89%B2%E8%8A%B1%E8%91%89%E8%96%87%E8%96%94%E8%A1%8C%E8%A8%80%E8%BB%A2%E8%BC%AA%E8%BE%BC%E8%BF%B7%E8%BF%BD%E9%81%B8%E9%96%93%E9%9D%92%E9%A0%90%E9%A1%94%E9%A2%A8%E9%A3%9B" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="https://fonts.loli.net/css2?family=Shippori+Mincho:wght@500&amp;display=swap&amp;text=%E3%80%81%E3%80%82%E3%81%82%E3%81%84%E3%81%86%E3%81%88%E3%81%8B%E3%81%8C%E3%81%8D%E3%81%8E%E3%81%8F%E3%81%90%E3%81%91%E3%81%93%E3%81%94%E3%81%95%E3%81%97%E3%81%98%E3%81%99%E3%81%9B%E3%81%9D%E3%81%9F%E3%81%A0%E3%81%A1%E3%81%A3%E3%81%A4%E3%81%A5%E3%81%A6%E3%81%A7%E3%81%A8%E3%81%AA%E3%81%AB%E3%81%AE%E3%81%AF%E3%81%B2%E3%81%B3%E3%81%B6%E3%81%B8%E3%81%BB%E3%81%BE%E3%81%BF%E3%82%81%E3%82%82%E3%82%83%E3%82%89%E3%82%8A%E3%82%8B%E3%82%8C%E3%82%8D%E3%82%8F%E3%82%92%E3%82%93%E3%82%B8%E3%82%B9%E3%83%86%E3%83%BC%E4%B8%80%E4%B8%8A%E4%B8%8B%E4%B8%96%E4%B8%AD%E4%BB%8A%E4%BC%9D%E4%BC%B8%E5%85%88%E5%85%89%E5%87%9D%E5%89%8D%E5%8B%87%E5%90%91%E5%92%B2%E5%9B%9B%E5%A3%B0%E5%A4%89%E5%A4%9C%E5%A4%A2%E5%A4%A7%E5%A5%A5%E5%A5%B3%E5%A5%BD%E5%AD%A3%E5%AD%A4%E5%B0%8F%E5%B1%8A%E5%B7%A1%E5%BA%A6%E5%BC%B7%E5%BD%93%E5%BE%85%E5%BF%83%E6%83%B3%E6%86%A7%E6%8A%B1%E6%8D%A8%E6%97%A5%E6%98%8E%E6%99%AF%E6%9C%AC%E6%AD%8C%E6%AD%A9%E6%B0%97%E6%B7%91%E6%BA%B6%E7%8B%AC%E7%95%8C%E7%9B%AE%E7%9C%9F%E7%9E%AC%E7%9F%A5%E7%A9%BA%E7%AB%8B%E7%AC%91%E7%B5%82%E7%B6%9A%E7%B7%92%E7%BF%BC%E8%83%8C%E8%84%B1%E8%89%B2%E8%8A%B1%E8%91%89%E8%96%87%E8%96%94%E8%A1%8C%E8%A8%80%E8%BB%A2%E8%BC%AA%E8%BE%BC%E8%BF%B7%E8%BF%BD%E9%81%B8%E9%96%93%E9%9D%92%E9%A0%90%E9%A1%94%E9%A2%A8%E9%A3%9B" rel="stylesheet"></noscript>
+  <link href="https://fonts.loli.net/css2?family=Shippori+Mincho:wght@500&display=swap&text=%E3%80%81%E3%80%82%E3%81%82%E3%81%84%E3%81%86%E3%81%88%E3%81%8B%E3%81%8C%E3%81%8D%E3%81%8E%E3%81%8F%E3%81%90%E3%81%91%E3%81%93%E3%81%94%E3%81%95%E3%81%97%E3%81%98%E3%81%99%E3%81%9B%E3%81%9D%E3%81%9F%E3%81%A0%E3%81%A1%E3%81%A3%E3%81%A4%E3%81%A5%E3%81%A6%E3%81%A7%E3%81%A8%E3%81%AA%E3%81%AB%E3%81%AE%E3%81%AF%E3%81%B2%E3%81%B3%E3%81%B6%E3%81%B8%E3%81%BB%E3%81%BE%E3%81%BF%E3%82%81%E3%82%82%E3%82%83%E3%82%89%E3%82%8A%E3%82%8B%E3%82%8C%E3%82%8D%E3%82%8F%E3%82%92%E3%82%93%E3%82%B8%E3%82%B9%E3%83%86%E3%83%BC%E4%B8%80%E4%B8%8A%E4%B8%8B%E4%B8%96%E4%B8%AD%E4%BB%8A%E4%BC%9D%E4%BC%B8%E5%85%88%E5%85%89%E5%87%9D%E5%89%8D%E5%8B%87%E5%90%91%E5%92%B2%E5%9B%9B%E5%A3%B0%E5%A4%89%E5%A4%9C%E5%A4%A2%E5%A4%A7%E5%A5%A5%E5%A5%B3%E5%A5%BD%E5%AD%A3%E5%AD%A4%E5%B0%8F%E5%B1%8A%E5%B7%A1%E5%BA%A6%E5%BC%B7%E5%BD%93%E5%BE%85%E5%BF%83%E6%83%B3%E6%86%A7%E6%8A%B1%E6%8D%A8%E6%97%A5%E6%98%8E%E6%99%AF%E6%9C%AC%E6%AD%8C%E6%AD%A9%E6%B0%97%E6%B7%91%E6%BA%B6%E7%8B%AC%E7%95%8C%E7%9B%AE%E7%9C%9F%E7%9E%AC%E7%9F%A5%E7%A9%BA%E7%AB%8B%E7%AC%91%E7%B5%82%E7%B6%9A%E7%B7%92%E7%BF%BC%E8%83%8C%E8%84%B1%E8%89%B2%E8%8A%B1%E8%91%89%E8%96%87%E8%96%94%E8%A1%8C%E8%A8%80%E8%BB%A2%E8%BC%AA%E8%BE%BC%E8%BF%B7%E8%BF%BD%E9%81%B8%E9%96%93%E9%9D%92%E9%A0%90%E9%A1%94%E9%A2%A8%E9%A3%9B" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.loli.net/css2?family=Shippori+Mincho:wght@500&display=swap&text=%E3%80%81%E3%80%82%E3%81%82%E3%81%84%E3%81%86%E3%81%88%E3%81%8B%E3%81%8C%E3%81%8D%E3%81%8E%E3%81%8F%E3%81%90%E3%81%91%E3%81%93%E3%81%94%E3%81%95%E3%81%97%E3%81%98%E3%81%99%E3%81%9B%E3%81%9D%E3%81%9F%E3%81%A0%E3%81%A1%E3%81%A3%E3%81%A4%E3%81%A5%E3%81%A6%E3%81%A7%E3%81%A8%E3%81%AA%E3%81%AB%E3%81%AE%E3%81%AF%E3%81%B2%E3%81%B3%E3%81%B6%E3%81%B8%E3%81%BB%E3%81%BE%E3%81%BF%E3%82%81%E3%82%82%E3%82%83%E3%82%89%E3%82%8A%E3%82%8B%E3%82%8C%E3%82%8D%E3%82%8F%E3%82%92%E3%82%93%E3%82%B8%E3%82%B9%E3%83%86%E3%83%BC%E4%B8%80%E4%B8%8A%E4%B8%8B%E4%B8%96%E4%B8%AD%E4%BB%8A%E4%BC%9D%E4%BC%B8%E5%85%88%E5%85%89%E5%87%9D%E5%89%8D%E5%8B%87%E5%90%91%E5%92%B2%E5%9B%9B%E5%A3%B0%E5%A4%89%E5%A4%9C%E5%A4%A2%E5%A4%A7%E5%A5%A5%E5%A5%B3%E5%A5%BD%E5%AD%A3%E5%AD%A4%E5%B0%8F%E5%B1%8A%E5%B7%A1%E5%BA%A6%E5%BC%B7%E5%BD%93%E5%BE%85%E5%BF%83%E6%83%B3%E6%86%A7%E6%8A%B1%E6%8D%A8%E6%97%A5%E6%98%8E%E6%99%AF%E6%9C%AC%E6%AD%8C%E6%AD%A9%E6%B0%97%E6%B7%91%E6%BA%B6%E7%8B%AC%E7%95%8C%E7%9B%AE%E7%9C%9F%E7%9E%AC%E7%9F%A5%E7%A9%BA%E7%AB%8B%E7%AC%91%E7%B5%82%E7%B6%9A%E7%B7%92%E7%BF%BC%E8%83%8C%E8%84%B1%E8%89%B2%E8%8A%B1%E8%91%89%E8%96%87%E8%96%94%E8%A1%8C%E8%A8%80%E8%BB%A2%E8%BC%AA%E8%BE%BC%E8%BF%B7%E8%BF%BD%E9%81%B8%E9%96%93%E9%9D%92%E9%A0%90%E9%A1%94%E9%A2%A8%E9%A3%9B" rel="stylesheet"></noscript>
 
   <script>
     tailwind.config = {
@@ -422,7 +422,148 @@
       #petalCanvas { display: none; }
     }
   </style>
-</head>
+<style id="responsiveLayoutStyles">
+/* Responsive layout: portrait and narrow windows retain the original phone layout. */
+.desktop-sidebar, .desktop-main { display: contents; }
+.desktop-brand, .desktop-nav { display: none; }
+#producerCard { order: 1; }
+#tantouShowcase { order: 2; }
+#gameSection { order: 3; }
+#musicSection { order: 4; }
+#interestsSection { order: 5; }
+#connectSection { order: 6; }
+#siteLayout > footer { order: 7; }
+@media (min-width: 1024px) and (orientation: landscape) {
+  html { scroll-padding-top: 110px; }
+  #siteLayout {
+    display: grid; grid-template-columns: 320px minmax(0, 1fr);
+    max-width: 1248px; padding: 24px; gap: 24px; align-items: start;
+  }
+  #appearanceBar {
+    grid-column: 1 / -1; order: 0; padding: 14px 20px;
+    position: sticky; top: 16px; z-index: 30; gap: 18px; min-height: 64px;
+  }
+  .desktop-brand { display: flex; align-items: baseline; gap: 12px; margin-right: auto; white-space: nowrap; }
+  .desktop-brand > span:first-child { font-size: 18px; font-weight: 700; color: #172b43; letter-spacing: -.02em; }
+  .desktop-brand > span:last-child { font-size: 12px; color: #64748b; }
+  .dark .desktop-brand > span:first-child { color: #f1f5f9; }
+  .dark .desktop-brand > span:last-child { color: #94a3b8; }
+  .desktop-sidebar { display: flex; flex-direction: column; gap: 20px; grid-column: 1; order: 1; min-width: 0; }
+  .desktop-main { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; grid-column: 2; order: 2; min-width: 0; }
+  #siteLayout > footer { grid-column: 1 / -1; padding: 22px 0 12px; gap: 8px; }
+  .desktop-sidebar > section, .desktop-main > section { min-width: 0; }
+  #producerCard { padding: 44px 24px 24px; }
+  #producerCard::before {
+    content: ''; position: absolute; inset: 0 0 auto; height: 108px;
+    background: linear-gradient(115deg, rgba(125,185,222,.32), rgba(217,220,239,.26) 48%, rgba(242,156,183,.3));
+    pointer-events: none;
+  }
+  .dark #producerCard::before {
+    background: linear-gradient(115deg, rgba(125,185,222,.22), rgba(92,103,142,.12) 48%, rgba(242,156,183,.19));
+  }
+  #producerCard > svg { display: none; }
+  #producerCard .producer-identity { justify-content: center; }
+  #producerCard .hero-identity-header { flex-direction: column; align-items: center; text-align: center; gap: 12px; width: 100%; }
+  #producerCard .avatar-wrapper { width: 96px; height: 96px; margin-bottom: 8px; }
+  #producerCard .hero-identity-details { width: 100%; }
+  #producerCard .hero-name-row { flex-direction: column; justify-content: center; column-gap: 6px; row-gap: 6px; }
+  #producerCard .hero-identity-actions { justify-content: center; }
+  #producerCard > div:nth-of-type(2) { justify-content: flex-start; }
+  #producerCard #profileTagsContainer { justify-content: center; }
+  #profileName { font-size: 26px; }
+  #profileSubtitle { font-size: 13px; margin-top: 5px; }
+  #producerCard #profileQuote { font-size: 12px; line-height: 1.9; }
+  #producerCard #profileTagsContainer { gap: 7px; }
+  #connectSection { padding: 20px; }
+  #connectSection h2 { font-size: 16px; }
+  #connectSection > div:first-child span.font-mono { display: none; }
+  #connectSection > div:nth-child(2) { padding: 12px; }
+  #connectSection > div:nth-child(2) > div:first-child > div { gap: 10px; }
+  #connectSection > div:nth-child(2) > div:first-child > div > div:first-child { display: none; }
+  #connectSection .desktop-social-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  #connectSection .desktop-social-grid > :last-child { grid-column: auto; }
+  #connectSection .desktop-social-grid > a { min-width: 0; }
+  #tantouShowcase, #gameSection, #musicSection, #interestsSection { padding: 26px; }
+  .desktop-main h2 { font-size: 20px; }
+  #tantouShowcase > p { font-size: 13px; margin-top: 8px; margin-bottom: 18px; }
+  .franchise-panel > div:first-child { margin-top: 20px; margin-bottom: 16px; padding: 16px; }
+  #siteLayout .desktop-idol-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .desktop-idol-grid > article { min-width: 0; padding: 20px; display: flex; flex-direction: column; }
+  .desktop-idol-grid > article:first-child:nth-last-child(3) { grid-column: 1 / -1; }
+  .desktop-idol-grid > article > div:last-child { margin-top: auto; padding-top: 14px; }
+  .desktop-idol-grid > article > .idol-introduction { margin-bottom: 16px; font-size: 13px; line-height: 2; }
+  .desktop-idol-grid h4 { row-gap: 4px; }
+  .desktop-idol-grid h4 > span:first-child { font-size: 21px; }
+  .desktop-idol-grid > article > div:nth-child(3) > div { min-width: 0; }
+  #siteLayout .desktop-game-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .desktop-game-grid > div { padding: 16px; flex-wrap: wrap; }
+  .desktop-game-grid > div > div { flex: 1 1 180px; }
+  #musicSection [id^="trackRow"] { padding: 14px; }
+  #musicSection [id^="trackRow"] img { width: 60px; height: 60px; }
+  #musicSection [id^="trackRow"] h4 { font-size: 15px; }
+  #musicSection [id^="trackRow"] p { font-size: 12px; }
+  #interestsSection > .grid { gap: 14px; }
+  #interestsSection > .grid > div { padding: 18px; }
+  #interestsSection > .grid p { font-size: 13px; line-height: 1.8; }
+  #siteLayout > footer p:first-child { font-size: 13px; }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  .desktop-nav { display: flex; gap: 20px; margin-right: 14px; color: #64748b; font-size: 13px; }
+  .desktop-nav a:hover { color: #3A6E94; }
+  .desktop-nav a:focus-visible { outline: 2px solid #7DB9DE; outline-offset: 5px; border-radius: 3px; }
+  .dark .desktop-nav { color: #94a3b8; }
+  .dark .desktop-nav a:hover { color: #9FD0F0; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  @media (min-width: 1024px) and (orientation: landscape) { html { scroll-behavior: smooth; } }
+}
+
+/* A single compact row from tablet width; phone navigation remains 3 × 2. */
+@media (min-width: 768px) and (orientation: landscape) {
+  #siteLayout .franchise-tabs { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; padding: 5px; border-radius: 16px; }
+  #siteLayout .franchise-tab-btn { min-height: 48px; padding: 6px 2px; flex-direction: column; gap: 3px; }
+  #siteLayout .franchise-tab-label { font-size: clamp(9px, calc(.78125vw + 1px), 11px); }
+  #siteLayout .franchise-tab-symbol { width: 26px; height: 18px; }
+}
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+  #siteLayout { max-width: 960px; padding-inline: 24px; }
+}
+
+/* Desktop-only glass contrast and compact social icons. */
+@media (min-width: 1024px) and (orientation: landscape) {
+  html:not(.dark) body.wagasa-bg {
+    background-color: #F1F5F9;
+    background-image:
+      radial-gradient(ellipse at 100% 0%, rgba(125,185,222,.25) 0%, transparent 56%),
+      radial-gradient(ellipse at 0% 100%, rgba(242,156,183,.25) 0%, transparent 56%),
+      radial-gradient(rgba(125,185,222,.07) 1px, transparent 1px),
+      radial-gradient(rgba(242,156,183,.07) 1px, transparent 1px);
+    background-attachment: fixed;
+  }
+  html:not(.dark) #siteLayout .glass-card {
+    background-color: rgba(255,255,255,.88);
+    border-color: rgba(255,255,255,.9);
+    box-shadow: 0 14px 40px -20px rgba(45,70,98,.22);
+  }
+  #connectSection .desktop-social-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+  #connectSection .desktop-social-grid > a { padding: 0; aspect-ratio: 1; border-radius: 12px; }
+  #connectSection .desktop-social-grid > a > span { display: none; }
+  #connectSection .desktop-social-grid > a:focus-visible { outline: 2px solid #7DB9DE; outline-offset: 2px; }
+}
+
+
+/* Align the six office badges as a compact, balanced affiliation list. */
+@media (min-width: 1024px) and (orientation: landscape) {
+  #producerCard > .hero-affiliations { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  #producerCard .hero-affiliations > span {
+    display: flex; align-items: center; justify-content: flex-start; gap: 4px;
+    min-width: 0; min-height: 32px; padding: 6px;
+    border-radius: 10px; font-size: 11px; line-height: 1.5;
+    font-family: Arial, 'Noto Sans SC', sans-serif; white-space: nowrap;
+  }
+  #producerCard .hero-affiliations .franchise-badge-img { width: 12px; height: 12px; margin: 0; flex-shrink: 0; }
+}
+</style></head>
 
 <body data-theme-accent="dual" class="wagasa-bg min-h-screen text-slate-800 dark:text-slate-100 bg-slate-50 dark:bg-slate-950 transition-colors duration-300 relative selection:bg-rinze selection:text-white">
 
@@ -433,10 +574,10 @@
   <div id="toastContainer" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-2 pointer-events-none w-11/12 max-w-sm"></div>
 
   <!-- Main Mobile-First Container -->
-  <div class="relative z-10 max-w-[480px] mx-auto min-h-screen pb-14 px-3.5 pt-3 sm:py-6 flex flex-col gap-3.5">
+  <div id="siteLayout" class="relative z-10 max-w-[480px] mx-auto min-h-screen pb-14 px-3.5 pt-3 sm:py-6 flex flex-col gap-3.5">
 
     <!-- 0. Top Controls Bar (Theme Switcher + Dark Mode) -->
-    <header class="glass-card rounded-2xl px-3.5 py-2.5 flex flex-wrap items-center justify-between gap-2">
+    <header id="appearanceBar" class="glass-card rounded-2xl px-3.5 py-2.5 flex flex-wrap items-center justify-between gap-2"><div class="desktop-brand"><span>SereindianP</span><span>制作人名片</span></div><nav aria-label="页面导航" class="desktop-nav"><a href="#tantouShowcase">担当档案</a><a href="#musicSection">常听音乐</a><a href="#interestsSection">共同话题</a></nav>
       <!-- Accent Theme Selector -->
       <div class="flex items-center gap-1.5 bg-slate-100/80 dark:bg-slate-800/80 p-1 rounded-xl border border-slate-200/60 dark:border-slate-700/60">
         <button onclick="setAccentTheme('dual')" id="btnThemeDual" class="px-2.5 py-1 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 bg-white dark:bg-slate-700 shadow-sm text-slate-800 dark:text-white" title="水色与玫瑰混色">
@@ -468,33 +609,33 @@
     </header>
 
     <!-- 2. Hero Producer Identity Card -->
-    <section class="glass-card rounded-3xl p-5 relative overflow-hidden">
+    <aside aria-label="个人名片与联系方式" class="desktop-sidebar"><section id="producerCard" class="glass-card rounded-3xl p-5 relative overflow-hidden">
       <!-- Subtle Decorative Corner SVG (Japanese Wagasa / Rose Motif) -->
       <svg class="absolute -right-8 -top-8 w-36 h-36 opacity-10 dark:opacity-15 pointer-events-none text-[#7DB9DE]" viewBox="0 0 100 100" fill="currentColor">
-        <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
-        <path d="M50 5 L50 95 M5 50 L95 50 M18 18 L82 82 M18 82 L82 18" stroke="currentColor" stroke-width="1.5"/>
-        <circle cx="50" cy="50" r="18" fill="none" stroke="#F29CB7" stroke-width="2"/>
+        <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" />
+        <path d="M50 5 L50 95 M5 50 L95 50 M18 18 L82 82 M18 82 L82 18" stroke="currentColor" stroke-width="1.5" />
+        <circle cx="50" cy="50" r="18" fill="none" stroke="#F29CB7" stroke-width="2" />
       </svg>
 
       <!-- Top Row: Avatar & Producer Name + Action Buttons -->
-      <div class="flex items-start justify-between gap-3 relative z-10">
-        <div class="flex items-center gap-3.5">
+      <div class="flex items-start justify-between gap-3 relative z-10 producer-identity">
+        <div class="flex items-center gap-3.5 producer-identity-inner hero-identity-header">
           <!-- Avatar with Dual-Color Ring -->
-          <div class="relative w-20 h-20 shrink-0 group cursor-pointer" onclick="openQrModal()" title="点击展示名片二维码">
+          <div class="relative w-20 h-20 shrink-0 group cursor-pointer avatar-wrapper" onclick="openQrModal()" title="点击展示名片二维码">
             <div class="avatar-ring absolute -inset-1 rounded-full opacity-85 group-hover:opacity-100 transition-opacity"></div>
             <div class="relative w-full h-full rounded-full bg-white dark:bg-slate-900 p-0.5 overflow-hidden flex items-center justify-center">
               <!-- Stylized SVG Avatar with Rinze Water Blue & Momoka Rose Elements -->
               <svg id="defaultAvatarSvg" viewBox="0 0 120 120" class="w-full h-full rounded-full hidden">
                 <defs>
-                  <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <lineargradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stop-color="#EBF5FB" />
                     <stop offset="50%" stop-color="#DCEEFB" />
                     <stop offset="100%" stop-color="#FCE8EF" />
-                  </linearGradient>
-                  <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  </lineargradient>
+                  <lineargradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stop-color="#5B9BD5" />
                     <stop offset="100%" stop-color="#E87A9F" />
-                  </linearGradient>
+                  </lineargradient>
                 </defs>
                 <rect width="120" height="120" fill="url(#avatarGrad)" />
                 <!-- Stylized Producer Monogram 'P' & Origami/Sakura -->
@@ -505,7 +646,7 @@
                 <circle cx="82" cy="80" r="6" fill="#F29CB7" opacity="0.85" />
                 <circle cx="36" cy="36" r="4" fill="#7DB9DE" opacity="0.85" />
               </svg>
-              <img id="customAvatarImg" src="my-avatar.jpg" width="832" height="832" alt="SereindianP 的头像" class="w-full h-full object-cover rounded-full" decoding="async" fetchpriority="high" onerror="this.classList.add('hidden'); document.getElementById('defaultAvatarSvg').classList.remove('hidden');" />
+              <img id="customAvatarImg" src="my-avatar.jpg" width="832" height="832" alt="SereindianP 的头像" class="w-full h-full object-cover rounded-full" decoding="async" fetchpriority="high" onerror="this.classList.add('hidden'); document.getElementById('defaultAvatarSvg').classList.remove('hidden');">
             </div>
             <!-- Mini Badge Icon -->
             <span class="absolute -bottom-0.5 -right-0.5 w-6 h-6 rounded-full dual-gradient-bg text-white text-[11px] flex items-center justify-center shadow-md border-2 border-white dark:border-slate-900">
@@ -514,8 +655,8 @@
           </div>
 
           <!-- Producer Name & Title -->
-          <div>
-            <div class="flex items-center gap-2 flex-wrap">
+          <div class="hero-identity-details">
+            <div class="flex items-center gap-2 flex-wrap hero-name-row">
               <h1 id="profileName" class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
                 SereindianP
               </h1>
@@ -527,7 +668,7 @@
               杜野凛世担当
             </p>
             <!-- Quick Action Buttons -->
-            <div class="flex items-center gap-2 mt-2.5">
+            <div class="flex items-center gap-2 mt-2.5 hero-identity-actions">
               <button onclick="openQrModal()" class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition-colors flex items-center gap-1 border border-slate-200/80 dark:border-slate-700">
                 <i class="fa-solid fa-qrcode text-[11px] text-[#D96B90] dark:text-[#F29CB7]"></i>
                 <span>QQ 加好友码</span>
@@ -538,7 +679,7 @@
       </div>
 
       <!-- Office Affiliation Badges -->
-      <div class="mt-4 pt-3.5 border-t border-slate-200/60 dark:border-slate-800/80 flex flex-wrap items-center gap-1.5">
+      <div class="mt-4 pt-3.5 border-t border-slate-200/60 dark:border-slate-800/80 flex flex-wrap items-center gap-1.5 hero-affiliations">
         <span class="px-2.5 py-1 rounded-full text-xs font-semibold border bg-rose-500/10 text-rose-700 dark:bg-rose-500/20 dark:text-rose-300 border-rose-400/30"><img src="icon/IM@S_AMCG_Angel.svg" class="franchise-badge-img mr-1" width="14" height="14" alt="" aria-hidden="true" decoding="async">765PRO ALLSTARS</span>
         <span class="px-2.5 py-1 rounded-full text-xs font-semibold border bg-[#F29CB7]/15 text-[#B5466C] dark:bg-[#F29CB7]/20 dark:text-[#F7B2C9] border-[#F29CB7]/35"><img src="icon/IM@S_CG_Pegasus_Mark.svg" class="franchise-badge-img mr-1" width="14" height="14" alt="" aria-hidden="true" decoding="async">Cinderella Girls</span>
         <span class="px-2.5 py-1 rounded-full text-xs font-semibold border bg-yellow-500/10 text-yellow-800 dark:bg-yellow-500/15 dark:text-yellow-200 border-yellow-400/40"><img src="icon/IM@S_ML_Papillon_Mark.svg" class="franchise-badge-img mr-1" width="14" height="14" alt="" aria-hidden="true" decoding="async">Million Live!</span>
@@ -566,12 +707,83 @@
         <span class="px-2.5 py-1 rounded-lg text-[11px] font-medium bg-slate-100 dark:bg-slate-800/90 text-slate-600 dark:text-slate-300">#杂食听歌党</span>
         <span class="px-2.5 py-1 rounded-lg text-[11px] font-medium bg-slate-100 dark:bg-slate-800/90 text-slate-600 dark:text-slate-300">#现地/LV参战</span>
       </div>
-    </section>
+    </section><section id="connectSection" class="glass-card rounded-3xl p-4 sm:p-5">
+      <div class="flex items-center justify-between mb-3.5">
+        <div class="flex items-center gap-2">
+          <span class="w-1.5 h-5 rounded-full dual-gradient-bg"></span>
+          <h2 class="text-base font-bold tracking-tight text-slate-900 dark:text-white">一键扩列与社交矩阵</h2>
+          <span class="text-[11px] text-slate-400 dark:text-slate-500 font-mono">QUICK CONNECT</span>
+        </div>
+      </div>
 
-    <!-- ==============================================================
-         3. 担当偶像 · 按企划浏览 (HIGH-AESTHETIC REDESIGN)
-         ============================================================== -->
-    <section id="tantouShowcase" class="glass-card rounded-3xl p-4 sm:p-5">
+      <!-- Primary QQ Connect Box -->
+      <div class="p-4 rounded-2xl bg-gradient-to-r from-[#7DB9DE]/15 via-[#7DB9DE]/10 to-[#F29CB7]/15 dark:from-[#7DB9DE]/20 dark:to-[#F29CB7]/20 border border-[#7DB9DE]/40">
+        <div class="flex items-center justify-between gap-2">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-2xl dual-gradient-bg text-white flex items-center justify-center text-xl shadow-md shrink-0">
+              <i class="fa-brands fa-qq"></i>
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <span class="text-xs font-bold text-slate-800 dark:text-white">主力扩列 QQ</span>
+                <span class="text-[10px] px-1.5 py-0.2 rounded bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 font-medium">备注：P名片扩列</span>
+              </div>
+              <p id="profileQqNumber" class="text-base font-mono font-bold text-[#2B5B84] dark:text-[#9FD0F0] tracking-wide mt-0.5">
+                3167642832
+              </p>
+            </div>
+          </div>
+
+          <button onclick="openQrModal()" class="w-10 h-10 rounded-xl bg-white/90 dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:scale-105 transition-transform shrink-0" title="展示二维码">
+            <i class="fa-solid fa-qrcode text-base"></i>
+          </button>
+        </div>
+
+        <!-- Action Buttons: Copy QQ & Launch QQ App -->
+        <div class="grid grid-cols-2 gap-2.5 mt-3.5">
+          <button onclick="copyQqNumber()" class="py-2.5 px-3 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-800 dark:text-white font-semibold text-xs border border-slate-200/80 dark:border-slate-700 flex items-center justify-center gap-1.5 shadow-sm transition-all active:scale-95">
+            <i class="fa-regular fa-copy text-[#3A6E94] dark:text-[#7DB9DE]"></i>
+            <span>复制 QQ 号</span>
+          </button>
+          <a id="qqWakeLink" href="https://qm.qq.com/q/qldpxCY0ww" target="_blank" rel="noopener noreferrer" class="py-2.5 px-3 rounded-xl dual-gradient-bg text-white font-semibold text-xs flex items-center justify-center gap-1.5 shadow-md hover:opacity-95 transition-all active:scale-95">
+            <i class="fa-solid fa-bolt"></i>
+            <span>QQ 加好友</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Social Matrix Grid -->
+      <div class="grid grid-cols-3 sm:grid-cols-5 gap-2 mt-3 desktop-social-grid">
+        <a title="Bilibili" aria-label="Bilibili（新窗口）" href="https://space.bilibili.com/455994470" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-2xl bg-slate-50/90 hover:bg-sky-50 dark:bg-slate-800/60 dark:hover:bg-slate-800 border border-slate-200/70 dark:border-slate-700/60 flex flex-col items-center justify-center gap-1 transition-all group">
+          <i class="fa-brands fa-bilibili text-lg text-[#00AEEC] group-hover:scale-110 transition-transform"></i>
+          <span class="text-[11px] font-medium text-slate-600 dark:text-slate-300">Bilibili</span>
+        </a>
+        <a title="Steam" aria-label="Steam（新窗口）" href="https://steamcommunity.com/profiles/76561199043348118/" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-2xl bg-slate-50/90 hover:bg-slate-100 dark:bg-slate-800/60 dark:hover:bg-slate-800 border border-slate-200/70 dark:border-slate-700/60 flex flex-col items-center justify-center gap-1 transition-all group">
+          <i class="fa-brands fa-steam text-lg text-slate-700 dark:text-slate-200 group-hover:scale-110 transition-transform"></i>
+          <span class="text-[11px] font-medium text-slate-600 dark:text-slate-300">Steam</span>
+        </a>
+        <a title="GitHub" aria-label="GitHub（新窗口）" href="https://github.com/Sereindian" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-2xl bg-slate-50/90 hover:bg-slate-100 dark:bg-slate-800/60 dark:hover:bg-slate-800 border border-slate-200/70 dark:border-slate-700/60 flex flex-col items-center justify-center gap-1 transition-all group">
+          <i class="fa-brands fa-github text-lg text-slate-800 dark:text-white group-hover:scale-110 transition-transform"></i>
+          <span class="text-[11px] font-medium text-slate-600 dark:text-slate-300">GitHub</span>
+        </a>
+        <a title="Discord" aria-label="Discord（新窗口）" href="https://discord.com/users/1051161558690050048" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-2xl bg-slate-50/90 hover:bg-indigo-50 dark:bg-slate-800/60 dark:hover:bg-slate-800 border border-slate-200/70 dark:border-slate-700/60 flex flex-col items-center justify-center gap-1 transition-all group">
+          <i class="fa-brands fa-discord text-lg text-[#5865F2] group-hover:scale-110 transition-transform"></i>
+          <span class="text-[11px] font-medium text-slate-600 dark:text-slate-300">Discord</span>
+        </a>
+        <a title="Bangumi" aria-label="Bangumi（新窗口）" href="https://bgm.tv/user/882140" target="_blank" rel="noopener noreferrer" class="col-span-2 sm:col-span-1 p-2.5 rounded-2xl bg-slate-50/90 hover:bg-pink-50 dark:bg-slate-800/60 dark:hover:bg-slate-800 border border-slate-200/70 dark:border-slate-700/60 flex flex-col items-center justify-center gap-1 transition-all group">
+          <i class="fa-solid fa-tv text-base text-[#F09199] group-hover:scale-110 transition-transform"></i>
+          <span class="text-[11px] font-medium text-slate-600 dark:text-slate-300">Bangumi</span>
+        </a>
+      </div>
+
+      <!-- Save vCard -->
+      <div class="mt-3.5 pt-3.5 border-t border-slate-200/60 dark:border-slate-800 flex items-center justify-between gap-2">
+        <button onclick="downloadVCard()" class="flex-1 py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-slate-200/80 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-medium flex items-center justify-center gap-1.5 transition-all">
+          <i class="fa-solid fa-address-card text-[#3A6E94] dark:text-[#7DB9DE]"></i>
+          <span>保存电子名片 (.vcf)</span>
+        </button>
+      </div>
+    </section></aside><main id="mainContent" class="desktop-main"><section id="tantouShowcase" class="glass-card rounded-3xl p-4 sm:p-5">
       <!-- Section Title Header -->
       <div class="flex items-center justify-between mb-1.5">
         <div class="flex items-center gap-2">
@@ -630,7 +842,7 @@
           <span class="franchise-office-symbol" style="color: #E22B30;" aria-hidden="true"><img src="icon/IM@S_AMCG_Angel.svg" class="franchise-banner-img" width="28" height="28" alt="" aria-hidden="true" decoding="async"></span>
         </div>
 
-        <div class="flex flex-col gap-3">
+        <div class="flex flex-col gap-3 desktop-idol-grid">
           <!-- Haruka Amami (#E22B30) -->
           <article class="idol-showcase-card" style="--idol-color: #E22B30; --idol-color-secondary: #F87171; --idol-tint-light: rgba(254, 226, 226, 0.65); --idol-tint-dark: rgba(69, 10, 10, 0.55); --idol-border: rgba(226, 43, 48, 0.35); --idol-border-dark: rgba(248, 113, 113, 0.3); --idol-glow: rgba(226, 43, 48, 0.25);">
             <div class="idol-top-bar"></div>
@@ -783,7 +995,7 @@
           <span class="franchise-office-symbol" style="color: #EF93B6;" aria-hidden="true"><img src="icon/IM@S_CG_Pegasus_Mark.svg" class="franchise-banner-img" width="28" height="28" alt="" aria-hidden="true" decoding="async"></span>
         </div>
 
-        <div class="flex flex-col gap-3">
+        <div class="flex flex-col gap-3 desktop-idol-grid">
           <!-- Rin Shibuya (#1C90CD) -->
           <article class="idol-showcase-card" style="--idol-color: #1C90CD; --idol-color-secondary: #38BDF8; --idol-tint-light: rgba(224, 242, 254, 0.7); --idol-tint-dark: rgba(12, 74, 110, 0.55); --idol-border: rgba(28, 144, 205, 0.38); --idol-border-dark: rgba(56, 189, 248, 0.3); --idol-glow: rgba(28, 144, 205, 0.25);">
             <div class="idol-top-bar"></div>
@@ -932,7 +1144,7 @@
           </div>
           <span class="franchise-office-symbol text-yellow-600 dark:text-yellow-200" aria-hidden="true"><img src="icon/IM@S_ML_Papillon_Mark.svg" class="franchise-banner-img" width="28" height="28" alt="" aria-hidden="true" decoding="async"></span>
         </div>
-        <div class="flex flex-col gap-3">
+        <div class="flex flex-col gap-3 desktop-idol-grid">
           <!-- Konomi Baba (#F1BECB). CV name follows the requested original credit; current official name: 髙橋ミナミ. -->
           <article id="idol-konomi" class="idol-showcase-card" style="--idol-color: #F1BECB; --idol-color-secondary: #CB7D96; --idol-tint-light: rgba(241,190,203,.22); --idol-tint-dark: rgba(72,38,52,.7); --idol-border: rgba(241,190,203,.65); --idol-border-dark: rgba(241,190,203,.4); --idol-glow: rgba(241,190,203,.35);">
             <div class="idol-top-bar"></div>
@@ -1027,7 +1239,7 @@
           <span class="franchise-office-symbol" style="color: #7DB9DE;" aria-hidden="true"><img src="icon/IM@S_SC_Swan_Mark.svg" class="franchise-banner-img" width="28" height="28" alt="" aria-hidden="true" decoding="async"></span>
         </div>
 
-        <div class="flex flex-col gap-3">
+        <div class="flex flex-col gap-3 desktop-idol-grid">
           <!-- Morino Rinze (#89C3EB) - Main Tantou Centerpiece -->
           <article class="idol-showcase-card" style="--idol-color: #7DB9DE; --idol-color-secondary: #3A6E94; --idol-tint-light: rgba(235, 245, 251, 0.9); --idol-tint-dark: rgba(23, 42, 58, 0.85); --idol-border: rgba(125, 185, 222, 0.55); --idol-border-dark: rgba(125, 185, 222, 0.4); --idol-glow: rgba(125, 185, 222, 0.35);">
             <div class="idol-top-bar"></div>
@@ -1186,7 +1398,7 @@
           <span class="franchise-office-symbol" style="color: #F59E0B;" aria-hidden="true"><img src="icon/IM@S_Gakuen_Hummingbird_Mark.svg" class="franchise-banner-img" width="28" height="28" alt="" aria-hidden="true" decoding="async"></span>
         </div>
 
-        <div class="flex flex-col gap-3">
+        <div class="flex flex-col gap-3 desktop-idol-grid">
           <!-- Temari Tsukimura (#49B4E6) -->
           <article class="idol-showcase-card" style="--idol-color: #49B4E6; --idol-color-secondary: #0284C7; --idol-tint-light: rgba(224, 242, 254, 0.72); --idol-tint-dark: rgba(12, 74, 110, 0.55); --idol-border: rgba(73, 180, 230, 0.42); --idol-border-dark: rgba(73, 180, 230, 0.32); --idol-glow: rgba(73, 180, 230, 0.28);">
             <div class="idol-top-bar"></div>
@@ -1322,10 +1534,7 @@
       </div>
 
       <noscript><style>.franchise-panel[hidden] { display: block !important; } #franchiseTabs { display: none; }</style></noscript>
-    </section>
-
-    <!-- 4. 企划涉猎与游戏 ID (Franchise Progress & One-Click Copy IDs) -->
-    <section class="glass-card rounded-3xl p-4 sm:p-5">
+    </section><section id="gameSection" class="glass-card rounded-3xl p-4 sm:p-5">
       <div class="flex items-center justify-between mb-3.5">
         <div class="flex items-center gap-2">
           <span class="w-1.5 h-5 rounded-full dual-gradient-bg"></span>
@@ -1335,7 +1544,7 @@
         <span class="text-[11px] text-slate-500 dark:text-slate-400">点击右侧按钮复制</span>
       </div>
 
-      <div class="flex flex-col gap-2.5">
+      <div class="flex flex-col gap-2.5 desktop-game-grid">
         <!-- Branch 1: Shiny Colors -->
         <div class="p-3 rounded-2xl bg-slate-50/90 dark:bg-slate-800/60 border border-slate-200/70 dark:border-slate-700/60 flex items-center justify-between gap-2">
           <div class="min-w-0">
@@ -1384,10 +1593,7 @@
           </button>
         </div>
       </div>
-    </section>
-
-    <!-- 5. 常听曲目与歌单 (Music & Apple Music Bar) -->
-    <section class="glass-card rounded-3xl p-4 sm:p-5">
+    </section><section id="musicSection" class="glass-card rounded-3xl p-4 sm:p-5">
       <div class="flex items-center justify-between mb-3.5">
         <div class="flex items-center gap-2">
           <span class="w-1.5 h-5 rounded-full dual-gradient-bg"></span>
@@ -1440,18 +1646,15 @@
       <!-- Apple Music Album Button -->
       <a id="appleMusicLink" href="https://music.apple.com/jp/album/the-idolm-ster-765pro-allstars-gre-test-best-love-peace/1659371784" target="_blank" rel="noopener noreferrer" class="mt-3 w-full py-2.5 px-4 rounded-2xl bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-semibold text-xs flex items-center justify-center gap-2 shadow-sm transition-all active:scale-[0.99]">
         <i class="fa-brands fa-apple text-sm"></i>
-        <span>打开 Apple Music 专辑 · LOVE&PEACE!</span>
+        <span>打开 Apple Music 专辑 · LOVE&amp;PEACE!</span>
         <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-80"></i>
       </a>
-    </section>
-
-    <!-- 6. 多元成分雷达 (ACGN & Geek Radar) -->
-    <section class="glass-card rounded-3xl p-4 sm:p-5">
+    </section><section id="interestsSection" class="glass-card rounded-3xl p-4 sm:p-5">
       <div class="flex items-center justify-between mb-3.5">
         <div class="flex items-center gap-2">
           <span class="w-1.5 h-5 rounded-full dual-gradient-bg"></span>
           <h2 class="text-base font-bold tracking-tight text-slate-900 dark:text-white">多元成分与共同话题雷达</h2>
-          <span class="text-[11px] text-slate-400 dark:text-slate-500 font-mono">ACGN & GEEK</span>
+          <span class="text-[11px] text-slate-400 dark:text-slate-500 font-mono">ACGN &amp; GEEK</span>
         </div>
       </div>
 
@@ -1514,86 +1717,24 @@
           </p>
         </div>
       </div>
-    </section>
+    </section></main>
+
+    <!-- ==============================================================
+         3. 担当偶像 · 按企划浏览 (HIGH-AESTHETIC REDESIGN)
+         ============================================================== -->
+
+
+    <!-- 4. 企划涉猎与游戏 ID (Franchise Progress & One-Click Copy IDs) -->
+
+
+    <!-- 5. 常听曲目与歌单 (Music & Apple Music Bar) -->
+
+
+    <!-- 6. 多元成分雷达 (ACGN & Geek Radar) -->
+
 
     <!-- 7. 一键扩列与社交矩阵 (Quick Connect) -->
-    <section class="glass-card rounded-3xl p-4 sm:p-5">
-      <div class="flex items-center justify-between mb-3.5">
-        <div class="flex items-center gap-2">
-          <span class="w-1.5 h-5 rounded-full dual-gradient-bg"></span>
-          <h2 class="text-base font-bold tracking-tight text-slate-900 dark:text-white">一键扩列与社交矩阵</h2>
-          <span class="text-[11px] text-slate-400 dark:text-slate-500 font-mono">QUICK CONNECT</span>
-        </div>
-      </div>
 
-      <!-- Primary QQ Connect Box -->
-      <div class="p-4 rounded-2xl bg-gradient-to-r from-[#7DB9DE]/15 via-[#7DB9DE]/10 to-[#F29CB7]/15 dark:from-[#7DB9DE]/20 dark:to-[#F29CB7]/20 border border-[#7DB9DE]/40">
-        <div class="flex items-center justify-between gap-2">
-          <div class="flex items-center gap-3">
-            <div class="w-11 h-11 rounded-2xl dual-gradient-bg text-white flex items-center justify-center text-xl shadow-md shrink-0">
-              <i class="fa-brands fa-qq"></i>
-            </div>
-            <div>
-              <div class="flex items-center gap-1.5">
-                <span class="text-xs font-bold text-slate-800 dark:text-white">主力扩列 QQ</span>
-                <span class="text-[10px] px-1.5 py-0.2 rounded bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 font-medium">备注：P名片扩列</span>
-              </div>
-              <p id="profileQqNumber" class="text-base font-mono font-bold text-[#2B5B84] dark:text-[#9FD0F0] tracking-wide mt-0.5">
-                3167642832
-              </p>
-            </div>
-          </div>
-
-          <button onclick="openQrModal()" class="w-10 h-10 rounded-xl bg-white/90 dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:scale-105 transition-transform shrink-0" title="展示二维码">
-            <i class="fa-solid fa-qrcode text-base"></i>
-          </button>
-        </div>
-
-        <!-- Action Buttons: Copy QQ & Launch QQ App -->
-        <div class="grid grid-cols-2 gap-2.5 mt-3.5">
-          <button onclick="copyQqNumber()" class="py-2.5 px-3 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-800 dark:text-white font-semibold text-xs border border-slate-200/80 dark:border-slate-700 flex items-center justify-center gap-1.5 shadow-sm transition-all active:scale-95">
-            <i class="fa-regular fa-copy text-[#3A6E94] dark:text-[#7DB9DE]"></i>
-            <span>复制 QQ 号</span>
-          </button>
-          <a id="qqWakeLink" href="https://qm.qq.com/q/qldpxCY0ww" target="_blank" rel="noopener noreferrer" class="py-2.5 px-3 rounded-xl dual-gradient-bg text-white font-semibold text-xs flex items-center justify-center gap-1.5 shadow-md hover:opacity-95 transition-all active:scale-95">
-            <i class="fa-solid fa-bolt"></i>
-            <span>QQ 加好友</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Social Matrix Grid -->
-      <div class="grid grid-cols-3 sm:grid-cols-5 gap-2 mt-3">
-        <a href="https://space.bilibili.com/455994470" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-2xl bg-slate-50/90 hover:bg-sky-50 dark:bg-slate-800/60 dark:hover:bg-slate-800 border border-slate-200/70 dark:border-slate-700/60 flex flex-col items-center justify-center gap-1 transition-all group">
-          <i class="fa-brands fa-bilibili text-lg text-[#00AEEC] group-hover:scale-110 transition-transform"></i>
-          <span class="text-[11px] font-medium text-slate-600 dark:text-slate-300">Bilibili</span>
-        </a>
-        <a href="https://steamcommunity.com/profiles/76561199043348118/" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-2xl bg-slate-50/90 hover:bg-slate-100 dark:bg-slate-800/60 dark:hover:bg-slate-800 border border-slate-200/70 dark:border-slate-700/60 flex flex-col items-center justify-center gap-1 transition-all group">
-          <i class="fa-brands fa-steam text-lg text-slate-700 dark:text-slate-200 group-hover:scale-110 transition-transform"></i>
-          <span class="text-[11px] font-medium text-slate-600 dark:text-slate-300">Steam</span>
-        </a>
-        <a href="https://github.com/Sereindian" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-2xl bg-slate-50/90 hover:bg-slate-100 dark:bg-slate-800/60 dark:hover:bg-slate-800 border border-slate-200/70 dark:border-slate-700/60 flex flex-col items-center justify-center gap-1 transition-all group">
-          <i class="fa-brands fa-github text-lg text-slate-800 dark:text-white group-hover:scale-110 transition-transform"></i>
-          <span class="text-[11px] font-medium text-slate-600 dark:text-slate-300">GitHub</span>
-        </a>
-        <a href="https://discord.com/users/1051161558690050048" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-2xl bg-slate-50/90 hover:bg-indigo-50 dark:bg-slate-800/60 dark:hover:bg-slate-800 border border-slate-200/70 dark:border-slate-700/60 flex flex-col items-center justify-center gap-1 transition-all group">
-          <i class="fa-brands fa-discord text-lg text-[#5865F2] group-hover:scale-110 transition-transform"></i>
-          <span class="text-[11px] font-medium text-slate-600 dark:text-slate-300">Discord</span>
-        </a>
-        <a href="https://bgm.tv/user/882140" target="_blank" rel="noopener noreferrer" class="col-span-2 sm:col-span-1 p-2.5 rounded-2xl bg-slate-50/90 hover:bg-pink-50 dark:bg-slate-800/60 dark:hover:bg-slate-800 border border-slate-200/70 dark:border-slate-700/60 flex flex-col items-center justify-center gap-1 transition-all group">
-          <i class="fa-solid fa-tv text-base text-[#F09199] group-hover:scale-110 transition-transform"></i>
-          <span class="text-[11px] font-medium text-slate-600 dark:text-slate-300">Bangumi</span>
-        </a>
-      </div>
-
-      <!-- Save vCard -->
-      <div class="mt-3.5 pt-3.5 border-t border-slate-200/60 dark:border-slate-800 flex items-center justify-between gap-2">
-        <button onclick="downloadVCard()" class="flex-1 py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-slate-200/80 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-medium flex items-center justify-center gap-1.5 transition-all">
-          <i class="fa-solid fa-address-card text-[#3A6E94] dark:text-[#7DB9DE]"></i>
-          <span>保存电子名片 (.vcf)</span>
-        </button>
-      </div>
-    </section>
 
     <!-- Footer -->
     <footer class="text-center py-2 text-[11px] text-slate-400 dark:text-slate-500 flex flex-col items-center gap-1">
@@ -1619,7 +1760,7 @@
 
       <!-- Static, scannable QQ contact QR code -->
       <div class="my-4 p-3 rounded-2xl bg-white border-2 border-[#7DB9DE]/40 shadow-inner flex flex-col items-center">
-        <svg id="qqContactQr" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 37" width="200" height="200" class="w-44 h-44" role="img" aria-label="QQ 3167642832 加好友二维码" shape-rendering="crispEdges"><rect width="37" height="37" fill="white"/><path d="M4,4h1v1h-1z M5,4h1v1h-1z M6,4h1v1h-1z M7,4h1v1h-1z M8,4h1v1h-1z M9,4h1v1h-1z M10,4h1v1h-1z M13,4h1v1h-1z M14,4h1v1h-1z M15,4h1v1h-1z M17,4h1v1h-1z M18,4h1v1h-1z M19,4h1v1h-1z M22,4h1v1h-1z M23,4h1v1h-1z M24,4h1v1h-1z M26,4h1v1h-1z M27,4h1v1h-1z M28,4h1v1h-1z M29,4h1v1h-1z M30,4h1v1h-1z M31,4h1v1h-1z M32,4h1v1h-1z M4,5h1v1h-1z M10,5h1v1h-1z M13,5h1v1h-1z M15,5h1v1h-1z M17,5h1v1h-1z M18,5h1v1h-1z M19,5h1v1h-1z M20,5h1v1h-1z M26,5h1v1h-1z M32,5h1v1h-1z M4,6h1v1h-1z M6,6h1v1h-1z M7,6h1v1h-1z M8,6h1v1h-1z M10,6h1v1h-1z M12,6h1v1h-1z M14,6h1v1h-1z M15,6h1v1h-1z M16,6h1v1h-1z M17,6h1v1h-1z M19,6h1v1h-1z M22,6h1v1h-1z M24,6h1v1h-1z M26,6h1v1h-1z M28,6h1v1h-1z M29,6h1v1h-1z M30,6h1v1h-1z M32,6h1v1h-1z M4,7h1v1h-1z M6,7h1v1h-1z M7,7h1v1h-1z M8,7h1v1h-1z M10,7h1v1h-1z M12,7h1v1h-1z M16,7h1v1h-1z M18,7h1v1h-1z M19,7h1v1h-1z M21,7h1v1h-1z M23,7h1v1h-1z M26,7h1v1h-1z M28,7h1v1h-1z M29,7h1v1h-1z M30,7h1v1h-1z M32,7h1v1h-1z M4,8h1v1h-1z M6,8h1v1h-1z M7,8h1v1h-1z M8,8h1v1h-1z M10,8h1v1h-1z M12,8h1v1h-1z M13,8h1v1h-1z M14,8h1v1h-1z M15,8h1v1h-1z M16,8h1v1h-1z M19,8h1v1h-1z M20,8h1v1h-1z M23,8h1v1h-1z M24,8h1v1h-1z M26,8h1v1h-1z M28,8h1v1h-1z M29,8h1v1h-1z M30,8h1v1h-1z M32,8h1v1h-1z M4,9h1v1h-1z M10,9h1v1h-1z M12,9h1v1h-1z M13,9h1v1h-1z M15,9h1v1h-1z M22,9h1v1h-1z M24,9h1v1h-1z M26,9h1v1h-1z M32,9h1v1h-1z M4,10h1v1h-1z M5,10h1v1h-1z M6,10h1v1h-1z M7,10h1v1h-1z M8,10h1v1h-1z M9,10h1v1h-1z M10,10h1v1h-1z M12,10h1v1h-1z M14,10h1v1h-1z M16,10h1v1h-1z M18,10h1v1h-1z M20,10h1v1h-1z M22,10h1v1h-1z M24,10h1v1h-1z M26,10h1v1h-1z M27,10h1v1h-1z M28,10h1v1h-1z M29,10h1v1h-1z M30,10h1v1h-1z M31,10h1v1h-1z M32,10h1v1h-1z M12,11h1v1h-1z M15,11h1v1h-1z M16,11h1v1h-1z M18,11h1v1h-1z M20,11h1v1h-1z M22,11h1v1h-1z M4,12h1v1h-1z M6,12h1v1h-1z M7,12h1v1h-1z M8,12h1v1h-1z M9,12h1v1h-1z M10,12h1v1h-1z M15,12h1v1h-1z M16,12h1v1h-1z M20,12h1v1h-1z M21,12h1v1h-1z M24,12h1v1h-1z M26,12h1v1h-1z M27,12h1v1h-1z M28,12h1v1h-1z M29,12h1v1h-1z M30,12h1v1h-1z M4,13h1v1h-1z M6,13h1v1h-1z M8,13h1v1h-1z M12,13h1v1h-1z M13,13h1v1h-1z M14,13h1v1h-1z M16,13h1v1h-1z M17,13h1v1h-1z M18,13h1v1h-1z M19,13h1v1h-1z M21,13h1v1h-1z M23,13h1v1h-1z M24,13h1v1h-1z M26,13h1v1h-1z M27,13h1v1h-1z M28,13h1v1h-1z M32,13h1v1h-1z M5,14h1v1h-1z M6,14h1v1h-1z M7,14h1v1h-1z M8,14h1v1h-1z M9,14h1v1h-1z M10,14h1v1h-1z M11,14h1v1h-1z M13,14h1v1h-1z M14,14h1v1h-1z M16,14h1v1h-1z M17,14h1v1h-1z M18,14h1v1h-1z M19,14h1v1h-1z M20,14h1v1h-1z M22,14h1v1h-1z M24,14h1v1h-1z M25,14h1v1h-1z M27,14h1v1h-1z M28,14h1v1h-1z M5,15h1v1h-1z M6,15h1v1h-1z M8,15h1v1h-1z M12,15h1v1h-1z M13,15h1v1h-1z M15,15h1v1h-1z M16,15h1v1h-1z M17,15h1v1h-1z M19,15h1v1h-1z M22,15h1v1h-1z M23,15h1v1h-1z M24,15h1v1h-1z M28,15h1v1h-1z M29,15h1v1h-1z M31,15h1v1h-1z M4,16h1v1h-1z M5,16h1v1h-1z M7,16h1v1h-1z M8,16h1v1h-1z M10,16h1v1h-1z M13,16h1v1h-1z M15,16h1v1h-1z M16,16h1v1h-1z M18,16h1v1h-1z M19,16h1v1h-1z M23,16h1v1h-1z M25,16h1v1h-1z M27,16h1v1h-1z M29,16h1v1h-1z M30,16h1v1h-1z M5,17h1v1h-1z M7,17h1v1h-1z M8,17h1v1h-1z M12,17h1v1h-1z M13,17h1v1h-1z M16,17h1v1h-1z M19,17h1v1h-1z M20,17h1v1h-1z M22,17h1v1h-1z M23,17h1v1h-1z M25,17h1v1h-1z M26,17h1v1h-1z M27,17h1v1h-1z M28,17h1v1h-1z M32,17h1v1h-1z M4,18h1v1h-1z M5,18h1v1h-1z M6,18h1v1h-1z M8,18h1v1h-1z M9,18h1v1h-1z M10,18h1v1h-1z M12,18h1v1h-1z M13,18h1v1h-1z M14,18h1v1h-1z M16,18h1v1h-1z M21,18h1v1h-1z M22,18h1v1h-1z M24,18h1v1h-1z M26,18h1v1h-1z M29,18h1v1h-1z M30,18h1v1h-1z M4,19h1v1h-1z M5,19h1v1h-1z M6,19h1v1h-1z M7,19h1v1h-1z M11,19h1v1h-1z M12,19h1v1h-1z M14,19h1v1h-1z M15,19h1v1h-1z M16,19h1v1h-1z M18,19h1v1h-1z M20,19h1v1h-1z M25,19h1v1h-1z M26,19h1v1h-1z M27,19h1v1h-1z M31,19h1v1h-1z M4,20h1v1h-1z M7,20h1v1h-1z M9,20h1v1h-1z M10,20h1v1h-1z M14,20h1v1h-1z M15,20h1v1h-1z M16,20h1v1h-1z M20,20h1v1h-1z M24,20h1v1h-1z M29,20h1v1h-1z M30,20h1v1h-1z M4,21h1v1h-1z M5,21h1v1h-1z M6,21h1v1h-1z M8,21h1v1h-1z M9,21h1v1h-1z M11,21h1v1h-1z M12,21h1v1h-1z M15,21h1v1h-1z M17,21h1v1h-1z M18,21h1v1h-1z M19,21h1v1h-1z M21,21h1v1h-1z M23,21h1v1h-1z M24,21h1v1h-1z M25,21h1v1h-1z M26,21h1v1h-1z M28,21h1v1h-1z M30,21h1v1h-1z M32,21h1v1h-1z M4,22h1v1h-1z M6,22h1v1h-1z M9,22h1v1h-1z M10,22h1v1h-1z M12,22h1v1h-1z M13,22h1v1h-1z M15,22h1v1h-1z M17,22h1v1h-1z M18,22h1v1h-1z M19,22h1v1h-1z M20,22h1v1h-1z M22,22h1v1h-1z M24,22h1v1h-1z M25,22h1v1h-1z M27,22h1v1h-1z M28,22h1v1h-1z M30,22h1v1h-1z M4,23h1v1h-1z M7,23h1v1h-1z M12,23h1v1h-1z M15,23h1v1h-1z M17,23h1v1h-1z M19,23h1v1h-1z M23,23h1v1h-1z M24,23h1v1h-1z M26,23h1v1h-1z M27,23h1v1h-1z M31,23h1v1h-1z M4,24h1v1h-1z M6,24h1v1h-1z M9,24h1v1h-1z M10,24h1v1h-1z M13,24h1v1h-1z M14,24h1v1h-1z M18,24h1v1h-1z M19,24h1v1h-1z M21,24h1v1h-1z M22,24h1v1h-1z M23,24h1v1h-1z M24,24h1v1h-1z M25,24h1v1h-1z M26,24h1v1h-1z M27,24h1v1h-1z M28,24h1v1h-1z M30,24h1v1h-1z M31,24h1v1h-1z M32,24h1v1h-1z M12,25h1v1h-1z M13,25h1v1h-1z M14,25h1v1h-1z M15,25h1v1h-1z M16,25h1v1h-1z M19,25h1v1h-1z M20,25h1v1h-1z M24,25h1v1h-1z M28,25h1v1h-1z M29,25h1v1h-1z M30,25h1v1h-1z M31,25h1v1h-1z M32,25h1v1h-1z M4,26h1v1h-1z M5,26h1v1h-1z M6,26h1v1h-1z M7,26h1v1h-1z M8,26h1v1h-1z M9,26h1v1h-1z M10,26h1v1h-1z M15,26h1v1h-1z M16,26h1v1h-1z M22,26h1v1h-1z M23,26h1v1h-1z M24,26h1v1h-1z M26,26h1v1h-1z M28,26h1v1h-1z M29,26h1v1h-1z M30,26h1v1h-1z M4,27h1v1h-1z M10,27h1v1h-1z M12,27h1v1h-1z M13,27h1v1h-1z M15,27h1v1h-1z M18,27h1v1h-1z M20,27h1v1h-1z M22,27h1v1h-1z M24,27h1v1h-1z M28,27h1v1h-1z M31,27h1v1h-1z M32,27h1v1h-1z M4,28h1v1h-1z M6,28h1v1h-1z M7,28h1v1h-1z M8,28h1v1h-1z M10,28h1v1h-1z M12,28h1v1h-1z M13,28h1v1h-1z M15,28h1v1h-1z M21,28h1v1h-1z M24,28h1v1h-1z M25,28h1v1h-1z M26,28h1v1h-1z M27,28h1v1h-1z M28,28h1v1h-1z M30,28h1v1h-1z M32,28h1v1h-1z M4,29h1v1h-1z M6,29h1v1h-1z M7,29h1v1h-1z M8,29h1v1h-1z M10,29h1v1h-1z M12,29h1v1h-1z M14,29h1v1h-1z M15,29h1v1h-1z M16,29h1v1h-1z M18,29h1v1h-1z M19,29h1v1h-1z M23,29h1v1h-1z M29,29h1v1h-1z M30,29h1v1h-1z M4,30h1v1h-1z M6,30h1v1h-1z M7,30h1v1h-1z M8,30h1v1h-1z M10,30h1v1h-1z M12,30h1v1h-1z M13,30h1v1h-1z M14,30h1v1h-1z M15,30h1v1h-1z M16,30h1v1h-1z M17,30h1v1h-1z M19,30h1v1h-1z M20,30h1v1h-1z M21,30h1v1h-1z M23,30h1v1h-1z M24,30h1v1h-1z M25,30h1v1h-1z M26,30h1v1h-1z M27,30h1v1h-1z M28,30h1v1h-1z M29,30h1v1h-1z M30,30h1v1h-1z M31,30h1v1h-1z M4,31h1v1h-1z M10,31h1v1h-1z M13,31h1v1h-1z M17,31h1v1h-1z M18,31h1v1h-1z M20,31h1v1h-1z M24,31h1v1h-1z M26,31h1v1h-1z M27,31h1v1h-1z M28,31h1v1h-1z M29,31h1v1h-1z M31,31h1v1h-1z M4,32h1v1h-1z M5,32h1v1h-1z M6,32h1v1h-1z M7,32h1v1h-1z M8,32h1v1h-1z M9,32h1v1h-1z M10,32h1v1h-1z M12,32h1v1h-1z M13,32h1v1h-1z M14,32h1v1h-1z M16,32h1v1h-1z M18,32h1v1h-1z M19,32h1v1h-1z M20,32h1v1h-1z M21,32h1v1h-1z M23,32h1v1h-1z M26,32h1v1h-1z M28,32h1v1h-1z M29,32h1v1h-1z M30,32h1v1h-1z" fill="#182B40"/></svg>
+        <svg id="qqContactQr" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 37" width="200" height="200" class="w-44 h-44" role="img" aria-label="QQ 3167642832 加好友二维码" shape-rendering="crispEdges"><rect width="37" height="37" fill="white" /><path d="M4,4h1v1h-1z M5,4h1v1h-1z M6,4h1v1h-1z M7,4h1v1h-1z M8,4h1v1h-1z M9,4h1v1h-1z M10,4h1v1h-1z M13,4h1v1h-1z M14,4h1v1h-1z M15,4h1v1h-1z M17,4h1v1h-1z M18,4h1v1h-1z M19,4h1v1h-1z M22,4h1v1h-1z M23,4h1v1h-1z M24,4h1v1h-1z M26,4h1v1h-1z M27,4h1v1h-1z M28,4h1v1h-1z M29,4h1v1h-1z M30,4h1v1h-1z M31,4h1v1h-1z M32,4h1v1h-1z M4,5h1v1h-1z M10,5h1v1h-1z M13,5h1v1h-1z M15,5h1v1h-1z M17,5h1v1h-1z M18,5h1v1h-1z M19,5h1v1h-1z M20,5h1v1h-1z M26,5h1v1h-1z M32,5h1v1h-1z M4,6h1v1h-1z M6,6h1v1h-1z M7,6h1v1h-1z M8,6h1v1h-1z M10,6h1v1h-1z M12,6h1v1h-1z M14,6h1v1h-1z M15,6h1v1h-1z M16,6h1v1h-1z M17,6h1v1h-1z M19,6h1v1h-1z M22,6h1v1h-1z M24,6h1v1h-1z M26,6h1v1h-1z M28,6h1v1h-1z M29,6h1v1h-1z M30,6h1v1h-1z M32,6h1v1h-1z M4,7h1v1h-1z M6,7h1v1h-1z M7,7h1v1h-1z M8,7h1v1h-1z M10,7h1v1h-1z M12,7h1v1h-1z M16,7h1v1h-1z M18,7h1v1h-1z M19,7h1v1h-1z M21,7h1v1h-1z M23,7h1v1h-1z M26,7h1v1h-1z M28,7h1v1h-1z M29,7h1v1h-1z M30,7h1v1h-1z M32,7h1v1h-1z M4,8h1v1h-1z M6,8h1v1h-1z M7,8h1v1h-1z M8,8h1v1h-1z M10,8h1v1h-1z M12,8h1v1h-1z M13,8h1v1h-1z M14,8h1v1h-1z M15,8h1v1h-1z M16,8h1v1h-1z M19,8h1v1h-1z M20,8h1v1h-1z M23,8h1v1h-1z M24,8h1v1h-1z M26,8h1v1h-1z M28,8h1v1h-1z M29,8h1v1h-1z M30,8h1v1h-1z M32,8h1v1h-1z M4,9h1v1h-1z M10,9h1v1h-1z M12,9h1v1h-1z M13,9h1v1h-1z M15,9h1v1h-1z M22,9h1v1h-1z M24,9h1v1h-1z M26,9h1v1h-1z M32,9h1v1h-1z M4,10h1v1h-1z M5,10h1v1h-1z M6,10h1v1h-1z M7,10h1v1h-1z M8,10h1v1h-1z M9,10h1v1h-1z M10,10h1v1h-1z M12,10h1v1h-1z M14,10h1v1h-1z M16,10h1v1h-1z M18,10h1v1h-1z M20,10h1v1h-1z M22,10h1v1h-1z M24,10h1v1h-1z M26,10h1v1h-1z M27,10h1v1h-1z M28,10h1v1h-1z M29,10h1v1h-1z M30,10h1v1h-1z M31,10h1v1h-1z M32,10h1v1h-1z M12,11h1v1h-1z M15,11h1v1h-1z M16,11h1v1h-1z M18,11h1v1h-1z M20,11h1v1h-1z M22,11h1v1h-1z M4,12h1v1h-1z M6,12h1v1h-1z M7,12h1v1h-1z M8,12h1v1h-1z M9,12h1v1h-1z M10,12h1v1h-1z M15,12h1v1h-1z M16,12h1v1h-1z M20,12h1v1h-1z M21,12h1v1h-1z M24,12h1v1h-1z M26,12h1v1h-1z M27,12h1v1h-1z M28,12h1v1h-1z M29,12h1v1h-1z M30,12h1v1h-1z M4,13h1v1h-1z M6,13h1v1h-1z M8,13h1v1h-1z M12,13h1v1h-1z M13,13h1v1h-1z M14,13h1v1h-1z M16,13h1v1h-1z M17,13h1v1h-1z M18,13h1v1h-1z M19,13h1v1h-1z M21,13h1v1h-1z M23,13h1v1h-1z M24,13h1v1h-1z M26,13h1v1h-1z M27,13h1v1h-1z M28,13h1v1h-1z M32,13h1v1h-1z M5,14h1v1h-1z M6,14h1v1h-1z M7,14h1v1h-1z M8,14h1v1h-1z M9,14h1v1h-1z M10,14h1v1h-1z M11,14h1v1h-1z M13,14h1v1h-1z M14,14h1v1h-1z M16,14h1v1h-1z M17,14h1v1h-1z M18,14h1v1h-1z M19,14h1v1h-1z M20,14h1v1h-1z M22,14h1v1h-1z M24,14h1v1h-1z M25,14h1v1h-1z M27,14h1v1h-1z M28,14h1v1h-1z M5,15h1v1h-1z M6,15h1v1h-1z M8,15h1v1h-1z M12,15h1v1h-1z M13,15h1v1h-1z M15,15h1v1h-1z M16,15h1v1h-1z M17,15h1v1h-1z M19,15h1v1h-1z M22,15h1v1h-1z M23,15h1v1h-1z M24,15h1v1h-1z M28,15h1v1h-1z M29,15h1v1h-1z M31,15h1v1h-1z M4,16h1v1h-1z M5,16h1v1h-1z M7,16h1v1h-1z M8,16h1v1h-1z M10,16h1v1h-1z M13,16h1v1h-1z M15,16h1v1h-1z M16,16h1v1h-1z M18,16h1v1h-1z M19,16h1v1h-1z M23,16h1v1h-1z M25,16h1v1h-1z M27,16h1v1h-1z M29,16h1v1h-1z M30,16h1v1h-1z M5,17h1v1h-1z M7,17h1v1h-1z M8,17h1v1h-1z M12,17h1v1h-1z M13,17h1v1h-1z M16,17h1v1h-1z M19,17h1v1h-1z M20,17h1v1h-1z M22,17h1v1h-1z M23,17h1v1h-1z M25,17h1v1h-1z M26,17h1v1h-1z M27,17h1v1h-1z M28,17h1v1h-1z M32,17h1v1h-1z M4,18h1v1h-1z M5,18h1v1h-1z M6,18h1v1h-1z M8,18h1v1h-1z M9,18h1v1h-1z M10,18h1v1h-1z M12,18h1v1h-1z M13,18h1v1h-1z M14,18h1v1h-1z M16,18h1v1h-1z M21,18h1v1h-1z M22,18h1v1h-1z M24,18h1v1h-1z M26,18h1v1h-1z M29,18h1v1h-1z M30,18h1v1h-1z M4,19h1v1h-1z M5,19h1v1h-1z M6,19h1v1h-1z M7,19h1v1h-1z M11,19h1v1h-1z M12,19h1v1h-1z M14,19h1v1h-1z M15,19h1v1h-1z M16,19h1v1h-1z M18,19h1v1h-1z M20,19h1v1h-1z M25,19h1v1h-1z M26,19h1v1h-1z M27,19h1v1h-1z M31,19h1v1h-1z M4,20h1v1h-1z M7,20h1v1h-1z M9,20h1v1h-1z M10,20h1v1h-1z M14,20h1v1h-1z M15,20h1v1h-1z M16,20h1v1h-1z M20,20h1v1h-1z M24,20h1v1h-1z M29,20h1v1h-1z M30,20h1v1h-1z M4,21h1v1h-1z M5,21h1v1h-1z M6,21h1v1h-1z M8,21h1v1h-1z M9,21h1v1h-1z M11,21h1v1h-1z M12,21h1v1h-1z M15,21h1v1h-1z M17,21h1v1h-1z M18,21h1v1h-1z M19,21h1v1h-1z M21,21h1v1h-1z M23,21h1v1h-1z M24,21h1v1h-1z M25,21h1v1h-1z M26,21h1v1h-1z M28,21h1v1h-1z M30,21h1v1h-1z M32,21h1v1h-1z M4,22h1v1h-1z M6,22h1v1h-1z M9,22h1v1h-1z M10,22h1v1h-1z M12,22h1v1h-1z M13,22h1v1h-1z M15,22h1v1h-1z M17,22h1v1h-1z M18,22h1v1h-1z M19,22h1v1h-1z M20,22h1v1h-1z M22,22h1v1h-1z M24,22h1v1h-1z M25,22h1v1h-1z M27,22h1v1h-1z M28,22h1v1h-1z M30,22h1v1h-1z M4,23h1v1h-1z M7,23h1v1h-1z M12,23h1v1h-1z M15,23h1v1h-1z M17,23h1v1h-1z M19,23h1v1h-1z M23,23h1v1h-1z M24,23h1v1h-1z M26,23h1v1h-1z M27,23h1v1h-1z M31,23h1v1h-1z M4,24h1v1h-1z M6,24h1v1h-1z M9,24h1v1h-1z M10,24h1v1h-1z M13,24h1v1h-1z M14,24h1v1h-1z M18,24h1v1h-1z M19,24h1v1h-1z M21,24h1v1h-1z M22,24h1v1h-1z M23,24h1v1h-1z M24,24h1v1h-1z M25,24h1v1h-1z M26,24h1v1h-1z M27,24h1v1h-1z M28,24h1v1h-1z M30,24h1v1h-1z M31,24h1v1h-1z M32,24h1v1h-1z M12,25h1v1h-1z M13,25h1v1h-1z M14,25h1v1h-1z M15,25h1v1h-1z M16,25h1v1h-1z M19,25h1v1h-1z M20,25h1v1h-1z M24,25h1v1h-1z M28,25h1v1h-1z M29,25h1v1h-1z M30,25h1v1h-1z M31,25h1v1h-1z M32,25h1v1h-1z M4,26h1v1h-1z M5,26h1v1h-1z M6,26h1v1h-1z M7,26h1v1h-1z M8,26h1v1h-1z M9,26h1v1h-1z M10,26h1v1h-1z M15,26h1v1h-1z M16,26h1v1h-1z M22,26h1v1h-1z M23,26h1v1h-1z M24,26h1v1h-1z M26,26h1v1h-1z M28,26h1v1h-1z M29,26h1v1h-1z M30,26h1v1h-1z M4,27h1v1h-1z M10,27h1v1h-1z M12,27h1v1h-1z M13,27h1v1h-1z M15,27h1v1h-1z M18,27h1v1h-1z M20,27h1v1h-1z M22,27h1v1h-1z M24,27h1v1h-1z M28,27h1v1h-1z M31,27h1v1h-1z M32,27h1v1h-1z M4,28h1v1h-1z M6,28h1v1h-1z M7,28h1v1h-1z M8,28h1v1h-1z M10,28h1v1h-1z M12,28h1v1h-1z M13,28h1v1h-1z M15,28h1v1h-1z M21,28h1v1h-1z M24,28h1v1h-1z M25,28h1v1h-1z M26,28h1v1h-1z M27,28h1v1h-1z M28,28h1v1h-1z M30,28h1v1h-1z M32,28h1v1h-1z M4,29h1v1h-1z M6,29h1v1h-1z M7,29h1v1h-1z M8,29h1v1h-1z M10,29h1v1h-1z M12,29h1v1h-1z M14,29h1v1h-1z M15,29h1v1h-1z M16,29h1v1h-1z M18,29h1v1h-1z M19,29h1v1h-1z M23,29h1v1h-1z M29,29h1v1h-1z M30,29h1v1h-1z M4,30h1v1h-1z M6,30h1v1h-1z M7,30h1v1h-1z M8,30h1v1h-1z M10,30h1v1h-1z M12,30h1v1h-1z M13,30h1v1h-1z M14,30h1v1h-1z M15,30h1v1h-1z M16,30h1v1h-1z M17,30h1v1h-1z M19,30h1v1h-1z M20,30h1v1h-1z M21,30h1v1h-1z M23,30h1v1h-1z M24,30h1v1h-1z M25,30h1v1h-1z M26,30h1v1h-1z M27,30h1v1h-1z M28,30h1v1h-1z M29,30h1v1h-1z M30,30h1v1h-1z M31,30h1v1h-1z M4,31h1v1h-1z M10,31h1v1h-1z M13,31h1v1h-1z M17,31h1v1h-1z M18,31h1v1h-1z M20,31h1v1h-1z M24,31h1v1h-1z M26,31h1v1h-1z M27,31h1v1h-1z M28,31h1v1h-1z M29,31h1v1h-1z M31,31h1v1h-1z M4,32h1v1h-1z M5,32h1v1h-1z M6,32h1v1h-1z M7,32h1v1h-1z M8,32h1v1h-1z M9,32h1v1h-1z M10,32h1v1h-1z M12,32h1v1h-1z M13,32h1v1h-1z M14,32h1v1h-1z M16,32h1v1h-1z M18,32h1v1h-1z M19,32h1v1h-1z M20,32h1v1h-1z M21,32h1v1h-1z M23,32h1v1h-1z M26,32h1v1h-1z M28,32h1v1h-1z M29,32h1v1h-1z M30,32h1v1h-1z" fill="#182B40" /></svg>
         <p id="qrModalQq" class="mt-2 text-xs font-mono font-bold text-slate-700">QQ: 3167642832</p>
       </div>
 
@@ -1753,7 +1894,7 @@
           let next;
           if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
           else if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
-          else if (event.key === 'ArrowDown' || event.key === 'ArrowUp') next = (index + 3) % tabs.length;
+          else if ((event.key === 'ArrowDown' || event.key === 'ArrowUp') && !window.matchMedia('(min-width: 768px) and (orientation: landscape)').matches) next = (index + 3) % tabs.length;
           else if (event.key === 'Home') next = 0;
           else if (event.key === 'End') next = tabs.length - 1;
           else return;
@@ -1957,6 +2098,16 @@
       initFranchiseTabs();
       initPetalCanvas();
     };
+  </script>
+  <script>
+    // Keep the phone DOM reading and keyboard order identical to the original page.
+    const desktopLayoutQuery = window.matchMedia('(min-width: 1024px) and (orientation: landscape)');
+    function syncContactPlacement() {
+      const parent = document.querySelector(desktopLayoutQuery.matches ? '.desktop-sidebar' : '.desktop-main');
+      parent.appendChild(document.getElementById('connectSection'));
+    }
+    desktopLayoutQuery.addEventListener('change', syncContactPlacement);
+    syncContactPlacement();
   </script>
 </body>
 </html>
